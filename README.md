@@ -42,4 +42,4 @@ Multiple utilities in one. A summer project. Android is the main and original pl
  - Commit Workflow:</br>
  !["workflow_gh.jpg"](https://cdn.discordapp.com/attachments/342481673822404608/726630332136423434/github_commit_flow.png)</br></br>
  
- (Social image URL: bit.ly/3dOuRtm (disabled))
+ (Social image URL: bit.ly/3dOuRtm (disabled for being a private repo))
