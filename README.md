@@ -28,6 +28,7 @@ Multiple utilities in one. A summer project. Android is the main and original pl
    - Minimum SDK: *API 19: Android 4.4 (KitKat)* (recommended in 2020)
    - Template: *Bottom Navigation Activity*
    - Use legacy android.support libraries: *OFF*</br>
+   (\*JUnit now upgraded to 4.13*)
 
  - GitHub Tabs:</br>
    - Code tab: *Where the files and code can be viewed, edited, cloned, and the repository details are visible*
