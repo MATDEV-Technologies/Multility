@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Multility</string>
     <string name="title_home">Multility</string>
+    <string name="tip_calc">Tip\nCalculator</string>
+    <string name="notepad">Notepad</string>
+    <string name="facts">Daily Fact</string>
+    <string name="passwd">Password\nGenerator</string>
+    <string name="unit_conv">Unit\nConverter</string>
+    <string name="news">Trending\nNews</string>
 </resources>

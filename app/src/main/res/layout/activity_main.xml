@@ -14,7 +14,7 @@
         android:rowCount="3"
         android:columnCount="2"
         android:layout_margin="20dp"
-        >
+        tools:ignore="UselessParent">
 
         <androidx.cardview.widget.CardView
             app:cardBackgroundColor="@color/colorCardBackground"
@@ -27,23 +27,25 @@
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
-            >
+            app:cardElevation="8dp">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
-                android:layout_gravity="center_vertical|center_horizontal">
+                android:layout_gravity="center_vertical|center_horizontal"
+                tools:ignore="UseCompoundDrawables">
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_baseline_attach_money_24"/>
+                    android:src="@drawable/ic_baseline_attach_money_24"
+                    tools:ignore="ContentDescription" />
+<!--                    android:contentDescription="TODO" />-->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tip\nCalculator"
-                    android:textSize="24dp"
+                    android:text="@string/tip_calc"
+                    android:textSize="24sp"
                     android:textColor="@color/colorGrey"
                     android:textStyle="bold"
                     android:textAlignment="center"/>
@@ -61,23 +63,25 @@
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
-            >
+            app:cardElevation="8dp">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
-                android:layout_gravity="center_vertical|center_horizontal">
+                android:layout_gravity="center_vertical|center_horizontal"
+                tools:ignore="UseCompoundDrawables">
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_baseline_create_24"/>
+                    android:src="@drawable/ic_baseline_create_24"
+                    tools:ignore="ContentDescription" />
+<!--                    android:contentDescription="TODO" />-->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Notepad"
-                    android:textSize="24dp"
+                    android:text="@string/notepad"
+                    android:textSize="24sp"
                     android:textColor="@color/colorGrey"
                     android:textStyle="bold"
                     android:textAlignment="center"/>
@@ -95,23 +99,25 @@
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
-            >
+            app:cardElevation="8dp">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
-                android:layout_gravity="center_vertical|center_horizontal">
+                android:layout_gravity="center_vertical|center_horizontal"
+                tools:ignore="UseCompoundDrawables">
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_baseline_book_24"/>
+                    android:src="@drawable/ic_baseline_book_24"
+                    tools:ignore="ContentDescription" />
+<!--                    android:contentDescription="TODO" />-->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Daily Fact"
-                    android:textSize="24dp"
+                    android:text="@string/facts"
+                    android:textSize="24sp"
                     android:textColor="@color/colorGrey"
                     android:textStyle="bold"
                     android:textAlignment="center"/>
@@ -129,23 +135,25 @@
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
-            >
+            app:cardElevation="8dp">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
-                android:layout_gravity="center_vertical|center_horizontal">
+                android:layout_gravity="center_vertical|center_horizontal"
+                tools:ignore="UseCompoundDrawables">
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_baseline_space_bar_24"/>
+                    android:src="@drawable/ic_baseline_space_bar_24"
+                    tools:ignore="ContentDescription" />
+<!--                    android:contentDescription="TODO" />-->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Password\nGenerator"
-                    android:textSize="24dp"
+                    android:text="@string/passwd"
+                    android:textSize="24sp"
                     android:textColor="@color/colorGrey"
                     android:textStyle="bold"
                     android:textAlignment="center"/>
@@ -163,23 +171,25 @@
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
-            >
+            app:cardElevation="8dp">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
-                android:layout_gravity="center_vertical|center_horizontal">
+                android:layout_gravity="center_vertical|center_horizontal"
+                tools:ignore="UseCompoundDrawables">
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_baseline_sync_alt_24"/>
+                    android:src="@drawable/ic_baseline_sync_alt_24"
+                    tools:ignore="ContentDescription" />
+<!--                    android:contentDescription="TODO" />-->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Unit\nConverter"
-                    android:textSize="24dp"
+                    android:text="@string/unit_conv"
+                    android:textSize="24sp"
                     android:textColor="@color/colorGrey"
                     android:textStyle="bold"
                     android:textAlignment="center"/>
@@ -197,23 +207,25 @@
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
-            >
+            app:cardElevation="8dp">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
-                android:layout_gravity="center_vertical|center_horizontal">
+                android:layout_gravity="center_vertical|center_horizontal"
+                tools:ignore="UseCompoundDrawables">
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_baseline_trending_up_24"/>
+                    android:src="@drawable/ic_baseline_trending_up_24"
+                    tools:ignore="ContentDescription" />
+<!--                    android:contentDescription="TODO" />-->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Trending\nNews"
-                    android:textSize="24dp"
+                    android:text="@string/news"
+                    android:textSize="24sp"
                     android:textColor="@color/colorGrey"
                     android:textStyle="bold"
                     android:textAlignment="center"/>
