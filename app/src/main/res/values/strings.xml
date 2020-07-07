@@ -7,4 +7,6 @@
     <string name="passwd">Password\nGenerator</string>
     <string name="unit_conv">Unit\nConverter</string>
     <string name="news">Trending\nNews</string>
+    <string name="settings">Settings</string>
+    <string name="back">Back</string>
 </resources>

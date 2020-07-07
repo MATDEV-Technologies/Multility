@@ -11,224 +11,239 @@
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:rowCount="3"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:columnCount="2"
-        android:layout_margin="20dp"
+        android:rowCount="3"
         tools:ignore="UselessParent">
 
         <androidx.cardview.widget.CardView
-            app:cardBackgroundColor="@color/colorCardBackground"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
-            android:layout_column="0"
-            android:layout_gravity="fill"
             android:layout_rowWeight="1"
+            android:layout_column="0"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_margin="8dp"
+            app:cardBackgroundColor="@color/colorCardBackground"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
                 android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical"
                 tools:ignore="UseCompoundDrawables">
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_baseline_attach_money_24"
                     tools:ignore="ContentDescription" />
-<!--                    android:contentDescription="TODO" />-->
+                <!--                    android:contentDescription="TODO" />-->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/tip_calc"
-                    android:textSize="24sp"
+                    android:textAlignment="center"
                     android:textColor="@color/colorGrey"
-                    android:textStyle="bold"
-                    android:textAlignment="center"/>
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            app:cardBackgroundColor="@color/colorCardBackground"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
-            android:layout_column="1"
-            android:layout_gravity="fill"
             android:layout_rowWeight="1"
+            android:layout_column="1"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_margin="8dp"
+            app:cardBackgroundColor="@color/colorCardBackground"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
                 android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical"
                 tools:ignore="UseCompoundDrawables">
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_baseline_create_24"
                     tools:ignore="ContentDescription" />
-<!--                    android:contentDescription="TODO" />-->
+                <!--                    android:contentDescription="TODO" />-->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/notepad"
-                    android:textSize="24sp"
+                    android:textAlignment="center"
                     android:textColor="@color/colorGrey"
-                    android:textStyle="bold"
-                    android:textAlignment="center"/>
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            app:cardBackgroundColor="@color/colorCardBackground"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="1"
-            android:layout_column="0"
-            android:layout_gravity="fill"
             android:layout_rowWeight="1"
+            android:layout_column="0"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_margin="8dp"
+            app:cardBackgroundColor="@color/colorCardBackground"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
                 android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical"
                 tools:ignore="UseCompoundDrawables">
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_baseline_book_24"
                     tools:ignore="ContentDescription" />
-<!--                    android:contentDescription="TODO" />-->
+                <!--                    android:contentDescription="TODO" />-->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/facts"
-                    android:textSize="24sp"
+                    android:textAlignment="center"
                     android:textColor="@color/colorGrey"
-                    android:textStyle="bold"
-                    android:textAlignment="center"/>
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            app:cardBackgroundColor="@color/colorCardBackground"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="1"
-            android:layout_column="1"
-            android:layout_gravity="fill"
             android:layout_rowWeight="1"
+            android:layout_column="1"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_margin="8dp"
+            app:cardBackgroundColor="@color/colorCardBackground"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
                 android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical"
                 tools:ignore="UseCompoundDrawables">
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_baseline_space_bar_24"
                     tools:ignore="ContentDescription" />
-<!--                    android:contentDescription="TODO" />-->
+                <!--                    android:contentDescription="TODO" />-->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/passwd"
-                    android:textSize="24sp"
+                    android:textAlignment="center"
                     android:textColor="@color/colorGrey"
-                    android:textStyle="bold"
-                    android:textAlignment="center"/>
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            app:cardBackgroundColor="@color/colorCardBackground"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="2"
-            android:layout_column="0"
-            android:layout_gravity="fill"
             android:layout_rowWeight="1"
+            android:layout_column="0"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_margin="8dp"
+            app:cardBackgroundColor="@color/colorCardBackground"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
                 android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical"
                 tools:ignore="UseCompoundDrawables">
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_baseline_sync_alt_24"
                     tools:ignore="ContentDescription" />
-<!--                    android:contentDescription="TODO" />-->
+                <!--                    android:contentDescription="TODO" />-->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/unit_conv"
-                    android:textSize="24sp"
+                    android:textAlignment="center"
                     android:textColor="@color/colorGrey"
-                    android:textStyle="bold"
-                    android:textAlignment="center"/>
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            app:cardBackgroundColor="@color/colorCardBackground"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="2"
-            android:layout_column="1"
-            android:layout_gravity="fill"
             android:layout_rowWeight="1"
+            android:layout_column="1"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_margin="8dp"
+            app:cardBackgroundColor="@color/colorCardBackground"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
                 android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical"
                 tools:ignore="UseCompoundDrawables">
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_baseline_trending_up_24"
                     tools:ignore="ContentDescription" />
-<!--                    android:contentDescription="TODO" />-->
+                <!--                    android:contentDescription="TODO" />-->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/news"
-                    android:textSize="24sp"
+                    android:textAlignment="center"
                     android:textColor="@color/colorGrey"
-                    android:textStyle="bold"
-                    android:textAlignment="center"/>
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 

@@ -11,6 +11,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
+        <activity android:name=".SettingsActivity"
+            android:label="@string/settings"
+            android:parentActivityName=".MainActivity">
+        </activity>
         <!--
         Remove the above line if data backups are a problem
         *-SOURCE of fix-*
@@ -18,7 +22,7 @@
         Consider adding the attribute android:fullBackupContent to specify an @xml resource which configures which files to back up.
         More info: https://developer.android.com/guide/topics/data/autobackup
         -->
-        <activity android:name="com.matdevtech.multility.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
