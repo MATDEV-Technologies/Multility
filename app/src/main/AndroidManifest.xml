@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="com.matdevtech.multility">
 
     <application
@@ -9,18 +8,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        tools:ignore="AllowBackup">
-        <!--
-        Remove the above line if data backups are a problem
-        *-SOURCE of fix-*
-        Previous warning on line 6 under "<application": On SDK version 23 and up, you data will be automatically backed up and restored on app install.
-        Consider adding the attribute android:fullBackupContent to specify an @xml resource which configures which files to back up.
-        More info: https://developer.android.com/guide/topics/data/autobackup
-        -->
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name">
+        android:theme="@style/AppTheme">
+        <activity android:name="com.matdevtech.multility.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
