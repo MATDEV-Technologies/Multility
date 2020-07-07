@@ -22,7 +22,7 @@ Multiple utilities in one. A summer project. Android is the main and original pl
    - Package name: *com.matdevtech.multility*
    - Language: *Java*
    - ADS Embedded JDK: JDK v1.8.0_251 (Java 8)
-   - Main API: 29 (Q)
+   - Main API: Mix of 29 (Q) / 30 (R)
    - Main AVD: Mix of Pixel 3a XL / Pixel 3 XL and API 29 / API 30
    - Gradle version: 6.1.1 (or use "gradlew" provided)
    - Minimum SDK: *API 19: Android 4.4 (KitKat)* (recommended in 2020)
