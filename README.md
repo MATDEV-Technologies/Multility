@@ -22,9 +22,9 @@ Multiple utilities in one. A summer project. Android is the main and original pl
    - Package name: *com.matdevtech.multility*
    - Language: *Java*
    - ADS Embedded JDK: JDK v1.8.0_251 (Java 8)
-   - Main API: Mix of 29 (Q) / 30 (R)
+   - Main API/OS: Mix of 29 (Q) / 30 (R)
    - Main AVD: Mix of Pixel 3a XL / Pixel 3 XL and API 29 / API 30
-   - Gradle version: 6.1.1 (or use "gradlew/gradlew.bat" provided) (do not upgrade Gradle)
+   - Gradle version: 6.1.1 (specifically gradle-6.1.1-all in the wrapper properties) (or use "gradlew/gradlew.bat" provided) (do not upgrade Gradle)
    - Minimum SDK: *API 19: Android 4.4 (KitKat)* (recommended in 2020)
    - Template: *Bottom Navigation Activity*
    - Use legacy android.support libraries: *OFF*</br>
@@ -42,7 +42,7 @@ Multiple utilities in one. A summer project. Android is the main and original pl
  
  - General development things:</br>
    - Please watch this (or any other resources on the Git/GitHub install doc) to catch up and make sure you know how to work with these tools, otherwise development will be very complicated and you won't be able to contribute as much you really could be able to: https://youtu.be/DVRQoVRzMIY (also terminology: https://bit.ly/38Acuao)
-   - Starting out, if you don't have the project, switch to the "working" branch and click the "Code" button and then clone using SSH
+   - Starting out, if you don't have the project, switch to the "working" branch and click the "Code" button and then clone using SSH (only if there are no current issues or test fails (red "X" next to the latest commit) plaguing the repo or that specific branch, otherwise, discuss what can someone new clone (the "master" branch as the default if changes need to be removed since they caused certain issues)
    - Always make changes on the "working" branch if you aren't sure; only commit to the master branch for super general and stable code
    - The general gist is that you will either commit and push to the "working" branch and then make a pull request from your recent commit to discuss and prepare for merging with the "master" branch. This is the most secure (Check below in the commit workflow image for more details)
    - There is technically no need to back up your files, unless the Android CI checks are negative (red "X" next to the latest commit), then you can back up your current local copy of the project and either pull or clone the repository from the latest commit in the given branch and fix the errors, then re-commit and push
