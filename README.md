@@ -1,12 +1,12 @@
 # Multility
-Multiple utilities in one. A summer project. Android is the main and original platform of distribution.</br>
+Multiple utilities in one. A summer project. Android is the main and original platform of distribution.</br></br>Please make sure to read **all** of the README if first joining.</br>
 
 ## Extra project resources
  - [Discord Server](https://discord.gg/nSKwHYR)
  - [Ideas document](https://docs.google.com/document/d/1ZJ-9lwCcr5kKQ4zTAPAAQd2noOBvZBnx5S1e-p9YDfU/edit?usp=sharing)
  - Initial tool setup series</br>
    - [Git](https://bit.ly/3fTqoXO)
-   - GitHub (You are on it)
+   - GitHub (You are on it, but if you need the doc again, it is [here](https://docs.google.com/document/d/1jfR-Fynh5D13MhGe48SEheDDyGM_rwKsX_gsuu6Sck4/edit?usp=sharing)), SET UP SSH CLONING (cannot easily clone private repos without it): https://bit.ly/2ZaJFhX
    - [Android Studio](https://bit.ly/3i34ao6)
  - Social Media:</br>
    - Email: *matdevtechstudios@gmail.com* (hyperlinked as "mailto")
@@ -37,9 +37,17 @@ Multiple utilities in one. A summer project. Android is the main and original pl
    - Actions tab: *This is for Continuous Integration with GitHub actions that performs tests and checks before allowing certain actions to happen on the repository. This project uses GitHub's built in "Android CI" Actions template which runs some Gradle tests and checks on pushes as well as pull requests to both the master and working branch*
    - Projects tab: *Where the project has its planning, tasks to do, and track of progress/status*
    - Security tab: *Security vulnerabilities and actions are all there; usually GitHub finds and reports them on their own and no manual checking has to be done*
-   - Insights tab: *Various statistics about activity, progress, collaboration, participation, and dependency tracking*
+   - Insights tab: *Various statistics about activity, progress, collaboration, participation, and dependency tracking (currently disabled since you need Pro to view this on private repositories, and you can't get it for free as a student on an organization, like a normal account)*
    - Settings: *Global settings about the repository*
-
+ 
+ - General development things:</br>
+   - Please watch this (or any other resources on the Git/GitHub install doc) to catch up and make sure you know how to work with these tools, otherwise development will be very complicated and you won't be able to contribute as much you really could be able to: https://youtu.be/DVRQoVRzMIY (also terminology: https://bit.ly/38Acuao)
+   - Starting out, if you don't have the project, switch to the "working" branch and click the "Code" button and then clone using SSH
+   - Always make changes on the "working" branch if you aren't sure; only commit to the master branch for super general and stable code
+   - The general gist is that you will either commit and push to the "working" branch and then make a pull request from your recent commit to discuss and prepare for merging with the "master" branch. This is the most secure (Check below in the commit workflow image for more details)
+   - There is technically no need to back up your files, unless the Android CI checks are negative (red "X" next to the latest commit), then you can back up your current local copy of the project and either pull or clone the repository from the latest commit in the given branch and fix the errors, then re-commit and push
+   - If pull requests need to be expanded more, there is a bug to bring attention to and work to solve, or there is a feature request, make sure to use the Issues tab and appropriate tags, along with some new templates
+   
  - SDLC Overview:</br>
  !["SDLC_image.jpg"](https://cdn.discordapp.com/attachments/342481673822404608/726630374561546270/SDLC-stages.png)</br></br>
  
