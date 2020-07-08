@@ -50,6 +50,7 @@ Multiple utilities in one. A summer project. Android is the main and original pl
    - If pull requests need to be expanded more, there is a bug to bring attention to and work to solve, or there is a feature request, make sure to use the Issues tab and appropriate tags, along with some new templates
    - We will be following the general SDLC, and we are as of now roughly in the Design and Implementation stage (and I guess also testing occasionaly) (refer to the SDLC overview image for reference)
    - You can most optimally contibute on your own time on different goals and parts of the application, or if available, collaborate in real time in voice chat and using [Floobits](https://floobits.com/) (Android Studio setting up the same as the IntelliJ guide) (make sure to not share workspace links or profiles since this is private code, but no one wants to pay for Pro to get private workspaces)
+   - *PLEASE* always check if there are new successful commits and pull or clone the repository with them so each person has the same codebase
    
  - **SDLC Overview**:</br>
  !["SDLC_image.jpg"](https://cdn.discordapp.com/attachments/342481673822404608/726630374561546270/SDLC-stages.png)</br></br>
