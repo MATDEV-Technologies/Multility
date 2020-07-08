@@ -11,10 +11,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
-        <activity android:name=".SettingsActivity"
+        <activity
+            android:name=".PrivacyPolicy"
+            android:label="@string/priv_policy"
+            android:parentActivityName=".SettingsActivity"/>
+        <activity
+            android:name=".TermsOfService"
+            android:label="@string/tos"
+            android:parentActivityName=".SettingsActivity"/>
+        <activity
+            android:name=".SettingsActivity"
             android:label="@string/settings"
-            android:parentActivityName=".MainActivity">
-        </activity>
+            android:parentActivityName=".MainActivity" />
         <!--
         Remove the above line if data backups are a problem
         *-SOURCE of fix-*

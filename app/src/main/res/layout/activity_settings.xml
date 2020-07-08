@@ -1,10 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!--suppress XmlUnusedNamespaceDeclaration -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".SettingsActivity"
     android:background="#000000">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Spinner
+        android:id="@+id/color_spinner"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="20dp"
+        android:text="Accent Colour (disabled)"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        tools:ignore="HardcodedText,RtlHardcoded"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:layout_marginLeft="20dp"
+        android:text="Choose Multility's colour theme"
+        android:textAlignment="center"
+        android:textColor="@color/colorGrey"
+        android:textSize="18sp"
+        tools:ignore="HardcodedText,RtlHardcoded"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_arrow_drop_down_24"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="360dp"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+<!--        android:contentDescription="TODO" />-->
+
+<!--    />-->
+
+    <Button
+        android:id="@+id/terms_of_service_button"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="120dp"
+        android:background="@null"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="135dp"
+        android:layout_marginLeft="20dp"
+        android:text="Terms of Service"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        tools:ignore="HardcodedText,RtlHardcoded"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="165dp"
+        android:layout_marginLeft="20dp"
+        android:text="View Multility's terms of service"
+        android:textAlignment="center"
+        android:textColor="@color/colorGrey"
+        android:textSize="18sp"
+        tools:ignore="HardcodedText,RtlHardcoded"/>
+
+
+    <Button
+        android:id="@+id/privacy_policy_button"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="220dp"
+        android:background="@null"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="235dp"
+        android:layout_marginLeft="20dp"
+        android:text="Privacy Policy"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        tools:ignore="HardcodedText,RtlHardcoded"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="265dp"
+        android:layout_marginLeft="20dp"
+        android:text="View Multility's privacy policy"
+        android:textAlignment="center"
+        android:textColor="@color/colorGrey"
+        android:textSize="18sp"
+        tools:ignore="HardcodedText,RtlHardcoded"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="665dp"
+        android:layout_marginLeft="20dp"
+        android:text="Multility, an app by MATDEV Technologies (2020)."
+        android:textAlignment="center"
+        android:textColor="@color/colorGrey"
+        android:textSize="18sp"
+        tools:ignore="HardcodedText,RtlHardcoded"/>
+
+</RelativeLayout>

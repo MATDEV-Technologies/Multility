@@ -9,4 +9,17 @@
     <string name="news">Trending\nNews</string>
     <string name="settings">Settings</string>
     <string name="back">Back</string>
+    <string name="tos">Terms of Service</string>
+    <string name="priv_policy">Privacy Policy</string>
+
+    <string-array name="colors">
+        <item>Choose Colour:</item>
+        <item>Red</item>
+        <item>Orange</item>
+        <item>Yellow</item>
+        <item>Green</item>
+        <item>Blue</item>
+        <item>Purple</item>
+    </string-array>
+
 </resources>
