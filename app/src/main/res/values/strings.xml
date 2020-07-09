@@ -1,4 +1,5 @@
 <resources>
+    <!-- Global strings used to display important text in the application. Useful for adding new translations -->
     <string name="app_name">Multility</string>
     <string name="title_home">Multility</string>
     <string name="tip_calc">Tip\nCalculator</string>

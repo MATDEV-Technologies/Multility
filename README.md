@@ -1,5 +1,5 @@
 # Multility
-Multiple utilities in one. A summer project. Android is the main and original platform of distribution.</br></br>Please make sure to read **all** of the README if first joining.</br></br>**SPECIFIC TO THE "working" BRANCH**: For any comments that are prefixed by "**DO NOT REMOVE**" or "**DO NOT DELETE**," please **DO NOT** remove them since they contain either postponed content, temporary fallback code, or really important documentation</br>
+Multiple utilities in one. A summer project. Android is the main and original platform of distribution.</br></br>Please make sure to read **all** of the README if first joining.</br></br>**SPECIFIC TO THE "working" BRANCH**: For any comments that are prefixed by "**DO NOT REMOVE**" or "**DO NOT DELETE**," please **DO NOT** remove them since they contain either postponed content, temporary fallback code, or really important documentation. In general to be safe, keep all comments and document your code to help others understand.</br>
 
 ## Extra project resources
  - [Discord Server](https://discord.gg/nSKwHYR)

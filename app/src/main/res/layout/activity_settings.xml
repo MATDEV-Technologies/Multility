@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--suppress XmlUnusedNamespaceDeclaration -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,11 +7,18 @@
     tools:context=".SettingsActivity"
     android:background="#000000">
 
+    <!-- GLOBAL NOTE: Spinners provide a quick way to
+    select one value from a set, displayed as adropdown menu -->
     <Spinner
         android:id="@+id/color_spinner"
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="80dp"/>
+
+    <!-- TODO:
+    Make text hardcoded under an alias in
+    strings.xml to help with translations,
+    Make text smaller once the activity is more populated -->
 
     <TextView
         android:layout_width="wrap_content"
@@ -46,8 +51,8 @@
         tools:ignore="ContentDescription,RtlHardcoded" />
 <!--        android:contentDescription="TODO" />-->
 
-<!--    />-->
-
+    <!-- GLOBAL NOTE: A clickable/tappable button to performs actions
+    on click/tap -->
     <Button
         android:id="@+id/terms_of_service_button"
         android:layout_width="match_parent"
@@ -107,13 +112,19 @@
         android:textSize="18sp"
         tools:ignore="HardcodedText,RtlHardcoded"/>
 
+    <!-- TODO
+    Figure out how to keep the TextView fully visible
+    on the bottom for some larger and smaller screens
+    (Currently works on Pixel 3a XL the best) -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="38dp"
-        android:layout_marginTop="665dp"
-        android:layout_marginRight="20dp"
-        android:text="Multility, an app by MATDEV Technologies"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="675dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="0dp"
+        android:text="Multility, an app by MATDEV Technologies\n(2020)"
+        android:layout_centerHorizontal="true"
         android:textAlignment="center"
         android:textColor="@color/colorGrey"
         android:textSize="18sp"
