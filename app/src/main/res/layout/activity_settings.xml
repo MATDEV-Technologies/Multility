@@ -110,12 +110,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="38dp"
         android:layout_marginTop="665dp"
-        android:layout_marginLeft="20dp"
-        android:text="Multility, an app by MATDEV Technologies (2020)."
+        android:layout_marginRight="20dp"
+        android:text="Multility, an app by MATDEV Technologies"
         android:textAlignment="center"
         android:textColor="@color/colorGrey"
         android:textSize="18sp"
-        tools:ignore="HardcodedText,RtlHardcoded"/>
+        tools:ignore="HardcodedText,RtlHardcoded" />
 
 </RelativeLayout>
