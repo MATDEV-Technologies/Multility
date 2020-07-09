@@ -1,8 +1,14 @@
 *.iml
 /local.properties
+.floo
 .DS_Store
 /build
 /captures
 .externalNativeBuild
 .cxx
 .idea/inspectionProfiles/
+.gradle/
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
