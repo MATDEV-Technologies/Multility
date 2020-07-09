@@ -1,5 +1,5 @@
 # Multility
-Multiple utilities in one. A summer project. Android is the main and original platform of distribution.</br></br>Please make sure to read **all** of the README if first joining.</br>
+Multiple utilities in one. A summer project. Android is the main and original platform of distribution.</br></br>Please make sure to read **all** of the README if first joining.</br></br>**SPECIFIC TO THE "working" BRANCH**: For any comments that are prefixed by "**DO NOT REMOVE**" or "**DO NOT DELETE**," please **DO NOT** remove them since they contain either postponed content, temporary fallback code, or really important documentation</br>
 
 ## Extra project resources
  - [Discord Server](https://discord.gg/nSKwHYR)
@@ -43,7 +43,7 @@ Multiple utilities in one. A summer project. Android is the main and original pl
  - **General development things**:</br>
    - Please watch this (or any other resources on the Git/GitHub install doc) to catch up and make sure you know how to work with these tools, otherwise development will be very complicated and you won't be able to contribute as much you really could be able to: https://youtu.be/DVRQoVRzMIY (also terminology: https://bit.ly/38Acuao)
    - Not as important, but GitHub Actions is a form of CI or Continous Integration that is used here. If you want to be more clear on how it works read [here](https://searchsoftwarequality.techtarget.com/definition/continuous-integration) and [here](https://github.com/features/actions), 
-   - Starting out, if you don't have the project, switch to the "working" branch and click the "Code" button and then clone using SSH (only if there are no current issues or test fails (red "X" next to the latest commit) plaguing the repo or that specific branch, otherwise, discuss what can someone new clone (the "master" branch as the default if changes need to be removed since they caused certain issues)
+   - Starting out, if you don't have the project, switch to the "working" branch and click the "Code" button and then clone using SSH (CMD for cloning the "working" branch with SSH: `git clone --branch working git@github.com:MATDEV-Technologies/Multility.git`) (only if there are no current issues or test fails (red "X" next to the latest commit) plaguing the repo or that specific branch, otherwise, discuss what can someone new clone (the "master" branch as the default if changes need to be removed since they caused certain issues)
    - Always make changes on the "working" branch if you aren't sure; only commit to the master branch for super general and stable code
    - The general gist is that you will commit and push to the "working" branch and then make a pull request from your recent commit to discuss and prepare for merging with the "master" branch. This is the most secure (Check below in the commit workflow image for more details)
    - There is technically no need to back up your files, unless the Android CI checks are negative (red "X" next to the latest commit), then you can back up your current local copy of the project and either pull or clone the repository from the latest commit in the given branch and fix the errors, then re-commit and push
