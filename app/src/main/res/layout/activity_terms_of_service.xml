@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<!-- GLOBAL NOTE: A scrollable field for display large amounts of images and text
-to ensure all can be viewed on a single screen/activity -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,9 +10,7 @@ to ensure all can be viewed on a single screen/activity -->
     <!-- TODO:
     Make text hardcoded under an alias in
     strings.xml to help with translations
-    (as well as HTML-like bolding of headings),
-    Make text smaller and more reasonable
-    once the settings activity has grown -->
+    (as well as HTML-like bolding of headings) -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -23,7 +18,7 @@ to ensure all can be viewed on a single screen/activity -->
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:textColor="@color/colorWhite"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:text="1. Terms:\nBy accessing this app, accessible from the Google Play Store, you are agreeing to be bound by these app Terms and Conditions of Use and agree that you are responsible for the agreement with any applicable local laws. If you disagree with any of these terms, you are prohibited from accessing this app.
 \n\n2. Use License:\nPermission is granted to temporarily download one copy of the materials on MATDEV Technologies' app for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
 \n\nModify or copy the materials;\nUse the materials for any commercial purpose or for any public display;
@@ -40,5 +35,5 @@ This will let MATDEV Technologies terminate the usage of products from the recip
 \n\n9. Governing Law:\nAny claim related to MATDEV Technologies's app shall be governed by the laws of Canada without regards to its conflict of law provisions.
 \n\n"
         tools:ignore="HardcodedText"/>
-    
+
 </ScrollView>

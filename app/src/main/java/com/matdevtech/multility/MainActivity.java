@@ -1,11 +1,12 @@
 package com.matdevtech.multility;
 
 // Imports
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import androidx.appcompat.app.AppCompatActivity;
 
 // Main class
 public class MainActivity extends AppCompatActivity {
