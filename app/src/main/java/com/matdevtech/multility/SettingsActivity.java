@@ -1,44 +1,40 @@
 package com.matdevtech.multility;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.content.res.AppCompatResources;
-import androidx.core.graphics.drawable.DrawableCompat;
-
-import android.content.Context;
+// Imports
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.view.View.OnClickListener;
-import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
 
+// Main class
 public class SettingsActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
+    // Global variables within the class and only accessible within the class
     private Button button1;
     private Button button2;
 
+    // Activity init
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // DO NOT DELETE COMMENTS
 
-//        UtilsTheme.onApplicationCreateSetTheme(this);
+        // UtilsTheme.onActivityCreateSetTheme(this);
         setContentView(R.layout.activity_settings);
 
+        // Spinner drop down init
         Spinner spinner = findViewById(R.id.color_spinner); // maybe make global to the class
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.colors, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.colors, android.R.layout.simple_spinner_item); // ArayAdapter to host all values
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The resources used for dropping down
         spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(this);
+        spinner.setOnItemSelectedListener(this); // Listen for selections
 
+        // Button init(s)
+        // Grab IDs and listen for clicks/taps
         button1 = findViewById(R.id.terms_of_service_button);
         button1.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -55,16 +51,7 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
         });
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.action_settings_back) {
-            super.onBackPressed();
-        } else {
-            return super.onOptionsItemSelected(item);
-        }
-
-        return true;
-    }
+    // Cases for changing the accent color by spinner (currently disabled)
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         // Theming is disabled for now; DO NOT REMOVE THE COMMENTS OR METHODS
@@ -102,17 +89,20 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
 //        }
     }
 
+    // Part of and required by onItemSelected() and the main class
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
         // pass BUT DO NOT DELETE; REQUIRED BY THE MAIN CLASS
     }
 
     public void openTermsOfService() {
+        // Create a new intent and launch it with the activity
         Intent intent1 = new Intent(this, TermsOfService.class);
         startActivity(intent1);
     }
 
     public void openPrivacyPolicy() {
+        // Create a new intent and launch it with the activity
         Intent intent2 = new Intent(this, PrivacyPolicy.class);
         startActivity(intent2);
     }

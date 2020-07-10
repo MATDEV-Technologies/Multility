@@ -1,5 +1,5 @@
 # Multility
-Multiple utilities in one. A summer project. Android is the main and original platform of distribution.</br></br>Please make sure to read **all** of the README if first joining.</br></br>**SPECIFIC TO THE "working" BRANCH**: For any comments that are prefixed by "**DO NOT REMOVE**" or "**DO NOT DELETE**," please **DO NOT** remove them since they contain either postponed content, temporary fallback code, or really important documentation</br>
+Multiple utilities in one. A summer project. Android is the main and original platform of distribution.</br></br>Please make sure to read **all** of the README if first joining.</br></br>Returning contributors, **PLEASE** always check for successful commits in your branch (should mainly be the "working" branch) and pull or clone to make you have the same codebase as everyone else (not really necessary for commits that only update the README though)</br></br>**SPECIFIC TO ALL BRANCHES**: For any comments that are prefixed by "**DO NOT REMOVE**" or "**DO NOT DELETE**," please **DO NOT** remove them since they contain either postponed content, temporary fallback code, or really important documentation. In general to be safe, keep all comments and document your code to help others understand.</br>
 
 ## Extra project resources
  - [Discord Server](https://discord.gg/nSKwHYR)
@@ -15,6 +15,7 @@ Multiple utilities in one. A summer project. Android is the main and original pl
    - [Instagram](https://www.instagram.com/matdevtechnologies/): *@matdevtechnologies*
    - [Linkedin](https://www.linkedin.com/in/matdev-technologies-9a08411aa/): *@matdev-technologies*
    - GitHub (Basically here but just one page directory back)</br></br>
+ - [Floobits workspace](https://floobits.com/MichaelSDavid/Multility/) (collaborative real-time coding) (DO NOT SHARE OUTSIDE THE DEV TEAM)
 
 ## Project specifications and workflow
  - **Android Studio Metadata**:</br>
@@ -50,7 +51,6 @@ Multiple utilities in one. A summer project. Android is the main and original pl
    - If pull requests need to be expanded more, there is a bug to bring attention to and work to solve, or there is a feature request, make sure to use the Issues tab and appropriate tags, along with some new templates
    - We will be following the general SDLC, and we are as of now roughly in the Design and Implementation stage (and I guess also testing occasionaly) (refer to the SDLC overview image for reference)
    - You can most optimally contibute on your own time on different goals and parts of the application, or if available, collaborate in real time in voice chat and using [Floobits](https://floobits.com/) (Android Studio setting up the same as the IntelliJ guide) (make sure to not share workspace links or profiles since this is private code, but no one wants to pay for Pro to get private workspaces)
-   - *PLEASE* always check for successful commits in your branch (should mainly be the "working" branch) and pull or clone to make sure everyone has the same codebase (not really necessary for commits that only update the README tho)
    
  - **SDLC Overview**:</br>
  !["SDLC_image.jpg"](https://cdn.discordapp.com/attachments/342481673822404608/726630374561546270/SDLC-stages.png)</br></br>

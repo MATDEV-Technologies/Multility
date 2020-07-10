@@ -1,42 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Global colors used in the application-->
 <resources>
-    // Default/Main Colours
-    <color name="colorPrimary">#30d179</color>
-    <color name="colorPrimaryDark">#218a51</color>
-    <color name="colorAccent">#00FF7B</color>
+    <!-- Default/Main colors -->
+    <color name="colorPrimary">#30d179</color> <!-- Primary is the icons and the bottom part of the app bar-->
+    <color name="colorPrimaryDark">#218a51</color> <!-- Primary darl is the top part of the app bar-->
+    <color name="colorAccent">#00FF7B</color> <!-- Accent is the pop out color to highlight specific things (not used as of now) -->
 <!--    <color name="colorAccent">#00ff61</color>--> <!-- previous -->
-    <color name="colorCardBackground">#202020</color>
-    <color name="colorWhite">#ffffff</color>
-    <color name="colorGrey">#848484</color>
+    <color name="colorCardBackground">#202020</color> <!-- The color for cards in the MainActivity layout -->
+    <color name="colorWhite">#ffffff</color> <!-- Global white -->
+    <color name="colorGrey">#848484</color> <!-- Global grey -->
 
     <!-- These colors are currently disabled since theming is put on hold; DO NOT REMOVE-->
 
-<!--    &lt;!&ndash; Red Preset Colours &ndash;&gt;-->
+    <!-- Red Preset Colours -->
 <!--    <color name="redPrimary">#D13D30</color>-->
 <!--    <color name="redPrimaryDark">#8A2121</color>-->
 <!--    <color name="redAccent">#FF0000</color>-->
 
-<!--    &lt;!&ndash; Orange Preset Colours &ndash;&gt;-->
+    <!-- Orange Preset Colours -->
 <!--    <color name="orangePrimary">#D16830</color>-->
 <!--    <color name="orangePrimaryDark">#8A3A21</color>-->
 <!--    <color name="orangeAccent">#FF4800</color>-->
 
-<!--    &lt;!&ndash; Yellow Preset Colours &ndash;&gt;-->
+    <!-- Yellow Preset Colours -->
 <!--    <color name="yellowPrimary">#D1AE30</color>-->
 <!--    <color name="yellowPrimaryDark">#8A7921</color>-->
 <!--    <color name="yellowAccent">#FFE600</color>-->
 
-<!--    &lt;!&ndash; Green Preset Colours &ndash;&gt;-->
+    <!-- Green Preset Colours -->
 <!--    <color name="greenPrimary">#30d179</color>-->
 <!--    <color name="greenPrimaryDark">#218a51</color>-->
 <!--    <color name="greenAccent">#00FF7B</color>-->
 
-<!--    &lt;!&ndash; Blue Preset Colours &ndash;&gt;-->
+    <!-- Blue Preset Colours -->
 <!--    <color name="bluePrimary">#3099D1</color>-->
 <!--    <color name="bluePrimaryDark">#21598A</color>-->
 <!--    <color name="blueAccent">#00C4FF</color>-->
 
-<!--    &lt;!&ndash; Purple Preset Colours &ndash;&gt;-->
+    <!-- Purple Preset Colours -->
 <!--    <color name="purplePrimary">#6830D1</color>-->
 <!--    <color name="purplePrimaryDark">#38218A</color>-->
 <!--    <color name="purpleAccent">#3700FF</color>-->
