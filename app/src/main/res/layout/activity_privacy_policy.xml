@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- GLOBAL NOTE: Scroll view is a scrollable field for display large amounts of images and text
+to ensure all can be viewed on a single screen/activity -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,9 +12,7 @@
     <!-- TODO:
     Make text hardcoded under an alias in
     strings.xml to help with translations
-    (as well as HTML-like bolding of headings),
-    Make text smaller and more reasonable
-    once the settings activity has grown -->
+    (as well as HTML-like bolding of headings) -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -20,7 +20,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:textColor="@color/colorWhite"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:text="This Privacy Policy document contains types of information that is collected and recorded by Multility and how we use it.
 \n\nIf you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us: matdevtechstudios@gmail.com.
 \n\nThis Privacy Policy applies only to our in-app activities and is valid for visitors to our app with regards to the information that they shared and/or collect in Multility. This policy is not applicable to any information collected offline or via channels other than this app.

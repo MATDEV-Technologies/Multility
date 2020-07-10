@@ -1,37 +1,56 @@
 package com.matdevtech.multility;
 
 // Imports
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.content.res.AppCompatResources;
+import androidx.core.graphics.drawable.DrawableCompat;
+
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-import androidx.appcompat.app.AppCompatActivity;
+import android.view.View.OnClickListener;
+import android.widget.Toast;
 
 // Main class
 public class SettingsActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    // Global variables within the class and only accessible within the class
+    // Global variables within the class and only accessible within the class (suggestion: make local in onCreate())
+    @SuppressWarnings("FieldCanBeLocal")
     private Button button1;
+    @SuppressWarnings("FieldCanBeLocal")
     private Button button2;
 
-    // Activity init
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // DO NOT DELETE COMMENTS
 
-        // UtilsTheme.onActivityCreateSetTheme(this);
+        // UtilsTheme.onApplicationCreateSetTheme(this);
         setContentView(R.layout.activity_settings);
 
         // Spinner drop down init
         Spinner spinner = findViewById(R.id.color_spinner); // maybe make global to the class
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.colors, android.R.layout.simple_spinner_item); // ArayAdapter to host all values
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The resources used for dropping down
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.colors, R.layout.spinner_styles);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_styles);
         spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(this); // Listen for selections
+        spinner.setOnItemSelectedListener(this);
+
+        // Spinner drop down init
+        Spinner spinner2 = findViewById(R.id.country_spinner); // maybe make global to the class
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.countries, R.layout.spinner_styles);
+        adapter2.setDropDownViewResource(R.layout.spinner_dropdown_styles);
+        spinner2.setAdapter(adapter2);
+        spinner2.setOnItemSelectedListener(this);
 
         // Button init(s)
         // Grab IDs and listen for clicks/taps
@@ -51,6 +70,18 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
         });
     }
 
+    // Check if the back arrow is selected
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.action_settings) {
+            super.onBackPressed(); // Goto -> parent activity -> main
+        } else {
+            return super.onOptionsItemSelected(item);
+        }
+
+        return true;
+    }
+
     // Cases for changing the accent color by spinner (currently disabled)
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -60,7 +91,7 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
 ////        String currentColor;
 //        String text = spinner.getSelectedItem().toString();
 //        switch (text) {
-//            case "Choose Colour:":
+//            case "Choose Colour":
 //                break;
 //            case "Red":
 //                UtilsTheme.changeToTheme(this, UtilsTheme.THEME_RED);
@@ -87,9 +118,15 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
 //                break;
 //            // Maybe add a default branch
 //        }
+
+        // IMPLEMENTATION OF LOCATION SPINNER
+        Spinner spinner2 = findViewById(R.id.country_spinner);
+        String currentCountry;
+        String text2 = spinner2.getSelectedItem().toString();
+
     }
 
-    // Part of and required by onItemSelected() and the main class
+    // Part of and required by onItemSelected() and the main clas
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
         // pass BUT DO NOT DELETE; REQUIRED BY THE MAIN CLASS

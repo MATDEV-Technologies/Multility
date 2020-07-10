@@ -1,8 +1,10 @@
 package com.matdevtech.multility;
 
 // Imports
-import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.MenuItem;
 
 // Main class
 public class PrivacyPolicy extends AppCompatActivity {
@@ -11,6 +13,6 @@ public class PrivacyPolicy extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_privacy_policy); // Sets the activity layout to the one belonging to PrivacyPolicy
+        setContentView(R.layout.activity_privacy_policy);
     }
 }
