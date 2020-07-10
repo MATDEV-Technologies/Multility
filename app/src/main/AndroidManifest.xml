@@ -30,13 +30,16 @@
         Consider adding the attribute android:fullBackupContent to specify an @xml resource which configures which files to back up.
         More info: https://developer.android.com/guide/topics/data/autobackup
         -->
-        <activity android:name=".MainActivity">
+        <activity android:name=".SplashScreen"
+            android:theme="@style/SplashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--suppress CheckTagEmptyBody -->
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

@@ -1,34 +1,31 @@
 package com.matdevtech.multility;
 
 // Imports
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.content.res.AppCompatResources;
-import androidx.core.graphics.drawable.DrawableCompat;
-
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.view.View.OnClickListener;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 // Main class
 public class SettingsActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    // Global variables within the class and only accessible within the class (suggestion: make local in onCreate())
+    // Global variables within the class (private is accessible only within the class) (suggestion: make local in onCreate())
     @SuppressWarnings("FieldCanBeLocal")
     private Button button1;
     @SuppressWarnings("FieldCanBeLocal")
     private Button button2;
+    Spinner location;
+    SharedPreferences sp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +43,7 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
         spinner.setOnItemSelectedListener(this);
 
         // Spinner drop down init
+        @SuppressLint("CutPasteId")
         Spinner spinner2 = findViewById(R.id.country_spinner); // maybe make global to the class
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.countries, R.layout.spinner_styles);
         adapter2.setDropDownViewResource(R.layout.spinner_dropdown_styles);
@@ -68,6 +66,9 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
                 openPrivacyPolicy();
             }
         });
+
+        // INITIALIZING SHARED PREFERENCES
+        sp = getSharedPreferences("MyUserPrefs", Context.MODE_PRIVATE);
     }
 
     // Check if the back arrow is selected
@@ -120,10 +121,16 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
 //        }
 
         // IMPLEMENTATION OF LOCATION SPINNER
-        Spinner spinner2 = findViewById(R.id.country_spinner);
-        String currentCountry;
-        String text2 = spinner2.getSelectedItem().toString();
+        location = findViewById(R.id.country_spinner);
+        String currentCountry = location.getSelectedItem().toString();
 
+        /* TODO:
+        MUST ADD A WAY TO GET THESE SHARED PREFERENCES IN THE "TRENDING NEWS" MINIAPP, USE END OF VIDEO https://www.youtube.com/watch?v=jiD2fxn8iKA
+        */
+        @SuppressLint("CommitPrefEdits")
+        SharedPreferences.Editor editor = sp.edit();
+        //noinspection UnnecessaryCallToStringValueOf
+        editor.putString("location", String.valueOf(currentCountry));
     }
 
     // Part of and required by onItemSelected() and the main clas
@@ -143,4 +150,5 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
         Intent intent2 = new Intent(this, PrivacyPolicy.class);
         startActivity(intent2);
     }
+
 }
