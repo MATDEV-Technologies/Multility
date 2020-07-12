@@ -11,7 +11,7 @@ public class SplashScreen extends AppCompatActivity {
 
     // Global variables within the class (private is accessible only within the class) (suggestion: make local in onCreate())
     @SuppressWarnings("FieldCanBeLocal")
-    private final static int SPLASH_TIME_OUT = 1000; // Original: 3500 (this was changed to be faster just like how it is on iOS)
+    private final static int SPLASH_TIME_OUT = 2000; // Original: 3500 (this was changed to be faster just like how it is on iOS)
 
     // Activity init
     @Override

@@ -25,7 +25,10 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
     @SuppressWarnings("FieldCanBeLocal")
     private Button button2;
     Spinner location;
-    SharedPreferences sp;
+
+    public static final String SHARED_PREFS = "sharedPrefs";
+    public static String COLOR_TEXT = "colorText";
+    public static String LOCATION_TEXT = "locationText";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,12 +46,11 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
         spinner.setOnItemSelectedListener(this);
 
         // Spinner drop down init
-        @SuppressLint("CutPasteId")
-        Spinner spinner2 = findViewById(R.id.country_spinner); // maybe make global to the class
+        location = findViewById(R.id.country_spinner); // maybe make global to the class
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.countries, R.layout.spinner_styles);
         adapter2.setDropDownViewResource(R.layout.spinner_dropdown_styles);
-        spinner2.setAdapter(adapter2);
-        spinner2.setOnItemSelectedListener(this);
+        location.setAdapter(adapter2);
+        location.setOnItemSelectedListener(this);
 
         // Button init(s)
         // Grab IDs and listen for clicks/taps
@@ -67,8 +69,6 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
             }
         });
 
-        // INITIALIZING SHARED PREFERENCES
-        sp = getSharedPreferences("MyUserPrefs", Context.MODE_PRIVATE);
     }
 
     // Check if the back arrow is selected
@@ -122,15 +122,8 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
 
         // IMPLEMENTATION OF LOCATION SPINNER
         location = findViewById(R.id.country_spinner);
-        String currentCountry = location.getSelectedItem().toString();
-
-        /* TODO:
-        MUST ADD A WAY TO GET THESE SHARED PREFERENCES IN THE "TRENDING NEWS" MINIAPP, USE END OF VIDEO https://www.youtube.com/watch?v=jiD2fxn8iKA
-        */
-        @SuppressLint("CommitPrefEdits")
-        SharedPreferences.Editor editor = sp.edit();
-        //noinspection UnnecessaryCallToStringValueOf
-        editor.putString("location", String.valueOf(currentCountry));
+        LOCATION_TEXT = location.getSelectedItem().toString();
+        // LATER, ADD SHARED PREFERENCES TO STORE THE CURRENT SPINNER CHOICE
     }
 
     // Part of and required by onItemSelected() and the main clas
@@ -150,5 +143,4 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
         Intent intent2 = new Intent(this, PrivacyPolicy.class);
         startActivity(intent2);
     }
-
 }
