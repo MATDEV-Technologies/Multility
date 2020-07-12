@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- GLOBAL NOTE: Scroll view is a scrollable field for display large amounts of images and text
 to ensure all can be viewed on a single screen/activity -->
+<!--suppress AndroidDomInspection -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"

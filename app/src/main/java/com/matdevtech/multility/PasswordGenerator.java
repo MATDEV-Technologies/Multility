@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.Objects;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link PasswordGenerator#newInstance} factory method to
@@ -21,7 +23,9 @@ public class PasswordGenerator extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
     // TODO: Rename and change types of parameters
+    @SuppressWarnings({"FieldCanBeLocal", "unused"})
     private String mParam1;
+    @SuppressWarnings({"FieldCanBeLocal", "unused"})
     private String mParam2;
 
     public PasswordGenerator() {
@@ -37,6 +41,7 @@ public class PasswordGenerator extends Fragment {
      * @return A new instance of fragment PasswordGenerator.
      */
     // TODO: Rename and change types and number of parameters
+    @SuppressWarnings("unused")
     public static PasswordGenerator newInstance(String param1, String param2) {
         PasswordGenerator fragment = new PasswordGenerator();
         Bundle args = new Bundle();
@@ -53,6 +58,8 @@ public class PasswordGenerator extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        // TODO: add new titles to strings.xml
+        Objects.requireNonNull(((NavigationBar) Objects.requireNonNull(getActivity())).getSupportActionBar()).setTitle("Password Generator");
     }
 
     @Override

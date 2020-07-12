@@ -11,51 +11,65 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
+        <!--suppress AndroidDomInspection -->
         <activity android:name=".NavigationBar"
             android:label="Multility"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity"
+            tools:ignore="MissingClass" />
+        <!--suppress AndroidDomInspection -->
         <activity
             android:name=".PrivacyPolicy"
             android:label="@string/priv_policy"
-            android:parentActivityName=".SettingsActivity" />
+            android:parentActivityName=".SettingsActivity"
+            tools:ignore="MissingClass" />
+        <!--suppress AndroidDomInspection -->
         <activity
             android:name=".TermsOfService"
             android:label="@string/tos"
-            android:parentActivityName=".SettingsActivity" />
+            android:parentActivityName=".SettingsActivity"
+            tools:ignore="MissingClass" />
+        <!--suppress AndroidDomInspection -->
         <activity
             android:name=".SettingsActivity"
             android:label="@string/settings"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            tools:ignore="MissingClass" />
+        <!--suppress AndroidDomInspection -->
         <activity
             android:name=".TipCalculator"
             android:label="Tip Calculator"
             android:parentActivityName=".MainActivity"
-            tools:ignore="Instantiatable" />
+            tools:ignore="Instantiatable,MissingClass" />
+        <!--suppress AndroidDomInspection -->
         <activity
             android:name=".Notepad"
             android:label="Notepad"
             android:parentActivityName=".MainActivity"
-            tools:ignore="Instantiatable" />
+            tools:ignore="Instantiatable,MissingClass" />
+        <!--suppress AndroidDomInspection -->
         <activity
             android:name=".UnitConverter"
             android:label="Unit Converter"
             android:parentActivityName=".MainActivity"
-            tools:ignore="Instantiatable" />
+            tools:ignore="Instantiatable,MissingClass" />
+        <!--suppress AndroidDomInspection -->
         <activity
             android:name=".PasswordGenerator"
             android:label="Password Generator"
             android:parentActivityName=".MainActivity"
-            tools:ignore="Instantiatable" />
+            tools:ignore="Instantiatable,MissingClass" />
+        <!--suppress AndroidDomInspection -->
         <activity
             android:name=".DailyFact"
             android:label="Daily Fact"
             android:parentActivityName=".MainActivity"
-            tools:ignore="Instantiatable" />
+            tools:ignore="Instantiatable,MissingClass" />
+        <!--suppress AndroidDomInspection -->
         <activity
             android:name=".TrendingNews"
             android:label="Trending News"
             android:parentActivityName=".MainActivity"
-            tools:ignore="Instantiatable" />
+            tools:ignore="Instantiatable,MissingClass" />
         <!--
         Remove the above line if data backups are a problem
         *-SOURCE of fix-*
@@ -63,16 +77,20 @@
         Consider adding the attribute android:fullBackupContent to specify an @xml resource which configures which files to back up.
         More info: https://developer.android.com/guide/topics/data/autobackup
         -->
+        <!--suppress AndroidDomInspection -->
         <activity
             android:name=".SplashScreen"
-            android:theme="@style/SplashScreenTheme">
+            android:theme="@style/SplashScreenTheme"
+            tools:ignore="MissingClass">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity> <!-- suppress CheckTagEmptyBody -->
-        <activity android:name=".MainActivity" />
+        <!--suppress AndroidDomInspection -->
+        <activity android:name=".MainActivity"
+            tools:ignore="MissingClass" />
     </application>
 
 </manifest>

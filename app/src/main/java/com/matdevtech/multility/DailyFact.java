@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.Objects;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link DailyFact#newInstance} factory method to
@@ -21,7 +23,9 @@ public class DailyFact extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
     // TODO: Rename and change types of parameters
+    @SuppressWarnings({"FieldCanBeLocal", "unused"})
     private String mParam1;
+    @SuppressWarnings({"FieldCanBeLocal", "unused"})
     private String mParam2;
 
     public DailyFact() {
@@ -37,6 +41,7 @@ public class DailyFact extends Fragment {
      * @return A new instance of fragment DailyFact.
      */
     // TODO: Rename and change types and number of parameters
+    @SuppressWarnings("unused")
     public static DailyFact newInstance(String param1, String param2) {
         DailyFact fragment = new DailyFact();
         Bundle args = new Bundle();
@@ -53,6 +58,8 @@ public class DailyFact extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        // TODO: add new titles to strings.xml
+        Objects.requireNonNull(((NavigationBar) Objects.requireNonNull(getActivity())).getSupportActionBar()).setTitle("Daily Fact");
     }
 
     @Override

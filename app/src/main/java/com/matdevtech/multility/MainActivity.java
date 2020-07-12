@@ -1,21 +1,19 @@
 package com.matdevtech.multility;
 
 // Imports
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 // Main class
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     public static final String FRAGMENT_INT = "com.matdevtech.multility.FRAGMENT_INT";
+    @SuppressWarnings("FieldCanBeLocal")
     private CardView tipCalculatorCard, notepadCard, unitConverterCard, passwordGeneratorCard, dailyFactCard, trendingNewsCard;
 
     // Activity init

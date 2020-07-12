@@ -20,6 +20,7 @@ public class NavigationBar extends AppCompatActivity {
     ChipNavigationBar bottomNav;
     FragmentManager fragmentManager;
 
+    @SuppressWarnings("ConstantConditions")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,60 +31,67 @@ public class NavigationBar extends AppCompatActivity {
         Intent intent = getIntent();
         fragment_int = intent.getStringExtra(MainActivity.FRAGMENT_INT);
 
-        if (fragment_int.equals("1")){
-            if (savedInstanceState==null){
-                bottomNav.setItemSelected(R.id.tip_calculator_navbar,true);
-                fragmentManager = getSupportFragmentManager();
-                TipCalculator tipCalculator = new TipCalculator();
-                fragmentManager.beginTransaction()
-                        .replace(R.id.fragment_container,tipCalculator)
-                        .commit();
-            }
-        }else if (fragment_int.equals("2")){
-            if (savedInstanceState==null){
-                bottomNav.setItemSelected(R.id.notepad_navbar,true);
-                fragmentManager = getSupportFragmentManager();
-                Notepad notepad = new Notepad();
-                fragmentManager.beginTransaction()
-                        .replace(R.id.fragment_container,notepad)
-                        .commit();
-            }
-        }else if (fragment_int.equals("3")){
-            if (savedInstanceState==null){
-                bottomNav.setItemSelected(R.id.unit_converter_navbar,true);
-                fragmentManager = getSupportFragmentManager();
-                UnitConverter unitConverter = new UnitConverter();
-                fragmentManager.beginTransaction()
-                        .replace(R.id.fragment_container,unitConverter)
-                        .commit();
-            }
-        }else if (fragment_int.equals("4")){
-            if (savedInstanceState==null){
-                bottomNav.setItemSelected(R.id.password_generator_navbar,true);
-                fragmentManager = getSupportFragmentManager();
-                PasswordGenerator passwordGenerator = new PasswordGenerator();
-                fragmentManager.beginTransaction()
-                        .replace(R.id.fragment_container,passwordGenerator)
-                        .commit();
-            }
-        }else if (fragment_int.equals("5")){
-            if (savedInstanceState==null){
-                bottomNav.setItemSelected(R.id.daily_fact_navbar,true);
-                fragmentManager = getSupportFragmentManager();
-                DailyFact dailyFact = new DailyFact();
-                fragmentManager.beginTransaction()
-                        .replace(R.id.fragment_container,dailyFact)
-                        .commit();
-            }
-        }else if (fragment_int.equals("6")) {
-            if (savedInstanceState==null){
-                bottomNav.setItemSelected(R.id.trending_news_navbar, true);
-                fragmentManager = getSupportFragmentManager();
-                TrendingNews trendingNews = new TrendingNews();
-                fragmentManager.beginTransaction()
-                        .replace(R.id.fragment_container, trendingNews)
-                        .commit();
-            }
+        switch (fragment_int) {
+            case "1":
+                if (savedInstanceState == null) {
+                    bottomNav.setItemSelected(R.id.tip_calculator_navbar, true);
+                    fragmentManager = getSupportFragmentManager();
+                    TipCalculator tipCalculator = new TipCalculator();
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.fragment_container, tipCalculator)
+                            .commit();
+                }
+                break;
+            case "2":
+                if (savedInstanceState == null) {
+                    bottomNav.setItemSelected(R.id.notepad_navbar, true);
+                    fragmentManager = getSupportFragmentManager();
+                    Notepad notepad = new Notepad();
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.fragment_container, notepad)
+                            .commit();
+                }
+                break;
+            case "3":
+                if (savedInstanceState == null) {
+                    bottomNav.setItemSelected(R.id.unit_converter_navbar, true);
+                    fragmentManager = getSupportFragmentManager();
+                    UnitConverter unitConverter = new UnitConverter();
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.fragment_container, unitConverter)
+                            .commit();
+                }
+                break;
+            case "4":
+                if (savedInstanceState == null) {
+                    bottomNav.setItemSelected(R.id.password_generator_navbar, true);
+                    fragmentManager = getSupportFragmentManager();
+                    PasswordGenerator passwordGenerator = new PasswordGenerator();
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.fragment_container, passwordGenerator)
+                            .commit();
+                }
+                break;
+            case "5":
+                if (savedInstanceState == null) {
+                    bottomNav.setItemSelected(R.id.daily_fact_navbar, true);
+                    fragmentManager = getSupportFragmentManager();
+                    DailyFact dailyFact = new DailyFact();
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.fragment_container, dailyFact)
+                            .commit();
+                }
+                break;
+            case "6":
+                if (savedInstanceState == null) {
+                    bottomNav.setItemSelected(R.id.trending_news_navbar, true);
+                    fragmentManager = getSupportFragmentManager();
+                    TrendingNews trendingNews = new TrendingNews();
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.fragment_container, trendingNews)
+                            .commit();
+                }
+                break;
         }
 
         bottomNav.setOnItemSelectedListener(new ChipNavigationBar.OnItemSelectedListener() {
@@ -116,10 +124,13 @@ public class NavigationBar extends AppCompatActivity {
                     fragmentManager.beginTransaction()
                             .replace(R.id.fragment_container, fragment)
                             .commit();
-                }else{
+                } else {
                     Log.e(TAG, "Error in creating fragment");
                 }
             }
         });
+//        public static void setActionBarTitle(String title) {
+//            getSupportActionBar().setTitle(title);
+//        }
     }
 }

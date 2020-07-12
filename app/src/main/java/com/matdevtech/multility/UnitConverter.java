@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.Objects;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link UnitConverter#newInstance} factory method to
@@ -21,7 +23,9 @@ public class UnitConverter extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
     // TODO: Rename and change types of parameters
+    @SuppressWarnings({"FieldCanBeLocal", "unused"})
     private String mParam1;
+    @SuppressWarnings({"FieldCanBeLocal", "unused"})
     private String mParam2;
 
     public UnitConverter() {
@@ -37,6 +41,7 @@ public class UnitConverter extends Fragment {
      * @return A new instance of fragment UnitConverter.
      */
     // TODO: Rename and change types and number of parameters
+    @SuppressWarnings("unused")
     public static UnitConverter newInstance(String param1, String param2) {
         UnitConverter fragment = new UnitConverter();
         Bundle args = new Bundle();
@@ -53,6 +58,8 @@ public class UnitConverter extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        // TODO: add new titles to strings.xml
+        Objects.requireNonNull(((NavigationBar) Objects.requireNonNull(getActivity())).getSupportActionBar()).setTitle("Unit Converter");
     }
 
     @Override
