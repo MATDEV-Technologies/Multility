@@ -2,11 +2,14 @@ package com.matdevtech.multility;
 
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.Objects;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -21,7 +24,9 @@ public class TipCalculator extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
     // TODO: Rename and change types of parameters
+    @SuppressWarnings({"FieldCanBeLocal", "unused"})
     private String mParam1;
+    @SuppressWarnings({"FieldCanBeLocal", "unused"})
     private String mParam2;
 
     public TipCalculator() {
@@ -37,6 +42,7 @@ public class TipCalculator extends Fragment {
      * @return A new instance of fragment TipCalculator.
      */
     // TODO: Rename and change types and number of parameters
+    @SuppressWarnings("unused")
     public static TipCalculator newInstance(String param1, String param2) {
         TipCalculator fragment = new TipCalculator();
         Bundle args = new Bundle();
@@ -53,6 +59,8 @@ public class TipCalculator extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        // TODO: add new titles to strings.xml
+        Objects.requireNonNull(((NavigationBar) Objects.requireNonNull(getActivity())).getSupportActionBar()).setTitle("Tip Calculator");
     }
 
     @Override
