@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    app:cnb_unselectedColor="@color/colorWhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/tip_calculator_navbar"
+        android:title="Tip Calculator"
+        android:icon="@drawable/ic_baseline_attach_money_24"
+        app:cnb_backgroundColor="@color/colorPrimary"
+        app:cnb_iconColor="@color/colorCardBackground"
+        app:cnb_textColor="@color/colorCardBackground"/>
+
+    <item
+        android:id="@+id/unit_converter_navbar"
+        android:title="Unit Converter"
+        android:icon="@drawable/ic_baseline_sync_alt_24"
+        app:cnb_backgroundColor="@color/colorPrimary"
+        app:cnb_iconColor="@color/colorCardBackground"
+        app:cnb_textColor="@color/colorCardBackground"/>
+
+    <item
+        android:id="@+id/notepad_navbar"
+        android:title="Notepad"
+        android:icon="@drawable/ic_baseline_create_24"
+        app:cnb_backgroundColor="@color/colorPrimary"
+        app:cnb_iconColor="@color/colorCardBackground"
+        app:cnb_textColor="@color/colorCardBackground"/>
+
+    <item
+        android:id="@+id/password_generator_navbar"
+        android:title="Password Generator"
+        android:icon="@drawable/ic_password_24"
+        app:cnb_backgroundColor="@color/colorPrimary"
+        app:cnb_iconColor="@color/colorCardBackground"
+        app:cnb_textColor="@color/colorCardBackground"/>
+
+    <item
+        android:id="@+id/daily_fact_navbar"
+        android:title="Daily Fact"
+        android:icon="@drawable/ic_baseline_book_24"
+        app:cnb_backgroundColor="@color/colorPrimary"
+        app:cnb_iconColor="@color/colorCardBackground"
+        app:cnb_textColor="@color/colorCardBackground"/>
+
+    <item
+        android:id="@+id/trending_news_navbar"
+        android:title="Trending News"
+        android:icon="@drawable/ic_baseline_trending_up_24"
+        app:cnb_backgroundColor="@color/colorPrimary"
+        app:cnb_iconColor="@color/colorCardBackground"
+        app:cnb_textColor="@color/colorCardBackground"/>
+</menu>

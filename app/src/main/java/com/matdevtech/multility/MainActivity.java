@@ -2,14 +2,21 @@ package com.matdevtech.multility;
 
 // Imports
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 // Main class
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+
+    public static final String FRAGMENT_INT = "com.matdevtech.multility.FRAGMENT_INT";
+    private CardView tipCalculatorCard, notepadCard, unitConverterCard, passwordGeneratorCard, dailyFactCard, trendingNewsCard;
 
     // Activity init
     // GLOBAL NOTE: all Android methods must be overidden to be called by the framework and function in the application
@@ -17,6 +24,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main); // Sets the activity layout to the one belonging to MainActivity
+
+        // INITIALIZE MENU CARDS BY THEIR IDs
+        tipCalculatorCard = (CardView) findViewById(R.id.tip_calculator_card);
+        notepadCard = (CardView) findViewById(R.id.notepad_card);
+        unitConverterCard = (CardView) findViewById(R.id.unit_converter_card);
+        passwordGeneratorCard = (CardView) findViewById(R.id.password_generator_card);
+        dailyFactCard = (CardView) findViewById(R.id.daily_fact_card);
+        trendingNewsCard = (CardView) findViewById(R.id.trending_news_card);
+
+        // ADD CARD CLICK LISTENERS
+        tipCalculatorCard.setOnClickListener(this);
+        notepadCard.setOnClickListener(this);
+        unitConverterCard.setOnClickListener(this);
+        passwordGeneratorCard.setOnClickListener(this);
+        dailyFactCard.setOnClickListener(this);
+        trendingNewsCard.setOnClickListener(this);
     }
 
     // Options menu for going to settings init
@@ -43,5 +66,52 @@ public class MainActivity extends AppCompatActivity {
         // Create a new intent and launch it with the activity
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        String fragment_int;
+
+        switch (v.getId()) {
+            case R.id.tip_calculator_card:
+                fragment_int = "1";
+                Intent navigation1 = new Intent(this, NavigationBar.class);
+                navigation1.putExtra(FRAGMENT_INT,fragment_int);
+                startActivity(navigation1);
+                break;
+            case R.id.notepad_card:
+                Intent navigation2 = new Intent(this, NavigationBar.class);
+                fragment_int = "2";
+                navigation2.putExtra(FRAGMENT_INT,fragment_int);
+                startActivity(navigation2);
+                break;
+            case R.id.unit_converter_card:
+                Intent navigation3 = new Intent(this, NavigationBar.class);
+                fragment_int = "3";
+                navigation3.putExtra(FRAGMENT_INT,fragment_int);
+                startActivity(navigation3);
+                break;
+            case R.id.password_generator_card:
+                Intent navigation4 = new Intent(this, NavigationBar.class);
+                fragment_int = "4";
+                navigation4.putExtra(FRAGMENT_INT,fragment_int);
+                startActivity(navigation4);
+                break;
+            case R.id.daily_fact_card:
+                Intent navigation5 = new Intent(this, NavigationBar.class);
+                fragment_int = "5";
+                navigation5.putExtra(FRAGMENT_INT,fragment_int);
+                startActivity(navigation5);
+                break;
+            case R.id.trending_news_card:
+                Intent navigation6 = new Intent(this, NavigationBar.class);
+                fragment_int = "6";
+                navigation6.putExtra(FRAGMENT_INT,fragment_int);
+                startActivity(navigation6);
+                break;
+            default:
+                break;
+        }
     }
 }
