@@ -15,7 +15,7 @@ Multiple utilities in one. A summer project. Android is the main and original pl
    - [Instagram](https://www.instagram.com/matdevtechnologies/): *@matdevtechnologies*
    - [Linkedin](https://www.linkedin.com/in/matdev-technologies-9a08411aa/): *@matdev-technologies*
    - GitHub (Basically here but just one page directory back)</br></br>
- - [Floobits workspace](https://floobits.com/MichaelSDavid/Multility/) (collaborative real-time coding) (DO NOT SHARE OUTSIDE THE DEV TEAM)
+ - [Floobits workspace](https://floobits.com/MATDEV-Technologies/Multility/) (collaborative real-time coding) (It's private so you need to have your account invited)
 
 ## Project specifications and workflow
  - **Android Studio Metadata**:</br>
