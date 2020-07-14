@@ -1,13 +1,11 @@
 package com.matdevtech.multility;
 
+// Imports
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import java.util.Objects;
 
 /**
@@ -51,6 +49,7 @@ public class Notepad extends Fragment {
         return fragment;
     }
 
+    // Fragment init
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,9 +61,9 @@ public class Notepad extends Fragment {
         Objects.requireNonNull(((NavigationBar) Objects.requireNonNull(getActivity())).getSupportActionBar()).setTitle("Notepad");
     }
 
+    // Fragment view init
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_notepad, container, false);
     }

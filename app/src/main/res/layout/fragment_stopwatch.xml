@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress AndroidDomInspection -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    tools:context=".Stopwatch">
+
+    <!-- GLOBAL NOTE: A Chronometer is a simple class
+    that implements a timer / watch-->
+    <Chronometer
+        android:id="@+id/stopwatch_chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="175dp"
+        android:textSize="50sp"
+        android:textColor="@color/colorWhite"/>
+
+    <Button
+        android:id="@+id/stopwatch_start_button"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="325dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_rounded_green"
+        android:textColor="@color/colorCardBackground"
+        android:textSize="18sp"
+        android:text="START"
+        tools:ignore="HardcodedText"/>
+
+    <Button
+        android:id="@+id/stopwatch_pause_button"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="400dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_rounded_darkgreen"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:text="PAUSE"
+        tools:ignore="HardcodedText"/>
+
+    <Button
+        android:id="@+id/stopwatch_reset_button"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="475dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_rounded_grey"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:text="RESET"
+        tools:ignore="HardcodedText"/>
+
+</RelativeLayout>

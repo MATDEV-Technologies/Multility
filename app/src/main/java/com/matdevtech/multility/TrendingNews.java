@@ -1,13 +1,11 @@
 package com.matdevtech.multility;
 
+// Import
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import java.util.Objects;
 
 /**
@@ -15,8 +13,10 @@ import java.util.Objects;
  * Use the {@link TrendingNews#newInstance} factory method to
  * create an instance of this fragment.
  */
+// Main class
 public class TrendingNews extends Fragment {
 
+    // Class consts
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -50,6 +50,7 @@ public class TrendingNews extends Fragment {
         return fragment;
     }
 
+    // Fragment init
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +62,7 @@ public class TrendingNews extends Fragment {
         Objects.requireNonNull(((NavigationBar) Objects.requireNonNull(getActivity())).getSupportActionBar()).setTitle("Trending News");
     }
 
+    // Fragment view init
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

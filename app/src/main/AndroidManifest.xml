@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.matdevtech.multility">
 
+    <!-- This is the file that contains all metadata about and for the application -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,61 +16,61 @@
         <activity android:name=".NavigationBar"
             android:label="Multility"
             android:parentActivityName=".MainActivity"
-            tools:ignore="MissingClass" />
+            tools:ignore="MissingClass"/>
         <!--suppress AndroidDomInspection -->
         <activity
             android:name=".PrivacyPolicy"
             android:label="@string/priv_policy"
             android:parentActivityName=".SettingsActivity"
-            tools:ignore="MissingClass" />
+            tools:ignore="MissingClass"/>
         <!--suppress AndroidDomInspection -->
         <activity
             android:name=".TermsOfService"
             android:label="@string/tos"
             android:parentActivityName=".SettingsActivity"
-            tools:ignore="MissingClass" />
+            tools:ignore="MissingClass"/>
         <!--suppress AndroidDomInspection -->
         <activity
             android:name=".SettingsActivity"
             android:label="@string/settings"
             android:parentActivityName=".MainActivity"
-            tools:ignore="MissingClass" />
+            tools:ignore="MissingClass"/>
         <!--suppress AndroidDomInspection -->
         <activity
             android:name=".TipCalculator"
             android:label="Tip Calculator"
             android:parentActivityName=".MainActivity"
-            tools:ignore="Instantiatable,MissingClass" />
+            tools:ignore="Instantiatable,MissingClass"/>
         <!--suppress AndroidDomInspection -->
         <activity
             android:name=".Notepad"
             android:label="Notepad"
             android:parentActivityName=".MainActivity"
-            tools:ignore="Instantiatable,MissingClass" />
+            tools:ignore="Instantiatable,MissingClass"/>
         <!--suppress AndroidDomInspection -->
         <activity
-            android:name=".UnitConverter"
-            android:label="Unit Converter"
+            android:name=".Stopwatch"
+            android:label="Stopwatch"
             android:parentActivityName=".MainActivity"
-            tools:ignore="Instantiatable,MissingClass" />
+            tools:ignore="Instantiatable,MissingClass"/>
         <!--suppress AndroidDomInspection -->
         <activity
             android:name=".PasswordGenerator"
             android:label="Password Generator"
             android:parentActivityName=".MainActivity"
-            tools:ignore="Instantiatable,MissingClass" />
+            tools:ignore="Instantiatable,MissingClass"/>
         <!--suppress AndroidDomInspection -->
         <activity
             android:name=".DailyFact"
             android:label="Daily Fact"
             android:parentActivityName=".MainActivity"
-            tools:ignore="Instantiatable,MissingClass" />
+            tools:ignore="Instantiatable,MissingClass"/>
         <!--suppress AndroidDomInspection -->
         <activity
             android:name=".TrendingNews"
             android:label="Trending News"
             android:parentActivityName=".MainActivity"
-            tools:ignore="Instantiatable,MissingClass" />
+            tools:ignore="Instantiatable,MissingClass"/>
         <!--
         Remove the above line if data backups are a problem
         *-SOURCE of fix-*
@@ -83,14 +84,14 @@
             android:theme="@style/SplashScreenTheme"
             tools:ignore="MissingClass">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity> <!-- suppress CheckTagEmptyBody -->
         <!--suppress AndroidDomInspection -->
         <activity android:name=".MainActivity"
-            tools:ignore="MissingClass" />
+            tools:ignore="MissingClass"/>
     </application>
 
 </manifest>

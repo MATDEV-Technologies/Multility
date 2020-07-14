@@ -48,6 +48,6 @@ to ensure all can be viewed on a single screen/activity -->
 \n\nChildren's Information:\nAnother part of our priority is adding protection for children while using this app. We encourage parents and guardians to observe, participate in, and/or monitor and guide their activity.
 \n\nMultility does not knowingly collect any personal identifiable information from children under the age of 13. If you think that your child provided this kind of information on our app, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.
 \n\n"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText"/>
 
 </ScrollView>

@@ -1,10 +1,7 @@
 package com.matdevtech.multility;
 
 // Imports
-import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,24 +9,24 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 // Main class
 public class SettingsActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    // Global variables within the class (private is accessible only within the class) (suggestion: make local in onCreate())
+    // Class vars
     @SuppressWarnings("FieldCanBeLocal")
     private Button button1;
     @SuppressWarnings("FieldCanBeLocal")
     private Button button2;
     Spinner location;
 
+    // Class consts
     public static final String SHARED_PREFS = "sharedPrefs";
     public static String COLOR_TEXT = "colorText";
     public static String LOCATION_TEXT = "locationText";
 
+    // Activity init
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -12,4 +12,4 @@
     android:ellipsize="marquee"
     android:textColor="@color/colorGrey"
     android:textSize="18sp"
-    tools:ignore="RtlHardcoded" />
+    tools:ignore="RtlHardcoded"/>

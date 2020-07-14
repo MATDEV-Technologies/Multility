@@ -2,19 +2,62 @@
 <!--suppress AndroidDomInspection -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
+    android:orientation="vertical"
     tools:context=".DailyFact">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- GLOBAL NOTE: View is a simple component to put text or
+     images over on top (meant for single instances, unlike CardView) -->
+    <View
+        android:layout_width="350dp"
+        android:layout_height="400dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="155dp"
+        android:background="@drawable/grey_background_rounded_2"/>
+
+    <ImageView
+        android:layout_width="99dp"
+        android:layout_height="141dp"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_baseline_book_24"
+        tools:ignore="ContentDescription"/>
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Daily Fact"
-        android:textColor="@color/colorWhite"
+        android:id="@+id/daily_fact_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        android:text="Java was called\nOak at the beginning of development."
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
         android:textSize="30sp"
-        android:gravity="center"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="470dp"
+        android:text="Next Fact In:"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        tools:ignore="HardcodedText"/>
+
+    <TextView
+        android:id="@+id/countdown_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="500dp"
+        android:text="23:32:49"
+        android:textSize="24sp"
+        tools:textColor="@color/colorPrimaryDark"
+        tools:ignore="HardcodedText"/>
 
 </RelativeLayout>

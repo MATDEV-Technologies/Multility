@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
+    android:orientation="vertical"
     tools:context=".TrendingNews">
 
     <!-- TODO: Update blank fragment layout -->
@@ -15,6 +16,6 @@
         android:textColor="@color/colorWhite"
         android:textSize="30sp"
         android:gravity="center"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText"/>
 
 </RelativeLayout>
