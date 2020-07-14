@@ -24,17 +24,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main); // Sets the activity layout to the one belonging to MainActivity
 
         // INITIALIZE MENU CARDS BY THEIR IDs
-        //noinspection RedundantCast
         tipCalculatorCard = (CardView) findViewById(R.id.tip_calculator_card);
-        //noinspection RedundantCast
         notepadCard = (CardView) findViewById(R.id.notepad_card);
-        //noinspection RedundantCast
         unitConverterCard = (CardView) findViewById(R.id.stopwatch_card);
-        //noinspection RedundantCast
         passwordGeneratorCard = (CardView) findViewById(R.id.password_generator_card);
-        //noinspection RedundantCast
         dailyFactCard = (CardView) findViewById(R.id.daily_fact_card);
-        //noinspection RedundantCast
         trendingNewsCard = (CardView) findViewById(R.id.trending_news_card);
 
         // ADD CARD CLICK LISTENERS

@@ -28,11 +28,11 @@
 
     <TextView
         android:id="@+id/daily_fact_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="310dp"
+        android:layout_height="200dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="250dp"
-        android:text="Java was called\nOak at the beginning of development."
+        android:layout_marginTop="235dp"
+        android:text="Java was called Oak at the beginning of development."
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
         android:textSize="30sp"
@@ -50,14 +50,14 @@
         tools:ignore="HardcodedText"/>
 
     <TextView
-        android:id="@+id/countdown_timer"
+        android:id="@+id/fact_countdown_timer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="500dp"
-        android:text="23:32:49"
         android:textSize="24sp"
-        tools:textColor="@color/colorPrimaryDark"
+        android:text="23:59:59"
+        android:textColor="@color/colorPrimaryDark"
         tools:ignore="HardcodedText"/>
 
 </RelativeLayout>

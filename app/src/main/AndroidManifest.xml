@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.matdevtech.multility">
 
+    <!-- Add Access to Internet, to access external APIs -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <!-- This is the file that contains all metadata about and for the application -->
     <application
         android:allowBackup="true"

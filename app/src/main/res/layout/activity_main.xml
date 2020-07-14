@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- GLOBAL TODO:
+Add the black background to colors.xml before production -->
 <!-- GLOBAL NOTE: RelativeLayout is a view group that displays
 child views in relative positions -->
 <!--suppress AndroidDomInspection -->
@@ -40,7 +42,7 @@ child views in relative positions -->
             android:layout_gravity="fill"
             android:layout_margin="8dp"
             app:cardBackgroundColor="@color/colorCardBackground"
-            app:cardCornerRadius="8dp"
+            app:cardCornerRadius="16dp"
             app:cardElevation="8dp">
 
             <!-- GLOBAL NOTE: LinearLayout is a view group that aligns all
@@ -84,7 +86,7 @@ child views in relative positions -->
             android:layout_gravity="fill"
             android:layout_margin="8dp"
             app:cardBackgroundColor="@color/colorCardBackground"
-            app:cardCornerRadius="8dp"
+            app:cardCornerRadius="16dp"
             app:cardElevation="8dp">
 
             <LinearLayout
@@ -124,7 +126,7 @@ child views in relative positions -->
             android:layout_gravity="fill"
             android:layout_margin="8dp"
             app:cardBackgroundColor="@color/colorCardBackground"
-            app:cardCornerRadius="8dp"
+            app:cardCornerRadius="16dp"
             app:cardElevation="8dp">
 
             <LinearLayout
@@ -164,7 +166,7 @@ child views in relative positions -->
             android:layout_gravity="fill"
             android:layout_margin="8dp"
             app:cardBackgroundColor="@color/colorCardBackground"
-            app:cardCornerRadius="8dp"
+            app:cardCornerRadius="16dp"
             app:cardElevation="8dp">
 
             <LinearLayout
@@ -204,7 +206,7 @@ child views in relative positions -->
             android:layout_gravity="fill"
             android:layout_margin="8dp"
             app:cardBackgroundColor="@color/colorCardBackground"
-            app:cardCornerRadius="8dp"
+            app:cardCornerRadius="16dp"
             app:cardElevation="8dp">
 
             <LinearLayout
@@ -244,7 +246,7 @@ child views in relative positions -->
             android:layout_gravity="fill"
             android:layout_margin="8dp"
             app:cardBackgroundColor="@color/colorCardBackground"
-            app:cardCornerRadius="8dp"
+            app:cardCornerRadius="16dp"
             app:cardElevation="8dp">
 
             <LinearLayout

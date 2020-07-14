@@ -6,6 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+/* > Task :app:compileDebugJavaWithJavac
+Note: /Users/michaeldavid/Desktop/Coding/GITHUB/Multility/app/src/main/java/com/matdevtech/multility/SplashScreen.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+*/
+
 // Main class
 public class SplashScreen extends AppCompatActivity {
 

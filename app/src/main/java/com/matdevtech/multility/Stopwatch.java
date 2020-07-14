@@ -8,10 +8,14 @@ import androidx.fragment.app.Fragment;
 
 import android.os.SystemClock;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Chronometer;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 
@@ -24,6 +28,7 @@ public class Stopwatch extends Fragment {
 
     private Chronometer chronometer;
     private long pauseOffset;
+    @SuppressWarnings("FieldCanBeLocal")
     private Button start_button, pause_button, reset_button;
     private boolean running;
 
@@ -64,6 +69,7 @@ public class Stopwatch extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);

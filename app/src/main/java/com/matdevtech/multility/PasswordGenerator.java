@@ -2,18 +2,27 @@ package com.matdevtech.multility;
 
 // Imports
 import android.annotation.SuppressLint;
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import java.util.Objects;
 import java.util.Random;
 import org.apache.commons.lang3.ArrayUtils;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -74,6 +83,7 @@ public class PasswordGenerator extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -239,6 +249,22 @@ public class PasswordGenerator extends Fragment {
                     }
                     password_generate_result.setText("PASSWORD:  " + generation);
                 }
+
+                password_generate_result.setOnLongClickListener(new View.OnLongClickListener() {
+                    @Override
+                    public boolean onLongClick(View view) {
+                        Toast password_copy = Toast.makeText(getActivity(), "Password Copied", Toast.LENGTH_SHORT);
+                        password_copy.setGravity(Gravity.CENTER_HORIZONTAL, 0, -700);
+                        password_copy.show();
+
+                        //noinspection ConstantConditions
+                        ClipboardManager clipboard = (ClipboardManager) getActivity().getSystemService(Context.CLIPBOARD_SERVICE);
+                        ClipData clip = ClipData.newPlainText("Copied Password", password_generate_result.getText().toString().substring(11)); // COPIES ONLY THE PASSWORD TO THE PHONE'S CLIPBOARD
+                        clipboard.setPrimaryClip(clip);
+
+                        return false;
+                    }
+                });
             }
         });
     }

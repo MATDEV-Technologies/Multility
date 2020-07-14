@@ -4,13 +4,20 @@ package com.matdevtech.multility;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Objects;
 
 /**
@@ -67,6 +74,7 @@ public class TipCalculator extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -114,5 +122,19 @@ public class TipCalculator extends Fragment {
                 tip_result.setText("TIP:  $" + String.format("%.2f", rounded_tip));
             }
         });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            //noinspection ConstantConditions
+            super.getActivity().onBackPressed(); // Goto -> parent activity -> main
+            total_price.onEditorAction(EditorInfo.IME_ACTION_DONE);
+            percentage_tip.onEditorAction(EditorInfo.IME_ACTION_DONE);
+        } else {
+            return super.onOptionsItemSelected(item);
+        }
+
+        return true;
     }
 }
