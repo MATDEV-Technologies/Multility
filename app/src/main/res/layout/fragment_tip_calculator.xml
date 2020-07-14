@@ -8,6 +8,10 @@
     android:orientation="vertical"
     tools:context=".TipCalculator">
 
+    <!-- TODO:
+    Maybe implement a cut off after 2 decimals for both
+    the Price and Tip entry if it is possible -->
+
     <!-- GLOBAL NOTE: EditText is a UI element
     for entering and modifying text -->
     <EditText
