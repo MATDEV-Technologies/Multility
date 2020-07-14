@@ -8,6 +8,8 @@
     android:orientation="vertical"
     tools:context=".Stopwatch">
 
+    <!-- TODO:
+    Maybe add milliseonds as well -->
     <!-- GLOBAL NOTE: A Chronometer is a simple class
     that implements a timer / watch-->
     <Chronometer
