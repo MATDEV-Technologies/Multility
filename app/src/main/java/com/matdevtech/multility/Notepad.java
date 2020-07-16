@@ -1,5 +1,7 @@
 package com.matdevtech.multility;
 
+// TODO: Maybe add mutliple notes and autosave
+
 // Imports
 import android.annotation.SuppressLint;
 import android.app.Activity;
