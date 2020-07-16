@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // INITIALIZE MENU CARDS BY THEIR IDs
         tipCalculatorCard = (CardView) findViewById(R.id.tip_calculator_card);
         notepadCard = (CardView) findViewById(R.id.notepad_card);
-        unitConverterCard = (CardView) findViewById(R.id.unit_converter_card);
+        unitConverterCard = (CardView) findViewById(R.id.stopwatch_card);
         passwordGeneratorCard = (CardView) findViewById(R.id.password_generator_card);
         dailyFactCard = (CardView) findViewById(R.id.daily_fact_card);
         trendingNewsCard = (CardView) findViewById(R.id.trending_news_card);
@@ -66,11 +66,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         startActivity(intent);
     }
 
+    // Main menu click/tap checks
     @Override
     public void onClick(View v) {
 
         String fragment_int;
 
+        // Check for and switch to new fragments
         switch (v.getId()) {
             case R.id.tip_calculator_card:
                 fragment_int = "1";
@@ -84,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 navigation2.putExtra(FRAGMENT_INT,fragment_int);
                 startActivity(navigation2);
                 break;
-            case R.id.unit_converter_card:
+            case R.id.stopwatch_card:
                 Intent navigation3 = new Intent(this, NavigationBar.class);
                 fragment_int = "3";
                 navigation3.putExtra(FRAGMENT_INT,fragment_int);
@@ -107,8 +109,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 fragment_int = "6";
                 navigation6.putExtra(FRAGMENT_INT,fragment_int);
                 startActivity(navigation6);
-                break;
-            default:
                 break;
         }
     }

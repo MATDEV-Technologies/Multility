@@ -1,20 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--suppress AndroidDomInspection -->
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
+    android:orientation="vertical"
     tools:context=".Notepad">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Notepad"
-        android:textColor="@color/colorWhite"
-        android:textSize="30sp"
-        android:gravity="center"
-        tools:ignore="HardcodedText" />
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/fab"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="bottom|end"-->
+<!--        app:srcCompat="@drawable/ic_baseline_save_24" />-->
 
-</RelativeLayout>
+    <EditText
+        android:id="@+id/notepad_edit"
+        android:layout_width="match_parent"
+        android:layout_height="640dp"
+        android:padding="18dp"
+        android:background="#000000"
+        android:gravity="top"
+        android:hint="Type here..."
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorGrey"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="Autofill,HardcodedText,TextFields" />
+
+
+    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/fab"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="bottom|end"-->
+<!--        app:srcCompat="@drawable/ic_baseline_save_24" />-->
+
+</LinearLayout>

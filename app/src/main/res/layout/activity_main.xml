@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- GLOBAL TODO:
+Add the black background to colors.xml before production -->
 <!-- GLOBAL NOTE: RelativeLayout is a view group that displays
 child views in relative positions -->
 <!--suppress AndroidDomInspection -->
@@ -9,10 +11,11 @@ child views in relative positions -->
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <!-- GLOBAL NOTE: GridLayout gives one the possibility to create
-    grid based layouts within a single root view-->
+    grid based layouts within a single root view -->
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -39,7 +42,7 @@ child views in relative positions -->
             android:layout_gravity="fill"
             android:layout_margin="8dp"
             app:cardBackgroundColor="@color/colorCardBackground"
-            app:cardCornerRadius="8dp"
+            app:cardCornerRadius="16dp"
             app:cardElevation="8dp">
 
             <!-- GLOBAL NOTE: LinearLayout is a view group that aligns all
@@ -83,7 +86,7 @@ child views in relative positions -->
             android:layout_gravity="fill"
             android:layout_margin="8dp"
             app:cardBackgroundColor="@color/colorCardBackground"
-            app:cardCornerRadius="8dp"
+            app:cardCornerRadius="16dp"
             app:cardElevation="8dp">
 
             <LinearLayout
@@ -123,7 +126,7 @@ child views in relative positions -->
             android:layout_gravity="fill"
             android:layout_margin="8dp"
             app:cardBackgroundColor="@color/colorCardBackground"
-            app:cardCornerRadius="8dp"
+            app:cardCornerRadius="16dp"
             app:cardElevation="8dp">
 
             <LinearLayout
@@ -153,7 +156,7 @@ child views in relative positions -->
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/unit_converter_card"
+            android:id="@+id/stopwatch_card"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
@@ -163,7 +166,7 @@ child views in relative positions -->
             android:layout_gravity="fill"
             android:layout_margin="8dp"
             app:cardBackgroundColor="@color/colorCardBackground"
-            app:cardCornerRadius="8dp"
+            app:cardCornerRadius="16dp"
             app:cardElevation="8dp">
 
             <LinearLayout
@@ -177,14 +180,14 @@ child views in relative positions -->
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_baseline_sync_alt_24"
+                    android:src="@drawable/ic_baseline_watch_later_24"
                     tools:ignore="ContentDescription"/>
                 <!-- android:contentDescription=""/> -->
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/unit_conv"
+                    android:text="@string/watch"
                     android:textAlignment="center"
                     android:textColor="@color/colorGrey"
                     android:textSize="24sp"
@@ -203,7 +206,7 @@ child views in relative positions -->
             android:layout_gravity="fill"
             android:layout_margin="8dp"
             app:cardBackgroundColor="@color/colorCardBackground"
-            app:cardCornerRadius="8dp"
+            app:cardCornerRadius="16dp"
             app:cardElevation="8dp">
 
             <LinearLayout
@@ -243,7 +246,7 @@ child views in relative positions -->
             android:layout_gravity="fill"
             android:layout_margin="8dp"
             app:cardBackgroundColor="@color/colorCardBackground"
-            app:cardCornerRadius="8dp"
+            app:cardCornerRadius="16dp"
             app:cardElevation="8dp">
 
             <LinearLayout

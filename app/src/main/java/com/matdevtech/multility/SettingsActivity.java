@@ -12,28 +12,36 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 // Main class
 public class SettingsActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    // Global variables within the class (private is accessible only within the class) (suggestion: make local in onCreate())
+    SharedPreferences LastSelect;
+    SharedPreferences.Editor editor;
+
+    // Class vars
     @SuppressWarnings("FieldCanBeLocal")
     private Button button1;
     @SuppressWarnings("FieldCanBeLocal")
     private Button button2;
     Spinner location;
 
-    public static final String SHARED_PREFS = "sharedPrefs";
+    // Class consts
     public static String COLOR_TEXT = "colorText";
     public static String LOCATION_TEXT = "locationText";
 
+    // Activity init
+    @SuppressLint("CommitPrefEdits")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // DO NOT DELETE COMMENTS
+
+        // INITIALIZE SHARED PREFERENCES
+        LastSelect = getSharedPreferences("LastSetting", Context.MODE_PRIVATE);
+        editor = LastSelect.edit();
+        final int LastClick = LastSelect.getInt("LastClick",0);
 
         // UtilsTheme.onApplicationCreateSetTheme(this);
         setContentView(R.layout.activity_settings);
@@ -50,25 +58,25 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.countries, R.layout.spinner_styles);
         adapter2.setDropDownViewResource(R.layout.spinner_dropdown_styles);
         location.setAdapter(adapter2);
+        location.setSelection(LastClick);
         location.setOnItemSelectedListener(this);
 
         // Button init(s)
         // Grab IDs and listen for clicks/taps
         button1 = findViewById(R.id.terms_of_service_button);
-        button1.setOnClickListener(new View.OnClickListener(){
+        button1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 openTermsOfService();
             }
         });
         button2 = findViewById(R.id.privacy_policy_button);
-        button2.setOnClickListener(new View.OnClickListener(){
+        button2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 openPrivacyPolicy();
             }
         });
-
     }
 
     // Check if the back arrow is selected
@@ -85,7 +93,11 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
 
     // Cases for changing the accent color by spinner (currently disabled)
     @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+    public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+
+        // SAVE LAST VARIABLE IN LOCATION SPINNER
+        editor.putInt("LastClick",position).commit();
+
         // Theming is disabled for now; DO NOT REMOVE THE COMMENTS OR METHODS
 
 //        Spinner spinner = findViewById(R.id.color_spinner);
@@ -123,7 +135,6 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
         // IMPLEMENTATION OF LOCATION SPINNER
         location = findViewById(R.id.country_spinner);
         LOCATION_TEXT = location.getSelectedItem().toString();
-        // LATER, ADD SHARED PREFERENCES TO STORE THE CURRENT SPINNER CHOICE
     }
 
     // Part of and required by onItemSelected() and the main clas

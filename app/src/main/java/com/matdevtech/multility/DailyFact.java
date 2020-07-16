@@ -1,13 +1,15 @@
 package com.matdevtech.multility;
 
+// Imports
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
+import androidx.fragment.app.Fragment;
+import org.jetbrains.annotations.NotNull;
 import java.util.Objects;
 
 /**
@@ -15,6 +17,7 @@ import java.util.Objects;
  * Use the {@link DailyFact#newInstance} factory method to
  * create an instance of this fragment.
  */
+// Main class
 public class DailyFact extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
@@ -51,9 +54,11 @@ public class DailyFact extends Fragment {
         return fragment;
     }
 
+    // Fragment init
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -62,9 +67,9 @@ public class DailyFact extends Fragment {
         Objects.requireNonNull(((NavigationBar) Objects.requireNonNull(getActivity())).getSupportActionBar()).setTitle("Daily Fact");
     }
 
+    // Fragment view init
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_daily_fact, container, false);
     }

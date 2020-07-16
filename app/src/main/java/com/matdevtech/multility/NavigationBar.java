@@ -1,25 +1,24 @@
 package com.matdevtech.multility;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-
+// Imports
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.Toast;
-
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 
+// Main class
 public class NavigationBar extends AppCompatActivity {
 
+    // Class vars
     private static final String TAG = NavigationBar.class.getSimpleName();
     String fragment_int;
     ChipNavigationBar bottomNav;
     FragmentManager fragmentManager;
 
+    // Menu init
     @SuppressWarnings("ConstantConditions")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +30,7 @@ public class NavigationBar extends AppCompatActivity {
         Intent intent = getIntent();
         fragment_int = intent.getStringExtra(MainActivity.FRAGMENT_INT);
 
+        // Check each fragment selection
         switch (fragment_int) {
             case "1":
                 if (savedInstanceState == null) {
@@ -54,11 +54,11 @@ public class NavigationBar extends AppCompatActivity {
                 break;
             case "3":
                 if (savedInstanceState == null) {
-                    bottomNav.setItemSelected(R.id.unit_converter_navbar, true);
+                    bottomNav.setItemSelected(R.id.stopwatch_navbar, true);
                     fragmentManager = getSupportFragmentManager();
-                    UnitConverter unitConverter = new UnitConverter();
+                    Stopwatch stopwatch = new Stopwatch();
                     fragmentManager.beginTransaction()
-                            .replace(R.id.fragment_container, unitConverter)
+                            .replace(R.id.fragment_container, stopwatch)
                             .commit();
                 }
                 break;
@@ -94,10 +94,13 @@ public class NavigationBar extends AppCompatActivity {
                 break;
         }
 
+        // Check and perform fragment changes
         bottomNav.setOnItemSelectedListener(new ChipNavigationBar.OnItemSelectedListener() {
             @Override
             public void onItemSelected(int id) {
                 Fragment fragment = null;
+
+                // Switch to new fragments based on case
                 switch (id){
                     case R.id.tip_calculator_navbar:
                         fragment = new TipCalculator();
@@ -105,8 +108,8 @@ public class NavigationBar extends AppCompatActivity {
                     case R.id.notepad_navbar:
                         fragment = new Notepad();
                         break;
-                    case R.id.unit_converter_navbar:
-                        fragment = new UnitConverter();
+                    case R.id.stopwatch_navbar:
+                        fragment = new Stopwatch();
                         break;
                     case R.id.password_generator_navbar:
                         fragment = new PasswordGenerator();
@@ -125,12 +128,9 @@ public class NavigationBar extends AppCompatActivity {
                             .replace(R.id.fragment_container, fragment)
                             .commit();
                 } else {
-                    Log.e(TAG, "Error in creating fragment");
+                    Log.e(TAG, "Error in creating fragment"); // DEBUG
                 }
             }
         });
-//        public static void setActionBarTitle(String title) {
-//            getSupportActionBar().setTitle(title);
-//        }
     }
 }

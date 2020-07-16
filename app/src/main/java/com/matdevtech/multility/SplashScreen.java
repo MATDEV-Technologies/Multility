@@ -6,10 +6,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+/* > Task :app:compileDebugJavaWithJavac
+Note: /Users/michaeldavid/Desktop/Coding/GITHUB/Multility/app/src/main/java/com/matdevtech/multility/SplashScreen.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+*/
+
 // Main class
 public class SplashScreen extends AppCompatActivity {
 
-    // Global variables within the class (private is accessible only within the class) (suggestion: make local in onCreate())
+    // Class const(s)
     @SuppressWarnings("FieldCanBeLocal")
     private final static int SPLASH_TIME_OUT = 2000; // Original: 3500 (this was changed to be faster just like how it is on iOS)
 
