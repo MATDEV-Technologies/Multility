@@ -4,8 +4,6 @@ package com.matdevtech.multility;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,9 +13,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-
-import org.jetbrains.annotations.NotNull;
-
 import java.util.Objects;
 
 /**
@@ -31,8 +26,6 @@ public class TipCalculator extends Fragment {
     // Class vars
     private EditText total_price;
     private EditText percentage_tip;
-    @SuppressWarnings("FieldCanBeLocal")
-    private Button tip_button;
     private TextView tip_result;
 
     // Class consts
@@ -40,12 +33,6 @@ public class TipCalculator extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    @SuppressWarnings({"FieldCanBeLocal", "unused"})
-    private String mParam1;
-    @SuppressWarnings({"FieldCanBeLocal", "unused"})
-    private String mParam2;
 
     public TipCalculator() {
         // Required empty public constructor
@@ -76,8 +63,11 @@ public class TipCalculator extends Fragment {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            // TODO: Rename and change types of parameters
+            //noinspection unused
+            String mParam1 = getArguments().getString(ARG_PARAM1);
+            //noinspection unused
+            String mParam2 = getArguments().getString(ARG_PARAM2);
         }
         // TODO: add new titles to strings.xml
         Objects.requireNonNull(((NavigationBar) Objects.requireNonNull(getActivity())).getSupportActionBar()).setTitle("Tip Calculator");
@@ -96,7 +86,7 @@ public class TipCalculator extends Fragment {
         //noinspection ConstantConditions
         total_price = getView().findViewById(R.id.total_price_input_bar);
         percentage_tip = getView().findViewById(R.id.tip_percentage_input_bar);
-        tip_button = getView().findViewById(R.id.tip_calculator_button);
+        Button tip_button = getView().findViewById(R.id.tip_calculator_button);
         tip_result = getView().findViewById(R.id.calculated_tip_text);
 
         // Tip calculation and display
@@ -124,11 +114,11 @@ public class TipCalculator extends Fragment {
         });
     }
 
+    // Check which items are selected
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
-            //noinspection ConstantConditions
-            super.getActivity().onBackPressed(); // Goto -> parent activity -> main
+            Objects.requireNonNull(super.getActivity()).onBackPressed(); // Goto -> parent activity -> main
             total_price.onEditorAction(EditorInfo.IME_ACTION_DONE);
             percentage_tip.onEditorAction(EditorInfo.IME_ACTION_DONE);
         } else {

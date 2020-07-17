@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--suppress AndroidDomInspection -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -127,6 +126,35 @@
         android:layout_marginTop="365dp"
         android:layout_marginLeft="20dp"
         android:text="View Multility's privacy policy"
+        android:textAlignment="center"
+        android:textColor="@color/colorGrey"
+        android:textSize="18sp"
+        tools:ignore="HardcodedText,RtlHardcoded"/>
+
+    <Button
+        android:id="@+id/about_button"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="420dp"
+        android:background="@null"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="435dp"
+        android:layout_marginLeft="20dp"
+        android:text="About"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        tools:ignore="HardcodedText,RtlHardcoded"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="465dp"
+        android:layout_marginLeft="20dp"
+        android:text="View Multility's team members"
         android:textAlignment="center"
         android:textColor="@color/colorGrey"
         android:textSize="18sp"

@@ -1,6 +1,7 @@
 package com.matdevtech.multility;
 
 // Imports
+
 import android.annotation.SuppressLint;
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -8,21 +9,19 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import java.util.Objects;
-import java.util.Random;
 import org.apache.commons.lang3.ArrayUtils;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.Objects;
+import java.util.Random;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -40,8 +39,6 @@ public class PasswordGenerator extends Fragment {
     private static CheckBox include_numbers;
     @SuppressLint("StaticFieldLeak")
     private static CheckBox include_symbols;
-    @SuppressWarnings("FieldCanBeLocal")
-    private Button password_generate_button;
     @SuppressLint("StaticFieldLeak")
     private static TextView password_generate_result;
 
@@ -49,12 +46,6 @@ public class PasswordGenerator extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    @SuppressWarnings({"FieldCanBeLocal", "unused"})
-    private String mParam1;
-    @SuppressWarnings({"FieldCanBeLocal", "unused"})
-    private String mParam2;
 
     public PasswordGenerator() {
         // Required empty public constructor
@@ -85,8 +76,11 @@ public class PasswordGenerator extends Fragment {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            // TODO: Rename and change types of parameters
+            //noinspection unused
+            String mParam1 = getArguments().getString(ARG_PARAM1);
+            //noinspection unused
+            String mParam2 = getArguments().getString(ARG_PARAM2);
         }
         // TODO: add new titles to strings.xml
         Objects.requireNonNull(((NavigationBar) Objects.requireNonNull(getActivity())).getSupportActionBar()).setTitle("Password Generator");
@@ -101,14 +95,13 @@ public class PasswordGenerator extends Fragment {
 
     // Fragemnt view management
     @Override
-    public void onViewCreated(@SuppressWarnings("NullableProblems") View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NotNull View view, @Nullable Bundle savedInstanceState) {
         // Local vars
-        //noinspection ConstantConditions
-        include_lowercase = getView().findViewById(R.id.include_lowercase_checkbox);
+        include_lowercase = Objects.requireNonNull(getView()).findViewById(R.id.include_lowercase_checkbox);
         include_uppercase = getView().findViewById(R.id.include_uppercase_checkbox);
         include_numbers = getView().findViewById(R.id.include_numbers_checkbox);
         include_symbols = getView().findViewById(R.id.include_symbols_checkbox);
-        password_generate_button = getView().findViewById(R.id.password_generator_button);
+        Button password_generate_button = getView().findViewById(R.id.password_generator_button);
         password_generate_result = getView().findViewById(R.id.generated_password_result);
 
         // Listen for clicks/taps
@@ -257,8 +250,7 @@ public class PasswordGenerator extends Fragment {
                         password_copy.setGravity(Gravity.CENTER_HORIZONTAL, 0, -700);
                         password_copy.show();
 
-                        //noinspection ConstantConditions
-                        ClipboardManager clipboard = (ClipboardManager) getActivity().getSystemService(Context.CLIPBOARD_SERVICE);
+                        ClipboardManager clipboard = (ClipboardManager) Objects.requireNonNull(getActivity()).getSystemService(Context.CLIPBOARD_SERVICE);
                         ClipData clip = ClipData.newPlainText("Copied Password", password_generate_result.getText().toString().substring(11)); // COPIES ONLY THE PASSWORD TO THE PHONE'S CLIPBOARD
                         clipboard.setPrimaryClip(clip);
 

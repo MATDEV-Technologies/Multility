@@ -46,6 +46,7 @@ public class TrendingNews extends Fragment {
      * @return A new instance of fragment TrendingNews.
      */
     // TODO: Rename and change types and number of parameters
+    @SuppressWarnings("unused")
     public static TrendingNews newInstance(String param1, String param2) {
         TrendingNews fragment = new TrendingNews();
         Bundle args = new Bundle();

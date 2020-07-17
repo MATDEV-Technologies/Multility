@@ -26,8 +26,10 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
     @SuppressWarnings("FieldCanBeLocal")
     private Button button2;
     Spinner location;
+    private Button button3;
 
     // Class consts
+    @SuppressWarnings("unused")
     public static String COLOR_TEXT = "colorText";
     public static String LOCATION_TEXT = "locationText";
 
@@ -75,6 +77,14 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
             @Override
             public void onClick(View v) {
                 openPrivacyPolicy();
+            }
+        });
+
+        button3 = findViewById(R.id.about_button);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openAbout();
             }
         });
     }
@@ -153,5 +163,11 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
         // Create a new intent and launch it with the activity
         Intent intent2 = new Intent(this, PrivacyPolicy.class);
         startActivity(intent2);
+    }
+
+    public void openAbout() {
+        // Create a new intent and launch it with the activity
+        Intent intent3 = new Intent(this, About.class);
+        startActivity(intent3);
     }
 }

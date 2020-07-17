@@ -1,13 +1,17 @@
 package com.matdevtech.multility;
 
-// TODO: Maybe add mutliple notes and autosave
+// TODO: Maybe add autosave, Word-like formatting, and clear all formatting (EX will clean up warnings later)
 
 // Imports
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.SpannableStringBuilder;
+import android.text.style.StyleSpan;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -15,7 +19,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -27,28 +33,21 @@ import java.util.Objects;
  * Use the {@link Notepad#newInstance} factory method to
  * create an instance of this fragment.
  */
-@SuppressWarnings("FieldCanBeLocal")
 public class Notepad extends Fragment {
 
     // Class vars and consts
     private EditText notepad_edit;
-    @SuppressWarnings("unused")
-    private Menu notepad_save;
     private static String noteText;
-
     public static final String SHARED_PREFS = "sharedPrefs";
     public static final String NOTE = "note";
+    public static String selectedText;
+    boolean bold_button_pressed = false;
+    boolean italic_button_pressed = false;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    @SuppressWarnings({"FieldCanBeLocal", "unused"})
-    private String mParam1;
-    @SuppressWarnings({"FieldCanBeLocal", "unused"})
-    private String mParam2;
 
     public Notepad() {
         // Required empty public constructor
@@ -79,16 +78,19 @@ public class Notepad extends Fragment {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            // TODO: Rename and change types of parameters
+            //noinspection unused
+            String mParam1 = getArguments().getString(ARG_PARAM1);
+            //noinspection unused
+            String mParam2 = getArguments().getString(ARG_PARAM2);
         }
         // TODO: add new titles to strings.xml
         Objects.requireNonNull(((NavigationBar) Objects.requireNonNull(getActivity())).getSupportActionBar()).setTitle("Notepad");
     }
 
+    // Options init
     @Override
     public void onCreateOptionsMenu(@NotNull Menu menu, @NotNull MenuInflater inflater) {
-        // Do something that differs the Activity's menu here
         inflater.inflate(R.menu.menu_notepad_clear, menu);
         inflater.inflate(R.menu.menu_notepad_save, menu);
         super.onCreateOptionsMenu(menu, inflater);
@@ -96,24 +98,102 @@ public class Notepad extends Fragment {
 
     // Fragment view init
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NotNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_notepad, container, false);
     }
 
     // Fragemnt view management
     @Override
-    public void onViewCreated(@SuppressWarnings("NullableProblems") View view, @Nullable Bundle savedInstanceState) {
-        //noinspection ConstantConditions
-        notepad_edit = getView().findViewById(R.id.notepad_edit);
-        notepad_save = getView().findViewById(R.id.action_notepad_save);
+    public void onViewCreated(@NotNull View view, @Nullable Bundle savedInstanceState) {
+        notepad_edit = Objects.requireNonNull(getView()).findViewById(R.id.notepad_edit);
+        final ImageButton notepad_button1 = Objects.requireNonNull(getView()).findViewById(R.id.bold_button);
+        ImageButton notepad_button2 = Objects.requireNonNull(getView()).findViewById(R.id.italic_button);
 
-        loadData();
+        notepad_button1.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint({"SetTextI18n", "DefaultLocale"})
+            @Override
+            public void onClick(View view) {
+                Typeface boldTypeFace = Typeface.defaultFromStyle(Typeface.BOLD);
+                Typeface italicTypeFace = Typeface.defaultFromStyle(Typeface.ITALIC);
+                Typeface regularTypeFace = Typeface.defaultFromStyle(Typeface.NORMAL);
+                Typeface boldItalicTypeFace = Typeface.defaultFromStyle(Typeface.BOLD_ITALIC);
+                bold_button_pressed = !bold_button_pressed;
+
+                //noinspection PointlessBooleanExpression
+                if ((bold_button_pressed == true) && (italic_button_pressed == false)) {
+                    notepad_edit.setTypeface(boldTypeFace);
+                }
+
+                //noinspection PointlessBooleanExpression
+                if ((bold_button_pressed == false)  && (italic_button_pressed == false)) {
+                    notepad_edit.setTypeface(regularTypeFace);
+                }
+
+                //noinspection PointlessBooleanExpression
+                if ((bold_button_pressed == true)  && (italic_button_pressed == true)) {
+                    notepad_edit.setTypeface(boldItalicTypeFace);
+                }
+
+                //noinspection PointlessBooleanExpression
+                if ((bold_button_pressed == false)  && (italic_button_pressed == true)) {
+                    notepad_edit.setTypeface(italicTypeFace);
+                }
+            }
+        });
+
+        notepad_button2.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint({"SetTextI18n", "DefaultLocale"})
+            @Override
+            public void onClick(View view) {
+                Typeface boldTypeFace = Typeface.defaultFromStyle(Typeface.BOLD);
+                Typeface italicTypeFace = Typeface.defaultFromStyle(Typeface.ITALIC);
+                Typeface regularTypeFace = Typeface.defaultFromStyle(Typeface.NORMAL);
+                Typeface boldItalicTypeFace = Typeface.defaultFromStyle(Typeface.BOLD_ITALIC);
+                italic_button_pressed = !italic_button_pressed;
+
+                //noinspection PointlessBooleanExpression
+                if ((italic_button_pressed == true) && (bold_button_pressed == false)) {
+                    notepad_edit.setTypeface(italicTypeFace);
+                }
+
+                //noinspection PointlessBooleanExpression
+                if ((italic_button_pressed == false)  && (bold_button_pressed == false)) {
+                    notepad_edit.setTypeface(regularTypeFace);
+                }
+
+                //noinspection PointlessBooleanExpression
+                if ((italic_button_pressed == true)  && (bold_button_pressed == true)) {
+                    notepad_edit.setTypeface(boldItalicTypeFace);
+                }
+
+                //noinspection PointlessBooleanExpression
+                if ((italic_button_pressed == false)  && (bold_button_pressed == true)) {
+                    notepad_edit.setTypeface(boldTypeFace);
+                }
+            }
+        });
+
+        // Load and update EditText if there was a saved note
+        SharedPreferences sharedPreferences = Objects.requireNonNull(getContext()).getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
+        noteText = sharedPreferences.getString(NOTE, "");
+        bold_button_pressed = sharedPreferences.getBoolean("Bold Button State",bold_button_pressed);
+        italic_button_pressed = sharedPreferences.getBoolean("Italic Button State",italic_button_pressed);
         try {
             ((Activity) Objects.requireNonNull(getContext())).runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    ((EditText) notepad_edit).setText(noteText);
+                    notepad_edit.setText(noteText);
+                    if ((bold_button_pressed) && (italic_button_pressed)) {
+                        notepad_edit.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD_ITALIC));
+                    } else if ((!bold_button_pressed) && (!italic_button_pressed)) {
+                        notepad_edit.setTypeface(Typeface.defaultFromStyle(Typeface.NORMAL));
+                    } else if (italic_button_pressed) {
+                        notepad_edit.setTypeface(Typeface.defaultFromStyle(Typeface.ITALIC));
+                    } else //noinspection ConstantConditions
+                        if (bold_button_pressed) {
+                        notepad_edit.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+                    }
                 }
             });
         } catch (Exception e) {
@@ -121,32 +201,35 @@ public class Notepad extends Fragment {
         }
     }
 
-    public void saveData() {
+    // SharedPrefs save EditText content
+    public void saveData(boolean hidden) {
         SharedPreferences sharedPreferences = Objects.requireNonNull(getContext()).getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
-        @SuppressLint("CommitPrefEdits")
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
+        editor.putBoolean("Bold Button State",bold_button_pressed);
+        editor.putBoolean("Italic Button State",italic_button_pressed);
         editor.putString(NOTE, notepad_edit.getText().toString());
         editor.apply();
 
-        Toast.makeText(getContext(), "Note Saved", Toast.LENGTH_SHORT).show();
+        // Hide info bubble
+        if (!hidden) {
+            Toast.makeText(getContext(), "Note Saved", Toast.LENGTH_SHORT).show();
+        }
     }
 
-    public void loadData() {
-        SharedPreferences sharedPreferences = Objects.requireNonNull(getContext()).getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
-        noteText = sharedPreferences.getString(NOTE, ""); // Remains null for some reason on Debug
-    }
-
+    // Check which options are selected
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
+            // TODO: Maybe add a clear all on file and save action
             //noinspection ConstantConditions
             super.getActivity().onBackPressed(); // Goto -> parent activity -> main
             notepad_edit.onEditorAction(EditorInfo.IME_ACTION_DONE);
         } else if (item.getItemId() == R.id.action_notepad_save) {
-            saveData();
+            saveData(false);
         } else if (item.getItemId() == R.id.action_notepad_clear){
             notepad_edit.setText("");
+//            saveData(true);
         } else {
             return super.onOptionsItemSelected(item);
         }
