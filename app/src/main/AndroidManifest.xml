@@ -3,9 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.matdevtech.multility">
     <!-- Add Access to Internet, to access external APIs -->
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -17,58 +18,53 @@
         <activity
             android:name=".NavigationBar"
             android:label="Multility"
-            android:parentActivityName=".MainActivity"
-            tools:ignore="MissingClass" /> <!-- suppress AndroidDomInspection -->
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".PrivacyPolicy"
             android:label="@string/priv_policy"
-            android:parentActivityName=".SettingsActivity"
-            tools:ignore="MissingClass" /> <!-- suppress AndroidDomInspection -->
+            android:parentActivityName=".SettingsActivity"/>
         <activity
             android:name=".TermsOfService"
             android:label="@string/tos"
-            android:parentActivityName=".SettingsActivity"
-            tools:ignore="MissingClass" /> <!-- suppress AndroidDomInspection -->
+            android:parentActivityName=".SettingsActivity"/>
         <activity
             android:name=".About"
             android:label="About"
-            android:parentActivityName=".SettingsActivity"
-            tools:ignore="MissingClass" /> <!-- suppress AndroidDomInspection -->
+            android:parentActivityName=".SettingsActivity"/>
         <activity
             android:name=".SettingsActivity"
             android:label="@string/settings"
-            android:parentActivityName=".MainActivity"
-            tools:ignore="MissingClass" /> <!-- suppress AndroidDomInspection -->
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".TipCalculator"
             android:label="Tip Calculator"
             android:parentActivityName=".MainActivity"
-            tools:ignore="Instantiatable,MissingClass" /> <!-- suppress AndroidDomInspection -->
+            tools:ignore="Instantiatable"/>
         <activity
             android:name=".Notepad"
             android:label="Notepad"
             android:parentActivityName=".MainActivity"
-            tools:ignore="Instantiatable,MissingClass" /> <!-- suppress AndroidDomInspection -->
+            tools:ignore="Instantiatable"/>
         <activity
             android:name=".Stopwatch"
             android:label="Stopwatch"
             android:parentActivityName=".MainActivity"
-            tools:ignore="Instantiatable,MissingClass" /> <!-- suppress AndroidDomInspection -->
+            tools:ignore="Instantiatable"/>
         <activity
             android:name=".PasswordGenerator"
             android:label="Password Generator"
             android:parentActivityName=".MainActivity"
-            tools:ignore="Instantiatable,MissingClass" /> <!-- suppress AndroidDomInspection -->
+            tools:ignore="Instantiatable"/>
         <activity
             android:name=".DailyFact"
             android:label="Daily Fact"
             android:parentActivityName=".MainActivity"
-            tools:ignore="Instantiatable,MissingClass" /> <!-- suppress AndroidDomInspection -->
+            tools:ignore="Instantiatable"/>
         <activity
             android:name=".TrendingNews"
             android:label="Trending News"
             android:parentActivityName=".MainActivity"
-            tools:ignore="Instantiatable,MissingClass" />
+            tools:ignore="Instantiatable"/>
         <!--
         Remove the above line if data backups are a problem
         *-SOURCE of fix-*
@@ -76,21 +72,19 @@
         Consider adding the attribute android:fullBackupContent to specify an @xml resource which configures which files to back up.
         More info: https://developer.android.com/guide/topics/data/autobackup
         -->
-        <!-- suppress AndroidDomInspection -->
         <activity
             android:name=".SplashScreen"
             android:theme="@style/SplashScreenTheme"
             tools:ignore="MissingClass">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity> <!-- suppress CheckTagEmptyBody -->
-        <!-- suppress AndroidDomInspection -->
+        </activity>
         <activity
             android:name=".MainActivity"
-            tools:ignore="MissingClass" />
+            tools:ignore="MissingClass"/>
     </application>
 
 </manifest>

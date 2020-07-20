@@ -40,7 +40,7 @@ public class Notepad extends Fragment {
     private static String noteText;
     public static final String SHARED_PREFS = "sharedPrefs";
     public static final String NOTE = "note";
-    public static String selectedText;
+//    public static String selectedText;
     boolean bold_button_pressed = false;
     boolean italic_button_pressed = false;
 

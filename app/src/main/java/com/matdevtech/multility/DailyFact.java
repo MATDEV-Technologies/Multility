@@ -1,10 +1,15 @@
 package com.matdevtech.multility;
 
 // Imports
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import java.util.Objects;
 
@@ -15,6 +20,9 @@ import java.util.Objects;
  */
 // Main class
 public class DailyFact extends Fragment {
+
+    @SuppressLint("StaticFieldLeak")
+    public static TextView fact_text;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -66,6 +74,12 @@ public class DailyFact extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_daily_fact, container, false);
     }
-}
 
-//bruh
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        fact_text = Objects.requireNonNull(getView()).findViewById(R.id.daily_fact_text);
+
+        DailyFactAPIFetch process = new DailyFactAPIFetch();
+        process.execute();
+    }
+}
