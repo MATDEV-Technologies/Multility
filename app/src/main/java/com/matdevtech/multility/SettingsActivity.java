@@ -12,6 +12,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 // Main class
@@ -40,7 +42,7 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
         super.onCreate(savedInstanceState);
         // DO NOT DELETE COMMENTS
 
-        // INITIALIZE SHARED PREFERENCES
+        // INITIALIZE SHARED PREFERENCES FOR LOCATION SPINNER
         LastSelect = getSharedPreferences("LastSetting", Context.MODE_PRIVATE);
         editor = LastSelect.edit();
         final int LastClick = LastSelect.getInt("LastClick",0);

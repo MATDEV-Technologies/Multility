@@ -43,7 +43,7 @@
 
     <item
         android:id="@+id/daily_fact_navbar"
-        android:title="Daily Fact"
+        android:title="Fact Generator"
         android:icon="@drawable/ic_baseline_book_24"
         app:cnb_backgroundColor="@color/colorPrimary"
         app:cnb_iconColor="@color/colorCardBackground"

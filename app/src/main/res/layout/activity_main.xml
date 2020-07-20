@@ -151,12 +151,13 @@ child views in relative positions -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/facts"
+                    android:text="Fact\nGenerator"
                     android:textAlignment="center"
                     android:textColor="@color/colorGrey"
                     android:elevation="16dp"
                     android:textSize="24sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
