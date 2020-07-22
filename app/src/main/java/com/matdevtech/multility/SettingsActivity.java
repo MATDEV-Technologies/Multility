@@ -12,12 +12,15 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.Toast;
+//import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 // Main class
 public class SettingsActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+
+    @SuppressWarnings("unused")
+    public static String API_COUNTRY_STRING;
 
     SharedPreferences LastSelect;
     SharedPreferences.Editor editor;
@@ -28,6 +31,7 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
     @SuppressWarnings("FieldCanBeLocal")
     private Button button2;
     Spinner location;
+    @SuppressWarnings("FieldCanBeLocal")
     private Button button3;
 
     // Class consts
@@ -147,6 +151,8 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
         // IMPLEMENTATION OF LOCATION SPINNER
         location = findViewById(R.id.country_spinner);
         LOCATION_TEXT = location.getSelectedItem().toString();
+
+
     }
 
     // Part of and required by onItemSelected() and the main clas

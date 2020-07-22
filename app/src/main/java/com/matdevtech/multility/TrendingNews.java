@@ -2,16 +2,35 @@ package com.matdevtech.multility;
 
 // Import
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
+import com.matdevtech.multility.api.ApiInterface;
+import com.matdevtech.multility.api.ApiClient;
+import com.matdevtech.multility.models.Article;
+import com.matdevtech.multility.models.News;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -20,6 +39,13 @@ import java.util.Objects;
  */
 // Main class
 public class TrendingNews extends Fragment {
+
+    public static final String API_KEY = "102f8feadfc8432d8be96f4e4de5d43d";
+    private RecyclerView recyclerView;
+    private RecyclerView.LayoutManager layoutManager;
+    private List<Article> articles = new ArrayList<>();
+    private Adapter adapter;
+    private String TAG = TrendingNews.class.getSimpleName();
 
     // Class consts
     // TODO: Rename parameter arguments, choose names that match
@@ -75,4 +101,50 @@ public class TrendingNews extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_trending_news, container, false);
     }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        recyclerView = Objects.requireNonNull(getView()).findViewById(R.id.recyclerView);
+        layoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.setNestedScrollingEnabled(false);
+
+        LoadJson();
+    }
+
+    // Loading API functionality
+    public void LoadJson(){
+
+        ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
+
+        String country = Utils.getCountry();
+
+        Call<News> call;
+        call = apiInterface.getNews(country, API_KEY);
+
+        call.enqueue(new Callback<News>() {
+            @Override
+            public void onResponse(@NotNull Call<News> call, @NotNull Response<News> response) {
+                assert response.body() != null; // DEBUG
+                if (response.isSuccessful() && response.body().getArticle() != null) {
+                    if (!articles.isEmpty()) {
+                        articles.clear();
+                    }
+                    articles = response.body().getArticle();
+                    adapter = new Adapter(articles, getContext());
+                    recyclerView.setAdapter(adapter);
+                    adapter.notifyDataSetChanged();
+                } else {
+                    Toast.makeText(getContext(), "No Result!", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(@NotNull Call<News> call, @NotNull Throwable t) {
+                // pass
+            }
+        });
+    }
+
 }
