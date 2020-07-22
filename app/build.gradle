@@ -11,6 +11,7 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
+//        glideVersion = "4.7.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -44,7 +45,11 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
 
 //Image
+    //noinspection GradleDependency
     implementation 'com.github.bumptech.glide:glide:4.7.1'
+//    implementation("com.github.bumptech.glide:annotations:${_glideVersion}") {
+//        exclude group: "com.android.support", module: "annotations"
+//    }
     annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
 
 //Network
