@@ -7,6 +7,7 @@
 .externalNativeBuild
 .cxx
 .idea/inspectionProfiles/
+.gradle
 .gradle/
 .idea/caches/
 .idea/libraries/
