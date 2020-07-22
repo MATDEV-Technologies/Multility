@@ -12,6 +12,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 // Main class
@@ -26,8 +28,10 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
     @SuppressWarnings("FieldCanBeLocal")
     private Button button2;
     Spinner location;
+    private Button button3;
 
     // Class consts
+    @SuppressWarnings("unused")
     public static String COLOR_TEXT = "colorText";
     public static String LOCATION_TEXT = "locationText";
 
@@ -38,7 +42,7 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
         super.onCreate(savedInstanceState);
         // DO NOT DELETE COMMENTS
 
-        // INITIALIZE SHARED PREFERENCES
+        // INITIALIZE SHARED PREFERENCES FOR LOCATION SPINNER
         LastSelect = getSharedPreferences("LastSetting", Context.MODE_PRIVATE);
         editor = LastSelect.edit();
         final int LastClick = LastSelect.getInt("LastClick",0);
@@ -75,6 +79,14 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
             @Override
             public void onClick(View v) {
                 openPrivacyPolicy();
+            }
+        });
+
+        button3 = findViewById(R.id.about_button);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openAbout();
             }
         });
     }
@@ -153,5 +165,11 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
         // Create a new intent and launch it with the activity
         Intent intent2 = new Intent(this, PrivacyPolicy.class);
         startActivity(intent2);
+    }
+
+    public void openAbout() {
+        // Create a new intent and launch it with the activity
+        Intent intent3 = new Intent(this, About.class);
+        startActivity(intent3);
     }
 }

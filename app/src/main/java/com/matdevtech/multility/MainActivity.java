@@ -12,9 +12,8 @@ import androidx.cardview.widget.CardView;
 // Main class
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
+    // Class const(s)
     public static final String FRAGMENT_INT = "com.matdevtech.multility.FRAGMENT_INT";
-    @SuppressWarnings("FieldCanBeLocal")
-    private CardView tipCalculatorCard, notepadCard, unitConverterCard, passwordGeneratorCard, dailyFactCard, trendingNewsCard;
 
     // Activity init
     // GLOBAL NOTE: all Android methods must be overidden to be called by the framework and function in the application
@@ -24,12 +23,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main); // Sets the activity layout to the one belonging to MainActivity
 
         // INITIALIZE MENU CARDS BY THEIR IDs
-        tipCalculatorCard = (CardView) findViewById(R.id.tip_calculator_card);
-        notepadCard = (CardView) findViewById(R.id.notepad_card);
-        unitConverterCard = (CardView) findViewById(R.id.stopwatch_card);
-        passwordGeneratorCard = (CardView) findViewById(R.id.password_generator_card);
-        dailyFactCard = (CardView) findViewById(R.id.daily_fact_card);
-        trendingNewsCard = (CardView) findViewById(R.id.trending_news_card);
+        CardView tipCalculatorCard = findViewById(R.id.tip_calculator_card);
+        CardView notepadCard = findViewById(R.id.notepad_card);
+        CardView unitConverterCard = findViewById(R.id.stopwatch_card);
+        CardView passwordGeneratorCard = findViewById(R.id.password_generator_card);
+        CardView dailyFactCard = findViewById(R.id.daily_fact_card);
+        CardView trendingNewsCard = findViewById(R.id.trending_news_card);
 
         // ADD CARD CLICK LISTENERS
         tipCalculatorCard.setOnClickListener(this);

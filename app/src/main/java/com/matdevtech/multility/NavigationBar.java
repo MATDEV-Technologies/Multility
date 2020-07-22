@@ -19,7 +19,6 @@ public class NavigationBar extends AppCompatActivity {
     FragmentManager fragmentManager;
 
     // Menu init
-    @SuppressWarnings("ConstantConditions")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +30,7 @@ public class NavigationBar extends AppCompatActivity {
         fragment_int = intent.getStringExtra(MainActivity.FRAGMENT_INT);
 
         // Check each fragment selection
+        assert fragment_int != null; // DEBUG
         switch (fragment_int) {
             case "1":
                 if (savedInstanceState == null) {
@@ -122,6 +122,7 @@ public class NavigationBar extends AppCompatActivity {
                         break;
                 }
 
+                // x != null -> exists
                 if (fragment!=null){
                     fragmentManager = getSupportFragmentManager();
                     fragmentManager.beginTransaction()
