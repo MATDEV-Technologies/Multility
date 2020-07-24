@@ -52,6 +52,7 @@ public class Utils {
         SimpleDateFormat dateFormat = new SimpleDateFormat("E, d MMM yyyy", new Locale(getCountry()));
         try {
             @SuppressLint("SimpleDateFormat") Date date = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse(oldstringDate);
+            assert date != null; // DEBUG
             newDate = dateFormat.format(date);
         } catch (ParseException e) {
             e.printStackTrace();
@@ -63,6 +64,7 @@ public class Utils {
 
     public static String getCountry(){
         Locale locale = Locale.getDefault();
+        //noinspection UnnecessaryCallToStringValueOf
         String country = String.valueOf(locale.getCountry());
         return country.toLowerCase();
     }

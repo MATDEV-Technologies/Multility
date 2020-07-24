@@ -1,38 +1,33 @@
 package com.matdevtech.multility;
 
-// Import
-import android.content.Intent;
-import android.net.Uri;
+// Imports
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
-
 import com.matdevtech.multility.api.ApiInterface;
 import com.matdevtech.multility.api.ApiClient;
 import com.matdevtech.multility.models.Article;
 import com.matdevtech.multility.models.News;
-
 import org.jetbrains.annotations.NotNull;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+//import android.content.Intent;
+//import android.net.Uri;
+//import android.view.Menu;
+//import android.view.MenuInflater;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -42,12 +37,19 @@ import retrofit2.Response;
 // Main class
 public class TrendingNews extends Fragment {
 
+    // Class vars and consts
     public static final String API_KEY = "102f8feadfc8432d8be96f4e4de5d43d";
     private RecyclerView recyclerView;
+    @SuppressWarnings("FieldCanBeLocal")
     private RecyclerView.LayoutManager layoutManager;
     private List<Article> articles = new ArrayList<>();
     private Adapter adapter;
+    @SuppressWarnings("unused")
+    private Adapter.OnItemClickListener recyclerViewClickListener;
+    @SuppressWarnings("unused")
     private String TAG = TrendingNews.class.getSimpleName();
+    @SuppressWarnings("unused")
+    private SwipeRefreshLayout swipeRefreshLayout;
 
     // Class consts
     // TODO: Rename parameter arguments, choose names that match
@@ -115,8 +117,8 @@ public class TrendingNews extends Fragment {
         LoadJson();
     }
 
-    public void LoadJson(){
-
+    // Load JSON data frmo API
+    public void LoadJson() {
         ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
 
         String country = Utils.getCountry();
@@ -136,9 +138,6 @@ public class TrendingNews extends Fragment {
                     adapter = new Adapter(articles, getContext());
                     recyclerView.setAdapter(adapter);
                     adapter.notifyDataSetChanged();
-
-                    initListener();
-
                 } else {
                     Toast.makeText(getContext(), "No Result!", Toast.LENGTH_SHORT).show();
                 }
@@ -147,18 +146,6 @@ public class TrendingNews extends Fragment {
             @Override
             public void onFailure(@NotNull Call<News> call, @NotNull Throwable t) {
                 // pass
-            }
-        });
-    }
-
-    private void initListener() {
-        adapter.setOnItemClickListener(new Adapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, int position) {
-                Article article = articles.get(position);
-                String articleURL = article.getUrl();
-                Intent browser = new Intent(Intent.ACTION_VIEW, Uri.parse(articleURL));
-                startActivity(browser);
             }
         });
     }
