@@ -1,6 +1,8 @@
 package com.matdevtech.multility;
 
 // Import
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -113,7 +115,6 @@ public class TrendingNews extends Fragment {
         LoadJson();
     }
 
-    // Loading API functionality
     public void LoadJson(){
 
         ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
@@ -135,6 +136,9 @@ public class TrendingNews extends Fragment {
                     adapter = new Adapter(articles, getContext());
                     recyclerView.setAdapter(adapter);
                     adapter.notifyDataSetChanged();
+
+                    initListener();
+
                 } else {
                     Toast.makeText(getContext(), "No Result!", Toast.LENGTH_SHORT).show();
                 }
@@ -147,4 +151,15 @@ public class TrendingNews extends Fragment {
         });
     }
 
+    private void initListener() {
+        adapter.setOnItemClickListener(new Adapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Article article = articles.get(position);
+                String articleURL = article.getUrl();
+                Intent browser = new Intent(Intent.ACTION_VIEW, Uri.parse(articleURL));
+                startActivity(browser);
+            }
+        });
+    }
 }

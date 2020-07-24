@@ -30,7 +30,6 @@ import android.widget.TextView;
 
 // Main Class
 public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
-    // Adapts view and list for the UI (and various other receieving and sending of information)
     private List<Article> articles;
     private Context context;
     private OnItemClickListener onItemClickListener;
@@ -92,14 +91,12 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
         return articles.size();
     }
 
-    @SuppressWarnings({"SillyAssignment", "unused"})
-    public void setOnItemClickListener() {
-        // noinspection ConstantConditions
-        this.onItemClickListener = onItemClickListener;
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        //noinspection ConstantConditions
+        this.onItemClickListener = this.onItemClickListener;
     }
 
     public interface OnItemClickListener {
-        @SuppressWarnings("unused")
         void onItemClick(View view, int position);
     }
 

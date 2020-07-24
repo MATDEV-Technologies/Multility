@@ -1,52 +1,50 @@
 package com.matdevtech.multility.api;
 
-// Imports
 import android.annotation.SuppressLint;
+
 import java.security.cert.CertificateException;
+
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSession;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
+
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-// Main class
 public class ApiClient {
-    // Main server-to-client usage of the API
 
-    // Class vars
     public static final String BASE_URL = "https://newsapi.org/v2/";
     public static Retrofit retrofit;
 
     public static Retrofit getApiClient(){
+
         if (retrofit == null){
             retrofit = new Retrofit.Builder().baseUrl(BASE_URL)
                     .client(getUnsafeOkHttpClient().build())
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }
+
         return retrofit;
     }
 
     public static OkHttpClient.Builder getUnsafeOkHttpClient(){
         try {
             // Create a trust manager that does not validate certificate chains
-            //noinspection RedundantThrows
             final TrustManager[] trustAllCerts = new TrustManager[]{
                     new X509TrustManager() {
                         @SuppressLint("TrustAllX509TrustManager")
                         @Override
                         public void checkClientTrusted(java.security.cert.X509Certificate[] chain, String authType) throws CertificateException {
-                            // pass
                         }
 
                         @SuppressLint("TrustAllX509TrustManager")
                         @Override
                         public void checkServerTrusted(java.security.cert.X509Certificate[] chain, String authType) throws CertificateException {
-                            // pass
                         }
 
                         @Override
@@ -74,7 +72,8 @@ public class ApiClient {
             });
             return builder;
         } catch (Exception e) {
-            throw new RuntimeException(e); // DEBUG
+            throw new RuntimeException(e);
         }
     }
+
 }

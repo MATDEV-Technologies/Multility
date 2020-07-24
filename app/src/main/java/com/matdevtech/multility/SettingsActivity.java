@@ -14,16 +14,19 @@ import android.widget.Button;
 import android.widget.Spinner;
 //import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 // Main class
-public class SettingsActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class SettingsActivity extends AppCompatActivity {
 
     @SuppressWarnings("unused")
     public static String API_COUNTRY_STRING;
 
     SharedPreferences LastSelect;
+    SharedPreferences LastSelectColour;
     SharedPreferences.Editor editor;
+    SharedPreferences.Editor coloreditor;
 
     // Class vars
     @SuppressWarnings("FieldCanBeLocal")
@@ -31,6 +34,7 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
     @SuppressWarnings("FieldCanBeLocal")
     private Button button2;
     Spinner location;
+    Spinner color;
     @SuppressWarnings("FieldCanBeLocal")
     private Button button3;
 
@@ -46,20 +50,24 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
         super.onCreate(savedInstanceState);
         // DO NOT DELETE COMMENTS
 
-        // INITIALIZE SHARED PREFERENCES FOR LOCATION SPINNER
+        // INITIALIZE SHARED PREFERENCES FOR SPINNERS
         LastSelect = getSharedPreferences("LastSetting", Context.MODE_PRIVATE);
         editor = LastSelect.edit();
         final int LastClick = LastSelect.getInt("LastClick",0);
 
-        // UtilsTheme.onApplicationCreateSetTheme(this);
+        LastSelectColour = getSharedPreferences("LastSettingColour", Context.MODE_PRIVATE);
+        coloreditor = LastSelectColour.edit();
+        final int LastClickColour = LastSelectColour.getInt("LastClickColour",0);
+
         setContentView(R.layout.activity_settings);
 
         // Spinner drop down init
-        Spinner spinner = findViewById(R.id.color_spinner); // maybe make global to the class
+        color = findViewById(R.id.color_spinner); // maybe make global to the class
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.colors, R.layout.spinner_styles);
         adapter.setDropDownViewResource(R.layout.spinner_dropdown_styles);
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(this);
+        color.setAdapter(adapter);
+        color.setSelection(LastClickColour);
+        color.setOnItemSelectedListener(new ColourSpinnerClass());
 
         // Spinner drop down init
         location = findViewById(R.id.country_spinner); // maybe make global to the class
@@ -67,7 +75,7 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
         adapter2.setDropDownViewResource(R.layout.spinner_dropdown_styles);
         location.setAdapter(adapter2);
         location.setSelection(LastClick);
-        location.setOnItemSelectedListener(this);
+        location.setOnItemSelectedListener(new LocationSpinnerClass());
 
         // Button init(s)
         // Grab IDs and listen for clicks/taps
@@ -107,58 +115,34 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
         return true;
     }
 
-    // Cases for changing the accent color by spinner (currently disabled)
-    @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+    class ColourSpinnerClass implements AdapterView.OnItemSelectedListener{
 
-        // SAVE LAST VARIABLE IN LOCATION SPINNER
-        editor.putInt("LastClick",position).commit();
+        @Override
+        public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+            coloreditor.putInt("LastClickColour",position).commit();
 
-        // Theming is disabled for now; DO NOT REMOVE THE COMMENTS OR METHODS
+            color = findViewById(R.id.color_spinner);
+            COLOR_TEXT = color.getSelectedItem().toString();
+        }
 
-//        Spinner spinner = findViewById(R.id.color_spinner);
-////        String currentColor;
-//        String text = spinner.getSelectedItem().toString();
-//        switch (text) {
-//            case "Choose Colour":
-//                break;
-//            case "Red":
-//                UtilsTheme.changeToTheme(this, UtilsTheme.THEME_RED);
-////                Drawable unwrappedDrawable = AppCompatResources.getDrawable(getBaseContext(), R.drawable.ic_baseline_attach_money_24);
-////                Drawable wrappedDrawable = DrawableCompat.wrap(unwrappedDrawable);
-////                DrawableCompat.setTint(wrappedDrawable, getResources().getColor(R.color.redPrimary));
-//                // Normally apply to all drawables and themes (the other branches of the switch statement)
-//                // DO NOT REMOVE THESE COMMENTS
-//                break;
-//            case "Orange":
-//                UtilsTheme.changeToTheme(this, UtilsTheme.THEME_ORANGE);
-//                break;
-//            case "Yellow":
-//                UtilsTheme.changeToTheme(this, UtilsTheme.THEME_YELLOW);
-//                break;
-//            case "Green":
-//                UtilsTheme.changeToTheme(this, UtilsTheme.THEME_DEFAULT);
-//                break;
-//            case "Blue":
-//                UtilsTheme.changeToTheme(this, UtilsTheme.THEME_BLUE);
-//                break;
-//            case "Purple":
-//                UtilsTheme.changeToTheme(this, UtilsTheme.THEME_PURPLE);
-//                break;
-//            // Maybe add a default branch
-//        }
-
-        // IMPLEMENTATION OF LOCATION SPINNER
-        location = findViewById(R.id.country_spinner);
-        LOCATION_TEXT = location.getSelectedItem().toString();
-
-
+        @Override
+        public void onNothingSelected(AdapterView<?> adapterView) {
+        }
     }
 
-    // Part of and required by onItemSelected() and the main clas
-    @Override
-    public void onNothingSelected(AdapterView<?> adapterView) {
-        // pass BUT DO NOT DELETE; REQUIRED BY THE MAIN CLASS
+    class LocationSpinnerClass implements AdapterView.OnItemSelectedListener{
+
+        @Override
+        public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+            editor.putInt("LastClick",position).commit();
+
+            location = findViewById(R.id.country_spinner);
+            LOCATION_TEXT = location.getSelectedItem().toString();
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> adapterView) {
+        }
     }
 
     public void openTermsOfService() {

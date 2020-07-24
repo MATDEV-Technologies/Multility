@@ -1,10 +1,11 @@
 package com.matdevtech.multility;
 
-// Imports
 import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+
 import org.ocpsoft.prettytime.PrettyTime;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -12,7 +13,7 @@ import java.util.Locale;
 import java.util.Random;
 
 public class Utils {
-    // General utilities for usage in the News app
+
     public static ColorDrawable[] vibrantLightColorList =
             {
                     // Maybe replace with own colour theme
@@ -51,18 +52,17 @@ public class Utils {
         SimpleDateFormat dateFormat = new SimpleDateFormat("E, d MMM yyyy", new Locale(getCountry()));
         try {
             @SuppressLint("SimpleDateFormat") Date date = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse(oldstringDate);
-            assert date != null; // DEBUG
             newDate = dateFormat.format(date);
         } catch (ParseException e) {
-            e.printStackTrace(); // DEBUG
+            e.printStackTrace();
             newDate = oldstringDate;
         }
+
         return newDate;
     }
 
     public static String getCountry(){
         Locale locale = Locale.getDefault();
-        //noinspection UnnecessaryCallToStringValueOf
         String country = String.valueOf(locale.getCountry());
         return country.toLowerCase();
     }

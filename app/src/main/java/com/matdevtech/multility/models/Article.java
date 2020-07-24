@@ -1,12 +1,9 @@
 package com.matdevtech.multility.models;
 
-// Imports
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-// Main class
 public class Article {
-    // Initialization and get/set functionality for the 'Article' component of News
     @SerializedName("source")
     @Expose
     private Source source;
@@ -37,37 +34,29 @@ public class Article {
 
     public Source getSource() { return source; }
 
-    @SuppressWarnings("unused")
     public void setSource(Source source) { this.source = source; }
 
     public String getAuthor() { return author;}
 
-    @SuppressWarnings("unused")
     public void setAuthor(String author) { this.author = author; }
 
     public String getTitle() { return title; }
 
-    @SuppressWarnings("unused")
     public void setTitle(String title) { this.title = title; }
 
     public String getDescription() { return description; }
 
-    @SuppressWarnings("unused")
     public void setDescription(String description) { this.description = description; }
 
-    @SuppressWarnings("unused")
     public String getUrl() { return url; }
 
-    @SuppressWarnings("unused")
     public void setUrl(String url) { this.url = url; }
 
     public String getUrlToImage() { return urlToImage; }
 
-    @SuppressWarnings("unused")
     public void setUrlToImage(String urlToImage) { this.urlToImage = urlToImage; }
 
     public String getPublishedAt() { return publishedAt; }
 
-    @SuppressWarnings("unused")
     public void setPublishedAt(String publishedAt) { this.publishedAt = publishedAt; }
 }
