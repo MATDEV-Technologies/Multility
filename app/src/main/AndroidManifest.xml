@@ -3,68 +3,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.matdevtech.multility">
     <!-- Add Access to Internet, to access external APIs -->
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
         tools:ignore="AllowBackup">
-        <!-- suppress AndroidDomInspection -->
         <activity
             android:name=".NavigationBar"
             android:label="Multility"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".PrivacyPolicy"
             android:label="@string/priv_policy"
-            android:parentActivityName=".SettingsActivity"/>
+            android:parentActivityName=".SettingsActivity" />
         <activity
             android:name=".TermsOfService"
             android:label="@string/tos"
-            android:parentActivityName=".SettingsActivity"/>
+            android:parentActivityName=".SettingsActivity" />
         <activity
             android:name=".About"
             android:label="About"
-            android:parentActivityName=".SettingsActivity"/>
+            android:parentActivityName=".SettingsActivity" />
         <activity
             android:name=".SettingsActivity"
             android:label="@string/settings"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".TipCalculator"
             android:label="Tip Calculator"
             android:parentActivityName=".MainActivity"
-            tools:ignore="Instantiatable"/>
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".Notepad"
             android:label="Notepad"
             android:parentActivityName=".MainActivity"
-            tools:ignore="Instantiatable"/>
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".Stopwatch"
             android:label="Stopwatch"
             android:parentActivityName=".MainActivity"
-            tools:ignore="Instantiatable"/>
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".PasswordGenerator"
             android:label="Password Generator"
             android:parentActivityName=".MainActivity"
-            tools:ignore="Instantiatable"/>
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".DailyFact"
             android:label="Daily Fact"
             android:parentActivityName=".MainActivity"
-            tools:ignore="Instantiatable"/>
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".TrendingNews"
             android:label="Trending News"
             android:parentActivityName=".MainActivity"
-            tools:ignore="Instantiatable"/>
+            tools:ignore="Instantiatable" />
         <!--
         Remove the above line if data backups are a problem
         *-SOURCE of fix-*
@@ -77,14 +76,14 @@
             android:theme="@style/SplashScreenTheme"
             tools:ignore="MissingClass">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
-            tools:ignore="MissingClass"/>
+            tools:ignore="MissingClass" />
     </application>
 
 </manifest>

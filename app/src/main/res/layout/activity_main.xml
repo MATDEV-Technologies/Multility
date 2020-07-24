@@ -286,5 +286,7 @@ child views in relative positions -->
                     android:textStyle="bold"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
     </GridLayout>
+
 </RelativeLayout>

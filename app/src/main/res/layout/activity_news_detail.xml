@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GLOBAL NOTE: Coordinator Layout is for advanced
+lists and menus -->
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="#000000"
+    android:fitsSystemWindows="true">
+
+    <!-- GLOBAL NOTE: Multiple entities that
+    have scroll fucntionality-->
+    <androidx.core.widget.NestedScrollView
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="8dp"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#000000">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="19sp"
+                        android:text="Title of News"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText"/>
+
+                    <TextView
+                        android:id="@+id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_below="@id/title"
+                        android:layout_marginTop="10dp"
+                        android:maxLines="1"
+                        android:drawablePadding="10dp"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:textColor="@color/colorWhite"
+                        android:text="a time ago"
+                        tools:ignore="HardcodedText"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="@dimen/cardview_default_elevation"
+                app:cardCornerRadius="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#000000">
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginBottom="70dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <WebView
+                        android:id="@+id/webView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/date_behavior"
+        android:adjustViewBounds="true"
+        android:layout_gravity="right|end"
+        android:clickable="false"
+        android:layout_below="@id/img"
+        android:background="@drawable/button_rounded_grey"
+        android:layout_width="wrap_content"
+        android:padding="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="410dp"
+        android:layout_height="wrap_content"
+        tools:ignore="RtlHardcoded,UnusedAttribute">
+        <TextView
+            android:textColor="@color/colorWhite"
+            android:id="@+id/date"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="01 January 1990"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText"/>
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
