@@ -6,6 +6,9 @@
 /captures
 .externalNativeBuild
 .cxx
+.idea/
+.idea
+**/.idea
 .idea/inspectionProfiles/
 .gradle
 .gradle/
