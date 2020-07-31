@@ -1,6 +1,9 @@
 package com.matdevtech.multility;
 
 // Imports
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -111,13 +114,12 @@ public class TrendingNews extends Fragment {
         recyclerView = Objects.requireNonNull(getView()).findViewById(R.id.recyclerView);
         layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setNestedScrollingEnabled(false);
 
         LoadJson();
     }
 
-    // Load JSON data frmo API
+    // Load JSON data from API
     public void LoadJson() {
         ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
 
@@ -138,6 +140,8 @@ public class TrendingNews extends Fragment {
                     adapter = new Adapter(articles, getContext());
                     recyclerView.setAdapter(adapter);
                     adapter.notifyDataSetChanged();
+
+                    initListener();
                 } else {
                     Toast.makeText(getContext(), "No Result!", Toast.LENGTH_SHORT).show();
                 }
@@ -149,4 +153,18 @@ public class TrendingNews extends Fragment {
             }
         });
     }
+
+    private void initListener() {
+        adapter.setOnItemClickListener(new Adapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Article article = articles.get(position);
+                String articleURL = article.getUrl();
+
+                Intent intent = new Intent (Intent.ACTION_VIEW, Uri.parse(articleURL));
+                startActivity(intent);
+            }
+        });
+    }
+
 }
