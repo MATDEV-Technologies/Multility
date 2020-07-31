@@ -35,6 +35,7 @@ public class ApiClient {
     public static OkHttpClient.Builder getUnsafeOkHttpClient(){
         try {
             // Create a trust manager that does not validate certificate chains
+            //noinspection RedundantThrows
             final TrustManager[] trustAllCerts = new TrustManager[]{
                     new X509TrustManager() {
                         @SuppressLint("TrustAllX509TrustManager")

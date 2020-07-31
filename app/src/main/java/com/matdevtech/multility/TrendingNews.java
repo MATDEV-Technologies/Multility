@@ -1,14 +1,12 @@
 package com.matdevtech.multility;
 
 // Imports
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -27,6 +25,8 @@ import java.util.Objects;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import android.content.Context;
+import androidx.recyclerview.widget.DefaultItemAnimator;
 //import android.content.Intent;
 //import android.net.Uri;
 //import android.view.Menu;
@@ -140,8 +140,6 @@ public class TrendingNews extends Fragment {
                     adapter = new Adapter(articles, getContext());
                     recyclerView.setAdapter(adapter);
                     adapter.notifyDataSetChanged();
-
-                    initListener();
                 } else {
                     Toast.makeText(getContext(), "No Result!", Toast.LENGTH_SHORT).show();
                 }
@@ -153,18 +151,4 @@ public class TrendingNews extends Fragment {
             }
         });
     }
-
-    private void initListener() {
-        adapter.setOnItemClickListener(new Adapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, int position) {
-                Article article = articles.get(position);
-                String articleURL = article.getUrl();
-
-                Intent intent = new Intent (Intent.ACTION_VIEW, Uri.parse(articleURL));
-                startActivity(intent);
-            }
-        });
-    }
-
 }
