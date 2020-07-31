@@ -55,5 +55,5 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.6'
 
 //Times Formatter
-    implementation 'org.ocpsoft.prettytime:prettytime:4.0.1.Final'
+    implementation 'org.ocpsoft.prettytime:prettytime:4.0.5.Final'
 }
