@@ -17,7 +17,10 @@ import android.content.Context;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,8 +28,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
-// LAST VIDEO TUTORIAL TIMESTAMP - 33:21 (https://youtu.be/9oNZAzIhL7s?list=WL)
+import android.widget.Toast;
 
 // Main Class
 public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
@@ -57,7 +59,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
         requestOptions.error(Utils.getRandomDrawbleColor());
         requestOptions.diskCacheStrategy(DiskCacheStrategy.ALL);
         requestOptions.centerCrop();
-        requestOptions.timeout(3000);
 
         Glide.with(context)
                 .load(model.getUrlToImage())
@@ -79,6 +80,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
                 .into(holder.imageView);
 
         holder.title.setText(model.getTitle());
+        holder.author.setText(model.getAuthor());
         holder.desc.setText(model.getDescription());
         holder.source.setText(model.getSource().getName());
         holder.time.setText(" \u2022 " + Utils.DateToTimeFormat(model.getPublishedAt()));
@@ -91,12 +93,14 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
         return articles.size();
     }
 
-    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+    @SuppressWarnings("SillyAssignment")
+    public void setOnItemClickListener(@SuppressWarnings("unused") OnItemClickListener onItemClickListener) {
         //noinspection ConstantConditions
         this.onItemClickListener = this.onItemClickListener;
     }
 
     public interface OnItemClickListener {
+        @SuppressWarnings("unused")
         void onItemClick(View view, int position);
     }
 
@@ -114,7 +118,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
             itemView.setOnClickListener(this);
             title = itemView.findViewById(R.id.title);
             desc = itemView.findViewById(R.id.desc);
-            author = itemView.findViewById(R.id.desc);
+            author = itemView.findViewById(R.id.author);
             published_at = itemView.findViewById(R.id.publishedAt);
             source = itemView.findViewById(R.id.source);
             time = itemView.findViewById(R.id.time);
@@ -126,7 +130,11 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
         @Override
         public void onClick(View v) {
-            // pass
+            Article article = articles.get(getAdapterPosition());
+            String articleURL = article.getUrl();
+
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(articleURL));
+            context.startActivity(intent);
         }
     }
 }

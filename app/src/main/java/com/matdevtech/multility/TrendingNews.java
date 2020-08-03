@@ -1,11 +1,12 @@
 package com.matdevtech.multility;
 
 // Imports
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -24,6 +25,8 @@ import java.util.Objects;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import android.content.Context;
+import androidx.recyclerview.widget.DefaultItemAnimator;
 //import android.content.Intent;
 //import android.net.Uri;
 //import android.view.Menu;
@@ -111,13 +114,12 @@ public class TrendingNews extends Fragment {
         recyclerView = Objects.requireNonNull(getView()).findViewById(R.id.recyclerView);
         layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setNestedScrollingEnabled(false);
 
         LoadJson();
     }
 
-    // Load JSON data frmo API
+    // Load JSON data from API
     public void LoadJson() {
         ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
 

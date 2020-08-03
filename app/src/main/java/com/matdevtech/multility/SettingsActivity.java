@@ -12,16 +12,17 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-//import android.widget.Toast;
-
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+//import android.widget.Toast;
+//import androidx.annotation.NonNull;
 
 // Main class
-public class SettingsActivity extends AppCompatActivity {
+public class SettingsActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     @SuppressWarnings("unused")
     public static String API_COUNTRY_STRING;
+
+    public static int themeInt;
 
     SharedPreferences LastSelect;
     SharedPreferences LastSelectColour;
@@ -33,7 +34,6 @@ public class SettingsActivity extends AppCompatActivity {
     private Button button1;
     @SuppressWarnings("FieldCanBeLocal")
     private Button button2;
-    Spinner location;
     Spinner color;
     @SuppressWarnings("FieldCanBeLocal")
     private Button button3;
@@ -41,24 +41,28 @@ public class SettingsActivity extends AppCompatActivity {
     // Class consts
     @SuppressWarnings("unused")
     public static String COLOR_TEXT = "colorText";
-    public static String LOCATION_TEXT = "locationText";
 
     // Activity init
     @SuppressLint("CommitPrefEdits")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // DO NOT DELETE COMMENTS
+
+
+         UtilsTheme.onActivityCreateSetTheme(this);
+//         UtilsTheme.onApplicationCreateSetTheme(this);
 
         // INITIALIZE SHARED PREFERENCES FOR SPINNERS
         LastSelect = getSharedPreferences("LastSetting", Context.MODE_PRIVATE);
         editor = LastSelect.edit();
+        //noinspection unused
         final int LastClick = LastSelect.getInt("LastClick",0);
 
         LastSelectColour = getSharedPreferences("LastSettingColour", Context.MODE_PRIVATE);
         coloreditor = LastSelectColour.edit();
         final int LastClickColour = LastSelectColour.getInt("LastClickColour",0);
 
+        UtilsTheme.onActivityCreateSetTheme(SettingsActivity.this);
         setContentView(R.layout.activity_settings);
 
         // Spinner drop down init
@@ -67,15 +71,7 @@ public class SettingsActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(R.layout.spinner_dropdown_styles);
         color.setAdapter(adapter);
         color.setSelection(LastClickColour);
-        color.setOnItemSelectedListener(new ColourSpinnerClass());
-
-        // Spinner drop down init
-        location = findViewById(R.id.country_spinner); // maybe make global to the class
-        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.countries, R.layout.spinner_styles);
-        adapter2.setDropDownViewResource(R.layout.spinner_dropdown_styles);
-        location.setAdapter(adapter2);
-        location.setSelection(LastClick);
-        location.setOnItemSelectedListener(new LocationSpinnerClass());
+        color.setOnItemSelectedListener(this);
 
         // Button init(s)
         // Grab IDs and listen for clicks/taps
@@ -115,35 +111,83 @@ public class SettingsActivity extends AppCompatActivity {
         return true;
     }
 
-    class ColourSpinnerClass implements AdapterView.OnItemSelectedListener{
+    // Still technically disabled (working on finishing before release, just need to fix one tiny bug that constantly resets the activity)
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
 
-        @Override
-        public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
-            coloreditor.putInt("LastClickColour",position).commit();
-
-            color = findViewById(R.id.color_spinner);
-            COLOR_TEXT = color.getSelectedItem().toString();
+        switch (COLOR_TEXT) {
+            case "Choose Colour":
+                themeInt = 0;
+                break;
+            case "Red":
+                themeInt = 1;
+//                Drawable unwrappedDrawable = AppCompatResources.getDrawable(getBaseContext(), R.drawable.ic_baseline_attach_money_24);
+//                Drawable wrappedDrawable = DrawableCompat.wrap(unwrappedDrawable);
+//                DrawableCompat.setTint(wrappedDrawable, getResources().getColor(R.color.redPrimary));
+                // Normally apply to all drawables and themes (the other branches of the switch statement)
+                // DO NOT REMOVE THESE COMMENTS
+                break;
+            case "Orange":
+                themeInt = 2;
+                break;
+            case "Yellow":
+                themeInt = 3;
+                break;
+            case "Green":
+                themeInt = 4;
+                break;
+            case "Blue":
+                themeInt = 5;
+                break;
+            case "Purple":
+                themeInt = 6;
+                break;
+            // Maybe add a default branch
         }
 
-        @Override
-        public void onNothingSelected(AdapterView<?> adapterView) {
-        }
+        // IMPLEMENTATION OF COLOUR SPINNER
+        coloreditor.putInt("LastClickColour", position).commit();
+
+        color = findViewById(R.id.color_spinner);
+        COLOR_TEXT = color.getSelectedItem().toString();
     }
 
-    class LocationSpinnerClass implements AdapterView.OnItemSelectedListener{
-
-        @Override
-        public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
-            editor.putInt("LastClick",position).commit();
-
-            location = findViewById(R.id.country_spinner);
-            LOCATION_TEXT = location.getSelectedItem().toString();
-        }
-
-        @Override
-        public void onNothingSelected(AdapterView<?> adapterView) {
-        }
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+        // pass
     }
+
+//        switch (COLOR_TEXT) {
+//            case "Choose Colour:":
+//                break;
+//            case "Red":
+//                UtilsTheme.changeToTheme(SettingsActivity.this, UtilsTheme.THEME_RED);
+////                Drawable unwrappedDrawable = AppCompatResources.getDrawable(getBaseContext(), R.drawable.ic_baseline_attach_money_24);
+////                Drawable wrappedDrawable = DrawableCompat.wrap(unwrappedDrawable);
+////                DrawableCompat.setTint(wrappedDrawable, getResources().getColor(R.color.redPrimary));
+//                // Normally apply to all drawables and themes (the other branches of the switch statement)
+//                // DO NOT REMOVE THESE COMMENTS
+//                break;
+//            case "Orange":
+//                UtilsTheme.changeToTheme(SettingsActivity.this, UtilsTheme.THEME_ORANGE);
+//                break;
+//            case "Yellow":
+//                UtilsTheme.changeToTheme(SettingsActivity.this, UtilsTheme.THEME_YELLOW);
+//                break;
+//            case "Green":
+//                UtilsTheme.changeToTheme(SettingsActivity.this, UtilsTheme.THEME_GREEN);
+//                break;
+//            case "Blue":
+//                UtilsTheme.changeToTheme(SettingsActivity.this, UtilsTheme.THEME_BLUE);
+//                break;
+//            case "Purple":
+//                UtilsTheme.changeToTheme(SettingsActivity.this, UtilsTheme.THEME_PURPLE);
+//                break;
+//            default:
+//                UtilsTheme.changeToTheme(SettingsActivity.this, UtilsTheme.THEME_DEFAULT);
+//        }
+//    }
+
 
     public void openTermsOfService() {
         // Create a new intent and launch it with the activity

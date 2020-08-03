@@ -32,7 +32,7 @@
             android:parentActivityName=".SettingsActivity" />
         <activity
             android:name=".SettingsActivity"
-            android:label="@string/settings"
+            android:label="Info"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".TipCalculator"
