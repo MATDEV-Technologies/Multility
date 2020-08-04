@@ -1,5 +1,6 @@
 package com.matdevtech.multility;
 
+// Imports
 import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -12,7 +13,9 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Random;
 
+// Main class
 public class Utils {
+    // Utility functions for the News micro-app
 
     public static ColorDrawable[] vibrantLightColorList =
             {

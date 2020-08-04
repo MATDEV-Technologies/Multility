@@ -1,7 +1,6 @@
 package com.matdevtech.multility;
 
 // Imports
-
 import android.annotation.SuppressLint;
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -30,7 +29,7 @@ import java.util.Random;
  */
 // Main class
 public class PasswordGenerator extends Fragment {
-
+    // Class vars and consts
     @SuppressLint("StaticFieldLeak")
     private static CheckBox include_lowercase;
     @SuppressLint("StaticFieldLeak")

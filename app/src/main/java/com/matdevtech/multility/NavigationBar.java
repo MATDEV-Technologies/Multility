@@ -11,7 +11,6 @@ import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 
 // Main class
 public class NavigationBar extends AppCompatActivity {
-
     // Class vars
     private static final String TAG = NavigationBar.class.getSimpleName();
     String fragment_int;

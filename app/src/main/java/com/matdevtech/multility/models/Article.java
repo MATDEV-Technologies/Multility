@@ -1,9 +1,12 @@
 package com.matdevtech.multility.models;
 
+// Imports
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+// Main class
 public class Article {
+    // Init Article attributes
     @SerializedName("source")
     @Expose
     private Source source;

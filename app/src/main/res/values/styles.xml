@@ -15,41 +15,42 @@
         <item name="colorAccent">#000000</item>
     </style>
 
+<!--    COLOUR THEMES (DO NOT DELETE)-->
 
-        <style name="AppThemeRed" parent="Theme.AppCompat.Light">
-            <!-- Customize your theme here. -->
-            <item name="colorPrimary">@color/redPrimary</item>
-            <item name="colorPrimaryDark">@color/redPrimaryDark</item>
-            <item name="colorAccent">@color/redAccent</item>
-        </style>
-        <style name="AppThemeOrange" parent="Theme.AppCompat.Light">
-            <!-- Customize your theme here. -->
-            <item name="colorPrimary">@color/orangePrimary</item>
-            <item name="colorPrimaryDark">@color/orangePrimaryDark</item>
-            <item name="colorAccent">@color/orangeAccent</item>
-        </style>
-        <style name="AppThemeYellow" parent="Theme.AppCompat.Light">
-            <!-- Customize your theme here. -->
-            <item name="colorPrimary">@color/yellowPrimary</item>
-            <item name="colorPrimaryDark">@color/yellowPrimaryDark</item>
-            <item name="colorAccent">@color/yellowAccent</item>
-        </style>
-        <style name="AppThemeGreen" parent="Theme.AppCompat.Light">
-            <!-- Customize your theme here. -->
-            <item name="colorPrimary">@color/greenPrimary</item>
-            <item name="colorPrimaryDark">@color/greenPrimaryDark</item>
-            <item name="colorAccent">@color/greenAccent</item>
-        </style>
-        <style name="AppThemeBlue" parent="Theme.AppCompat.Light">
-            <!-- Customize your theme here. -->
-            <item name="colorPrimary">@color/bluePrimary</item>
-            <item name="colorPrimaryDark">@color/bluePrimaryDark</item>
-            <item name="colorAccent">@color/blueAccent</item>
-        </style>
-        <style name="AppThemePurple" parent="Theme.AppCompat.Light">
-            <!-- Customize your theme here. -->
-            <item name="colorPrimary">@color/purplePrimary</item>
-            <item name="colorPrimaryDark">@color/purplePrimaryDark</item>
-            <item name="colorAccent">@color/purpleAccent</item>
-        </style>
+<!--        <style name="AppThemeRed" parent="Theme.AppCompat.Light">-->
+<!--            &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+<!--            <item name="colorPrimary">@color/redPrimary</item>-->
+<!--            <item name="colorPrimaryDark">@color/redPrimaryDark</item>-->
+<!--            <item name="colorAccent">@color/redAccent</item>-->
+<!--        </style>-->
+<!--        <style name="AppThemeOrange" parent="Theme.AppCompat.Light">-->
+<!--            &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+<!--            <item name="colorPrimary">@color/orangePrimary</item>-->
+<!--            <item name="colorPrimaryDark">@color/orangePrimaryDark</item>-->
+<!--            <item name="colorAccent">@color/orangeAccent</item>-->
+<!--        </style>-->
+<!--        <style name="AppThemeYellow" parent="Theme.AppCompat.Light">-->
+<!--            &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+<!--            <item name="colorPrimary">@color/yellowPrimary</item>-->
+<!--            <item name="colorPrimaryDark">@color/yellowPrimaryDark</item>-->
+<!--            <item name="colorAccent">@color/yellowAccent</item>-->
+<!--        </style>-->
+<!--        <style name="AppThemeGreen" parent="Theme.AppCompat.Light">-->
+<!--            &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+<!--            <item name="colorPrimary">@color/greenPrimary</item>-->
+<!--            <item name="colorPrimaryDark">@color/greenPrimaryDark</item>-->
+<!--            <item name="colorAccent">@color/greenAccent</item>-->
+<!--        </style>-->
+<!--        <style name="AppThemeBlue" parent="Theme.AppCompat.Light">-->
+<!--            &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+<!--            <item name="colorPrimary">@color/bluePrimary</item>-->
+<!--            <item name="colorPrimaryDark">@color/bluePrimaryDark</item>-->
+<!--            <item name="colorAccent">@color/blueAccent</item>-->
+<!--        </style>-->
+<!--        <style name="AppThemePurple" parent="Theme.AppCompat.Light">-->
+<!--            &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+<!--            <item name="colorPrimary">@color/purplePrimary</item>-->
+<!--            <item name="colorPrimaryDark">@color/purplePrimaryDark</item>-->
+<!--            <item name="colorAccent">@color/purpleAccent</item>-->
+<!--        </style>-->
 </resources>

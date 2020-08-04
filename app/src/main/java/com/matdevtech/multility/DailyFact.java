@@ -25,7 +25,7 @@ import java.util.Objects;
  */
 // Main class
 public class DailyFact extends Fragment {
-
+    // Class vars and consts
     @SuppressLint("StaticFieldLeak")
     public static TextView fact_text;
     @SuppressWarnings({"FieldCanBeLocal", "unused"})

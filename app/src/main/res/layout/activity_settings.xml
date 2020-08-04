@@ -14,46 +14,46 @@
     Make text hardcoded under an alias in
     strings.xml to help with translations,
     Make text smaller once the activity is more populated -->
-    <Spinner
-        android:id="@+id/color_spinner"
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:paddingStart="10dp"
-        tools:ignore="RtlSymmetry"/>
+<!--    <Spinner-->
+<!--        android:id="@+id/color_spinner"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="80dp"-->
+<!--        android:paddingStart="10dp"-->
+<!--        tools:ignore="RtlSymmetry"/>-->
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:layout_marginLeft="20dp"
-        android:text="Accent Colour"
-        android:textAlignment="center"
-        android:textColor="@color/colorWhite"
-        android:textSize="24sp"
-        tools:ignore="HardcodedText,RtlHardcoded"/>
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="35dp"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:text="Accent Colour"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="@color/colorWhite"-->
+<!--        android:textSize="24sp"-->
+<!--        tools:ignore="HardcodedText,RtlHardcoded"/>-->
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_arrow_drop_down_24"
-        android:layout_marginTop="30dp"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="10dp"
-        tools:ignore="ContentDescription,RtlHardcoded"/>
+<!--    <ImageView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_baseline_arrow_drop_down_24"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        tools:ignore="ContentDescription,RtlHardcoded"/>-->
 
 
     <Button
         android:id="@+id/terms_of_service_button"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="20dp"
         android:background="@null"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="135dp"
+        android:layout_marginTop="35dp"
         android:layout_marginLeft="20dp"
         android:text="Terms of Service"
         android:textAlignment="center"
@@ -64,7 +64,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="165dp"
+        android:layout_marginTop="65dp"
         android:layout_marginLeft="20dp"
         android:text="View Multility's terms of service"
         android:textAlignment="center"
@@ -72,18 +72,17 @@
         android:textSize="18sp"
         tools:ignore="HardcodedText,RtlHardcoded"/>
 
-
     <Button
         android:id="@+id/privacy_policy_button"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="120dp"
         android:background="@null"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="235dp"
+        android:layout_marginTop="135dp"
         android:layout_marginLeft="20dp"
         android:text="Privacy Policy"
         android:textAlignment="center"
@@ -94,7 +93,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="265dp"
+        android:layout_marginTop="165dp"
         android:layout_marginLeft="20dp"
         android:text="View Multility's privacy policy"
         android:textAlignment="center"
@@ -102,17 +101,18 @@
         android:textSize="18sp"
         tools:ignore="HardcodedText,RtlHardcoded"/>
 
+
     <Button
         android:id="@+id/about_button"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="220dp"
         android:background="@null"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="335dp"
+        android:layout_marginTop="235dp"
         android:layout_marginLeft="20dp"
         android:text="About"
         android:textAlignment="center"
@@ -123,7 +123,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="365dp"
+        android:layout_marginTop="265dp"
         android:layout_marginLeft="20dp"
         android:text="View Multility's team members"
         android:textAlignment="center"
@@ -137,9 +137,10 @@
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:gravity="center|bottom"
-        android:text="Multility, an app by MATDEV Technologies\n(2020)"
+        android:layout_marginBottom="10dp"
+        android:text="Multility, an app by MATDEV Technologies (2020)"
         android:textAlignment="center"
-        android:textColor="@color/colorGrey"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="16sp"
         tools:ignore="HardcodedText,RtlHardcoded"/>
 

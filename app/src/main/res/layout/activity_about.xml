@@ -17,10 +17,10 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:textColor="@color/colorWhite"
-        android:textSize="20sp"
+        android:textSize="22sp"
         android:text="Multility, by MATDEV Technologies\n\n\nDevelopers:\n     Michael David\n     Allen Mathew
-             \n     Tristan Parry\n     Dev Patel\n     Ethan Soosaipillai\n     Vincent Tran\n\n\nDesigners:\n     Tristan Parry
-             \n\n\nMarketers:\n     Dev Patel\n     Tristan Parry\n\n\nTesters:\n     Ethan Soosaipillai\n     Vincent Tran\n     Dev Patel"
+             \n     Tristan Parry\n     Dev Patel\n     Ethan Soosaipillai\n     Vincent Tran\n\n\nDesigners:\n     Allen Mathew\n     Tristan Parry
+             \n\n\nMedia Coordinators:\n     Tristan Parry\n     Dev Patel\n\n\nTesters:\n     Michael David\n     Allen Mathew\n     Ethan Soosaipillai\n     Vincent Tran"
         tools:ignore="HardcodedText" />
 
 </RelativeLayout>

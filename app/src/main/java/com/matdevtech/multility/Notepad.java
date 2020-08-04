@@ -1,6 +1,6 @@
 package com.matdevtech.multility;
 
-// TODO: Maybe add autosave, Word-like formatting, and clear all formatting (EX will clean up warnings later)
+// TODO: Maybe add autosave, Word-like formatting, and clear all formatting
 
 // Imports
 import android.annotation.SuppressLint;
@@ -34,15 +34,14 @@ import java.util.Objects;
  * create an instance of this fragment.
  */
 public class Notepad extends Fragment {
-
     // Class vars and consts
     private EditText notepad_edit;
     private static String noteText;
     public static final String SHARED_PREFS = "sharedPrefs";
     public static final String NOTE = "note";
-//    public static String selectedText;
     boolean bold_button_pressed = false;
     boolean italic_button_pressed = false;
+//    public static String selectedText;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

@@ -11,7 +11,6 @@ import androidx.cardview.widget.CardView;
 
 // Main class
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-
     // Class const(s)
     public static final String FRAGMENT_INT = "com.matdevtech.multility.FRAGMENT_INT";
 

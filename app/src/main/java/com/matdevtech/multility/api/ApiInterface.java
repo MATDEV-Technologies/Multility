@@ -9,6 +9,7 @@ import retrofit2.http.Query;
 
 // Main class
 public interface ApiInterface {
+    // Implementation of the interface update procedure for the API
 
     @GET("top-headlines")
     Call<News> getNews(
