@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cnb_unselectedColor="@color/colorWhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Implements custom bottom navigation -->
+    <item
+        android:id="@+id/tip_calculator_navbar"
+        android:title=""
+        android:icon="@drawable/ic_baseline_attach_money_24"
+        app:cnb_backgroundColor="@color/colorPrimary"
+        app:cnb_iconColor="@color/colorCardBackground"
+        app:cnb_textColor="@color/colorCardBackground"
+        tools:ignore="HardcodedText"/>
+
+    <item
+        android:id="@+id/stopwatch_navbar"
+        android:title=""
+        android:icon="@drawable/ic_baseline_watch_later_24"
+        app:cnb_backgroundColor="@color/colorPrimary"
+        app:cnb_iconColor="@color/colorCardBackground"
+        app:cnb_textColor="@color/colorCardBackground"
+        tools:ignore="HardcodedText"/>
+
+    <item
+        android:id="@+id/notepad_navbar"
+        android:title=""
+        android:icon="@drawable/ic_baseline_create_24"
+        app:cnb_backgroundColor="@color/colorPrimary"
+        app:cnb_iconColor="@color/colorCardBackground"
+        app:cnb_textColor="@color/colorCardBackground"
+        tools:ignore="HardcodedText"/>
+
+    <item
+        android:id="@+id/password_generator_navbar"
+        android:title=""
+        android:icon="@drawable/ic_password_24"
+        app:cnb_backgroundColor="@color/colorPrimary"
+        app:cnb_iconColor="@color/colorCardBackground"
+        app:cnb_textColor="@color/colorCardBackground"
+        tools:ignore="HardcodedText"/>
+
+    <item
+        android:id="@+id/daily_fact_navbar"
+        android:title=""
+        android:icon="@drawable/ic_baseline_book_24"
+        app:cnb_backgroundColor="@color/colorPrimary"
+        app:cnb_iconColor="@color/colorCardBackground"
+        app:cnb_textColor="@color/colorCardBackground"
+        tools:ignore="HardcodedText"/>
+
+    <item
+        android:id="@+id/trending_news_navbar"
+        android:title=""
+        android:icon="@drawable/ic_baseline_trending_up_24"
+        app:cnb_backgroundColor="@color/colorPrimary"
+        app:cnb_iconColor="@color/colorCardBackground"
+        app:cnb_textColor="@color/colorCardBackground"
+        tools:ignore="HardcodedText"/>
+</menu>

@@ -8,14 +8,6 @@
     android:orientation="vertical"
     tools:context=".Notepad">
 
-
-    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-    <!--        android:id="@+id/fab"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_gravity="bottom|end"-->
-    <!--        app:srcCompat="@drawable/ic_baseline_save_24"/>-->
-
     <ImageButton
         android:id="@+id/bold_button"
         android:background="@drawable/button_rounded_green"
@@ -55,6 +47,7 @@
         android:hint="Type here..."
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/colorGrey"
+        android:textSize="15sp"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="Autofill,HardcodedText,RtlHardcoded,TextFields"/>
 

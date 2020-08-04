@@ -56,8 +56,8 @@ child views in relative positions -->
 
                 <!-- GLOBAL NOTE: ImageView displays an image from the drawables -->
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:src="@drawable/ic_baseline_attach_money_24"
                     android:elevation="16dp"
                     tools:ignore="ContentDescription"/>
@@ -71,7 +71,7 @@ child views in relative positions -->
                     android:textAlignment="center"
                     android:textColor="@color/colorGrey"
                     android:elevation="16dp"
-                    android:textSize="24sp"
+                    android:textSize="20sp"
                     android:textStyle="bold"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -99,8 +99,8 @@ child views in relative positions -->
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:src="@drawable/ic_baseline_create_24"
                     android:elevation="16dp"
                     tools:ignore="ContentDescription"/>
@@ -113,7 +113,7 @@ child views in relative positions -->
                     android:textAlignment="center"
                     android:textColor="@color/colorGrey"
                     android:elevation="16dp"
-                    android:textSize="24sp"
+                    android:textSize="20sp"
                     android:textStyle="bold"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -141,8 +141,8 @@ child views in relative positions -->
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:src="@drawable/ic_baseline_book_24"
                     android:elevation="16dp"
                     tools:ignore="ContentDescription"/>
@@ -155,7 +155,7 @@ child views in relative positions -->
                     android:textAlignment="center"
                     android:textColor="@color/colorGrey"
                     android:elevation="16dp"
-                    android:textSize="24sp"
+                    android:textSize="20sp"
                     android:textStyle="bold"
                     tools:ignore="HardcodedText"/>
             </LinearLayout>
@@ -184,8 +184,8 @@ child views in relative positions -->
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:src="@drawable/ic_baseline_watch_later_24"
                     android:elevation="16dp"
                     tools:ignore="ContentDescription"/>
@@ -198,7 +198,7 @@ child views in relative positions -->
                     android:textAlignment="center"
                     android:textColor="@color/colorGrey"
                     android:elevation="16dp"
-                    android:textSize="24sp"
+                    android:textSize="20sp"
                     android:textStyle="bold"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -226,8 +226,8 @@ child views in relative positions -->
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:src="@drawable/ic_password_24"
                     android:elevation="16dp"
                     tools:ignore="ContentDescription"/>
@@ -240,7 +240,7 @@ child views in relative positions -->
                     android:textAlignment="center"
                     android:textColor="@color/colorGrey"
                     android:elevation="16dp"
-                    android:textSize="24sp"
+                    android:textSize="20sp"
                     android:textStyle="bold"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -268,8 +268,8 @@ child views in relative positions -->
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:src="@drawable/ic_baseline_trending_up_24"
                     android:elevation="16dp"
                     tools:ignore="ContentDescription"/>
@@ -282,7 +282,7 @@ child views in relative positions -->
                     android:textAlignment="center"
                     android:textColor="@color/colorGrey"
                     android:elevation="16dp"
-                    android:textSize="24sp"
+                    android:textSize="20sp"
                     android:textStyle="bold"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>

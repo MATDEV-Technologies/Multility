@@ -7,6 +7,8 @@
     tools:context=".SettingsActivity"
     android:background="#000000">
 
+    <!-- Theming is currently disabled DO NOT DELETE -->
+
     <!-- GLOBAL NOTE: Spinners provide a quick way to
     select one value from a set, displayed as adropdown menu -->
 

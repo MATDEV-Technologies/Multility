@@ -1,9 +1,9 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".PrivacyPolicy"
+    tools:context=".About"
     android:background="#000000">
 
     <!-- TODO:
@@ -20,7 +20,7 @@
         android:textSize="22sp"
         android:text="Multility, by MATDEV Technologies\n\n\nDevelopers:\n     Michael David\n     Allen Mathew
              \n     Tristan Parry\n     Dev Patel\n     Ethan Soosaipillai\n     Vincent Tran\n\n\nDesigners:\n     Allen Mathew\n     Tristan Parry
-             \n\n\nMedia Coordinators:\n     Tristan Parry\n     Dev Patel\n\n\nTesters:\n     Michael David\n     Allen Mathew\n     Ethan Soosaipillai\n     Vincent Tran"
+             \n\n\nMedia Coordinators:\n     Tristan Parry\n     Dev Patel\n\n\nTesters:\n     Michael David\n     Allen Mathew\n     Ethan Soosaipillai\n     Vincent Tran\n\n"
         tools:ignore="HardcodedText" />
 
-</RelativeLayout>
+</ScrollView>

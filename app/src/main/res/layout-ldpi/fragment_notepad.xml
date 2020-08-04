@@ -55,10 +55,11 @@
         android:hint="Type here..."
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/colorGrey"
+        android:textSize="16sp"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="Autofill,HardcodedText,RtlHardcoded,TextFields"/>
 
-
+    <!-- Disabled -->
     <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
     <!--        android:id="@+id/fab"-->
     <!--        android:layout_width="wrap_content"-->

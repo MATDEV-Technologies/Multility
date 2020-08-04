@@ -14,13 +14,13 @@
         android:layout_width="350dp"
         android:layout_height="400dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="155dp"
+        android:layout_marginTop="95dp"
         android:background="@drawable/grey_background_rounded_2"/>
 
     <ImageView
         android:layout_width="99dp"
         android:layout_height="141dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
         android:src="@drawable/ic_baseline_book_24"
         tools:ignore="ContentDescription"/>
@@ -31,7 +31,7 @@
         android:layout_height="200dp"
         android:autoSizeTextType="uniform"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="235dp"
+        android:layout_marginTop="175dp"
         android:text=""
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
@@ -42,7 +42,7 @@
         android:id="@+id/daily_fact_button"
         android:layout_width="200dp"
         android:layout_height="60dp"
-        android:layout_marginTop="475dp"
+        android:layout_marginTop="415dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/button_rounded_green"
         android:textColor="@color/colorCardBackground"

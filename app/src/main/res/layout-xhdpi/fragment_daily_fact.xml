@@ -1,6 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    tools:context=".DailyFact">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- GLOBAL NOTE: View is a simple component to put text or
+     images over on top (meant for single instances, unlike CardView) -->
+    <View
+        android:layout_width="310dp"
+        android:layout_height="360dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="65dp"
+        android:background="@drawable/grey_background_rounded_2"/>
+
+    <ImageView
+        android:layout_width="79dp"
+        android:layout_height="91dp"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_baseline_book_24"
+        tools:ignore="ContentDescription"/>
+
+    <TextView
+        android:id="@+id/daily_fact_text"
+        android:layout_width="260dp"
+        android:layout_height="200dp"
+        android:autoSizeTextType="uniform"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="125dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        tools:ignore="HardcodedText"/>
+
+    <Button
+        android:id="@+id/daily_fact_button"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="345dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_rounded_green"
+        android:textColor="@color/colorCardBackground"
+        android:textSize="18sp"
+        android:text="GENERATE FACT"
+        tools:ignore="HardcodedText"/>
+
+</RelativeLayout>

@@ -245,9 +245,7 @@ public class PasswordGenerator extends Fragment {
                 password_generate_result.setOnLongClickListener(new View.OnLongClickListener() {
                     @Override
                     public boolean onLongClick(View view) {
-                        Toast password_copy = Toast.makeText(getActivity(), "Password Copied", Toast.LENGTH_SHORT);
-                        password_copy.setGravity(Gravity.CENTER_HORIZONTAL, 0, -700);
-                        password_copy.show();
+                        Toast.makeText(getActivity(), "Password Copied", Toast.LENGTH_SHORT).show();
 
                         ClipboardManager clipboard = (ClipboardManager) Objects.requireNonNull(getActivity()).getSystemService(Context.CLIPBOARD_SERVICE);
                         ClipData clip = ClipData.newPlainText("Copied Password", password_generate_result.getText().toString().substring(11)); // COPIES ONLY THE PASSWORD TO THE PHONE'S CLIPBOARD
