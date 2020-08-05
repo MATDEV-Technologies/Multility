@@ -11,27 +11,27 @@ import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.Target;
 import com.matdevtech.multility.models.Article;
 import java.util.List;
-//import org.w3c.dom.Text;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-//import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
+//import org.w3c.dom.Text;
+//import android.widget.Toast;
+//import android.graphics.drawable.Drawable;
 
 // Main Class
 public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
+    // Class vars
     private List<Article> articles;
     private Context context;
     private OnItemClickListener onItemClickListener;
@@ -93,7 +93,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
         return articles.size();
     }
 
-    @SuppressWarnings("SillyAssignment")
+    @SuppressWarnings({"SillyAssignment", "unused"})
     public void setOnItemClickListener(@SuppressWarnings("unused") OnItemClickListener onItemClickListener) {
         //noinspection ConstantConditions
         this.onItemClickListener = this.onItemClickListener;

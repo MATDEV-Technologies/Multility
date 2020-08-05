@@ -1,21 +1,21 @@
 package com.matdevtech.multility.api;
 
+// Imports
 import android.annotation.SuppressLint;
-
 import java.security.cert.CertificateException;
-
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSession;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
-
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+// Main class
 public class ApiClient {
+    // Implementation of the client for the API
 
     public static final String BASE_URL = "https://newsapi.org/v2/";
     public static Retrofit retrofit;

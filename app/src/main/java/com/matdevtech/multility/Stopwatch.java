@@ -1,7 +1,6 @@
 package com.matdevtech.multility;
 
 // Imports
-
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.SystemClock;
@@ -21,7 +20,6 @@ import java.util.Objects;
  */
 // Main class
 public class Stopwatch extends Fragment {
-
     // Class vars and consts
     private Chronometer chronometer;
     private long pauseOffset;

@@ -13,7 +13,6 @@ Note: Recompile with -Xlint:deprecation for details.
 
 // Main class
 public class SplashScreen extends AppCompatActivity {
-
     // Class const(s)
     private final static int SPLASH_TIME_OUT = 2000; // Original: 3500 (this was changed to be faster just like how it is on iOS)
 

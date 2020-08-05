@@ -6,7 +6,6 @@ import android.os.Bundle;
 
 // Main class
 public class PrivacyPolicy extends AppCompatActivity {
-
     // Activity init
     @Override
     protected void onCreate(Bundle savedInstanceState) {

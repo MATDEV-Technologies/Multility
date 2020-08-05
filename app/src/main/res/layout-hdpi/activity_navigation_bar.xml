@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    tools:context=".NavigationBar">
+
+    <!-- GLOBAL NOTE: FrameLayout is designed to block out an area
+    on the screen to display a single item
+    Generally, FrameLayout should be used to hold a single child view,
+    because it can be difficult to organize child views in a way
+    that's scalable to different screen sizes without the children
+    overlapping each other -->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.ismaeldivita.chipnavigation.ChipNavigationBar
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/nav_bar_rounded"
+        android:elevation="16dp"
+        android:padding="4dp"
+        app:cnb_menuResource="@menu/menu_bottom_small"/>
+
+</RelativeLayout>

@@ -13,6 +13,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.matdevtech.multility.api.ApiInterface;
 import com.matdevtech.multility.api.ApiClient;
@@ -39,7 +40,6 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
  */
 // Main class
 public class TrendingNews extends Fragment {
-
     // Class vars and consts
     public static final String API_KEY = "102f8feadfc8432d8be96f4e4de5d43d";
     private RecyclerView recyclerView;
@@ -54,7 +54,6 @@ public class TrendingNews extends Fragment {
     @SuppressWarnings("unused")
     private SwipeRefreshLayout swipeRefreshLayout;
 
-    // Class consts
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";

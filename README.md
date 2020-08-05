@@ -58,4 +58,6 @@ Multiple utilities in one. A summer project. Android is the main and original pl
  - **Commit Workflow**:</br>
  !["workflow_gh.jpg"](https://cdn.discordapp.com/attachments/342481673822404608/726630332136423434/github_commit_flow.png)</br></br>
  
- (Social image URL: bit.ly/3dOuRtm (disabled for being a private repo))
+ (Social image URL: bit.ly/3dOuRtm (disabled for being a private repo))</br></br>
+
+ (Archived files: [./res/layout/spinner_styles.xml](https://cdn.discordapp.com/attachments/342481673822404608/740279216548872362/spinner_styles.xml), [./res/layout/spinner_dropdown_styles](https://cdn.discordapp.com/attachments/342481673822404608/740279213713522758/spinner_dropdown_styles.xml))

@@ -22,13 +22,11 @@ import java.util.Objects;
  */
 // Main class
 public class TipCalculator extends Fragment {
-
-    // Class vars
+    // Class vars and consts
     private EditText total_price;
     private EditText percentage_tip;
     private TextView tip_result;
 
-    // Class consts
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";

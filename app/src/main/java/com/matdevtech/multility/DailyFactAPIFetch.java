@@ -14,7 +14,7 @@ import java.net.URL;
 // Main class
 @SuppressWarnings({"unused", "deprecation"})
 public class DailyFactAPIFetch extends AsyncTask<Void,Void,Void> {
-
+    // Class var(s)
     String fact_data = "";
 
     @Override

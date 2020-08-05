@@ -1,11 +1,13 @@
 package com.matdevtech.multility.models;
 
+// Imports
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
+// Main class
 public class News {
-
+  // Init News attributes
   @SerializedName("status")
   @Expose
   private String status;
