@@ -44,6 +44,8 @@ public class DailyFactAPIFetch extends AsyncTask<Void,Void,Void> {
     @Override
     protected void onPostExecute(Void aVoid) {
         super.onPostExecute(aVoid);
-        DailyFact.fact_text.setText(this.fact_data);
+        if (!this.fact_data.equals("")) {
+            DailyFact.fact_text.setText(this.fact_data);
+        }
     }
 }
