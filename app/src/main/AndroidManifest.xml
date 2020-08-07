@@ -56,7 +56,7 @@
             tools:ignore="Instantiatable" />
         <activity
             android:name=".DailyFact"
-            android:label="Daily Fact"
+            android:label="Fact Generator"
             android:parentActivityName=".MainActivity"
             tools:ignore="Instantiatable" />
         <activity
