@@ -16,6 +16,7 @@ import java.net.URL;
 public class DailyFactAPIFetch extends AsyncTask<Void,Void,Void> {
     // Class var(s)
     String fact_data = "";
+    int errorNum;
 
     @Override
     protected Void doInBackground(Void... voids) {
@@ -44,8 +45,6 @@ public class DailyFactAPIFetch extends AsyncTask<Void,Void,Void> {
     @Override
     protected void onPostExecute(Void aVoid) {
         super.onPostExecute(aVoid);
-        if (!this.fact_data.equals("")) {
-            DailyFact.fact_text.setText(this.fact_data);
-        }
+        DailyFact.fact_text.setText(this.fact_data);
     }
 }
