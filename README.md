@@ -31,7 +31,7 @@ Multiple utilities in one. A summer project. Android is the main and original pl
    - **Use legacy android.support libraries**: OFF</br>
    (JUnit now upgraded to version 4.13)
 
- - **GitHub Tab**s:</br>
+ - **GitHub Tabs**:</br>
    - **Code tab**: Where the files and code can be viewed, edited, cloned, and the repository details are visible
    - **Issues tab**: This is for reporting issues or bugs that are relatively major or just hard to fix so that multiple members can some together and find a solution, as well as feature ideas/requests
    - **Pull Requests tab**: This is where you can make a proposal for new code in the project to be merged with either the master or working branch. Always discuss and make corrections (if needed) before actually confirming the request and adding it to the given branch
