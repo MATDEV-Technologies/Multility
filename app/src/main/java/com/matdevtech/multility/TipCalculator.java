@@ -11,6 +11,8 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import java.util.Objects;
@@ -100,14 +102,22 @@ public class TipCalculator extends Fragment {
                     percentage_tip.setText("");
                 }
 
-                float total_price_int = Float.parseFloat(total_price.getText().toString());
-                float percentage_tip_int = Float.parseFloat(percentage_tip.getText().toString());
+                float total_price_int;
+                float percentage_tip_int;
+                float calculated_tip;
+                double rounded_tip;
 
-                float calculated_tip = (total_price_int * (percentage_tip_int / 100));
-                double rounded_tip = Math.round(calculated_tip * 100.0) / 100.0;
+                try{
+                    total_price_int = Float.parseFloat(total_price.getText().toString());
+                    percentage_tip_int = Float.parseFloat(percentage_tip.getText().toString());
 
-                // String formatting for displaying a trailing zero if there is only a value in the tenths
-                tip_result.setText("TIP:  $" + String.format("%.2f", rounded_tip));
+                    calculated_tip = (total_price_int * (percentage_tip_int / 100));
+                    rounded_tip = Math.round(calculated_tip * 100.0) / 100.0;
+
+                    tip_result.setText("TIP:  $" + String.format("%.2f", rounded_tip));
+                }catch(Exception e){
+                    Toast.makeText(getActivity(), "Enter Price/Percentage Info!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
