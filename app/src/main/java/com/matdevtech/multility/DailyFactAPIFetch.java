@@ -46,6 +46,7 @@ public class DailyFactAPIFetch extends AsyncTask<Void,Void,Void> {
     protected void onPostExecute(Void aVoid) {
         super.onPostExecute(aVoid);
         if (!this.fact_data.equals("")) {
+            // Grab as HTML text to include proper formatting
             DailyFact.fact_text.setText(Html.fromHtml(this.fact_data));
         }
     }
