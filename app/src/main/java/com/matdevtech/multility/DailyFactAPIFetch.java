@@ -2,6 +2,7 @@ package com.matdevtech.multility;
 
 // Imports
 import android.os.AsyncTask;
+import android.text.Html;
 import android.util.Log;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -45,7 +46,7 @@ public class DailyFactAPIFetch extends AsyncTask<Void,Void,Void> {
     protected void onPostExecute(Void aVoid) {
         super.onPostExecute(aVoid);
         if (!this.fact_data.equals("")) {
-            DailyFact.fact_text.setText(this.fact_data);
+            DailyFact.fact_text.setText(Html.fromHtml(this.fact_data));
         }
     }
 }
