@@ -17,6 +17,7 @@
     <item
         android:id="@+id/stopwatch_navbar"
         android:title=""
+        android:titleCondensed="Stopwatch"
         android:icon="@drawable/ic_baseline_watch_later_24"
         app:cnb_backgroundColor="@color/colorPrimary"
         app:cnb_iconColor="@color/colorCardBackground"

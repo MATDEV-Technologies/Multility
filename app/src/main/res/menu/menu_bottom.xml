@@ -34,7 +34,7 @@
 
     <item
         android:id="@+id/password_generator_navbar"
-        android:title="Password Generator"
+        android:title="Password"
         android:icon="@drawable/ic_password_24"
         app:cnb_backgroundColor="@color/colorPrimary"
         app:cnb_iconColor="@color/colorCardBackground"
@@ -43,7 +43,7 @@
 
     <item
         android:id="@+id/daily_fact_navbar"
-        android:title="Fact Generator"
+        android:title="Fact"
         android:icon="@drawable/ic_baseline_book_24"
         app:cnb_backgroundColor="@color/colorPrimary"
         app:cnb_iconColor="@color/colorCardBackground"
@@ -52,7 +52,7 @@
 
     <item
         android:id="@+id/trending_news_navbar"
-        android:title="Trending News"
+        android:title="News"
         android:icon="@drawable/ic_baseline_trending_up_24"
         app:cnb_backgroundColor="@color/colorPrimary"
         app:cnb_iconColor="@color/colorCardBackground"

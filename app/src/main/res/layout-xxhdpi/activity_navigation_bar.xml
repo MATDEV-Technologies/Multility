@@ -27,6 +27,6 @@
         android:background="@drawable/nav_bar_rounded"
         android:elevation="16dp"
         android:padding="4dp"
-        app:cnb_menuResource="@menu/menu_bottom_small"/>
+        app:cnb_menuResource="@menu/menu_bottom"/>
 
 </RelativeLayout>
