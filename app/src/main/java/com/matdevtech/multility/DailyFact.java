@@ -2,22 +2,20 @@ package com.matdevtech.multility;
 
 // Imports
 import android.annotation.SuppressLint;
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import java.util.Objects;
-
+//import android.content.Context;
+//import android.content.SharedPreferences;
+//import android.util.Log;
+//import android.widget.Toast;
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link DailyFact#newInstance} factory method to
