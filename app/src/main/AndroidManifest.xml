@@ -56,7 +56,7 @@
             tools:ignore="Instantiatable"/>
         <activity
             android:name=".DailyFact"
-            android:label="Daily Fact"
+            android:label="Fact Generator"
             android:parentActivityName=".MainActivity"
             tools:ignore="Instantiatable"/>
         <activity
@@ -64,13 +64,6 @@
             android:label="Trending News"
             android:parentActivityName=".MainActivity"
             tools:ignore="Instantiatable"/>
-        <!--
-        Remove the above line if data backups are a problem
-        *-SOURCE of fix-*
-        Previous warning on line 6 under "<application": On SDK version 23 and up, you data will be automatically backed up and restored on app install.
-        Consider adding the attribute android:fullBackupContent to specify an @xml resource which configures which files to back up.
-        More info: https://developer.android.com/guide/topics/data/autobackup
-        -->
         <activity
             android:name=".SplashScreen"
             android:theme="@style/SplashScreenTheme"

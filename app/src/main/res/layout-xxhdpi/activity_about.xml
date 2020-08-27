@@ -21,6 +21,6 @@
         android:text="Multility, by MATDEV Technologies\n\n\nDevelopers:\n     Michael David\n     Allen Mathew
              \n     Tristan Parry\n     Dev Patel\n     Ethan Soosaipillai\n     Vincent Tran\n\n\nDesigners:\n     Allen Mathew\n     Tristan Parry
              \n\n\nMedia Coordinators:\n     Tristan Parry\n     Dev Patel\n\n\nTesters:\n     Michael David\n     Allen Mathew\n     Ethan Soosaipillai\n     Vincent Tran\n\n"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText"/>
 
 </ScrollView>

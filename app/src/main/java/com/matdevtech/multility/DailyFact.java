@@ -14,14 +14,16 @@ import androidx.fragment.app.Fragment;
 import java.util.Objects;
 //import android.content.Context;
 //import android.content.SharedPreferences;
-//import android.util.Log;
 //import android.widget.Toast;
+//import android.util.Log;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link DailyFact#newInstance} factory method to
  * create an instance of this fragment.
  */
 // Main class
+@SuppressWarnings("RedundantSuppression")
 public class DailyFact extends Fragment {
     // Class vars and consts
     @SuppressLint("StaticFieldLeak")
