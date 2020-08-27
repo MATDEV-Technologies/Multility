@@ -13,11 +13,10 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 // Main class
-@SuppressWarnings({"unused", "deprecation"})
+@SuppressWarnings({"deprecation"})
 public class DailyFactAPIFetch extends AsyncTask<Void,Void,Void> {
     // Class var(s)
     String fact_data = "";
-    int errorNum;
 
     @Override
     protected Void doInBackground(Void... voids) {
