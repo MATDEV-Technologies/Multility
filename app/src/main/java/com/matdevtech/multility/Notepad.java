@@ -9,9 +9,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
-//import android.text.Spannable;
-//import android.text.SpannableStringBuilder;
-//import android.text.style.StyleSpan;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -19,7 +16,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
-//import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -27,6 +23,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import org.jetbrains.annotations.NotNull;
 import java.util.Objects;
+//import android.text.Spannable;
+//import android.text.SpannableStringBuilder;
+//import android.text.style.StyleSpan;
+//import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,7 +61,7 @@ public class Notepad extends Fragment {
      * @return A new instance of fragment Notepad.
      */
     // TODO: Rename and change types and number of parameters
-    @SuppressWarnings("unused")
+    @SuppressWarnings({"unused", "RedundantSuppression"})
     public static Notepad newInstance(String param1, String param2) {
         Notepad fragment = new Notepad();
         Bundle args = new Bundle();
@@ -76,7 +76,8 @@ public class Notepad extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
-        if (getArguments() != null) {
+        if (getArguments() != null) //noinspection RedundantSuppression
+        {
             // TODO: Rename and change types of parameters
             //noinspection unused
             String mParam1 = getArguments().getString(ARG_PARAM1);
@@ -119,23 +120,19 @@ public class Notepad extends Fragment {
                 Typeface boldItalicTypeFace = Typeface.defaultFromStyle(Typeface.BOLD_ITALIC);
                 bold_button_pressed = !bold_button_pressed;
 
-                //noinspection PointlessBooleanExpression
-                if ((bold_button_pressed == true) && (italic_button_pressed == false)) {
+                if ((bold_button_pressed) && (!italic_button_pressed)) {
                     notepad_edit.setTypeface(boldTypeFace);
                 }
 
-                //noinspection PointlessBooleanExpression
-                if ((bold_button_pressed == false)  && (italic_button_pressed == false)) {
+                if ((!bold_button_pressed)  && (!italic_button_pressed)) {
                     notepad_edit.setTypeface(regularTypeFace);
                 }
 
-                //noinspection PointlessBooleanExpression
-                if ((bold_button_pressed == true)  && (italic_button_pressed == true)) {
+                if ((bold_button_pressed)  && (italic_button_pressed)) {
                     notepad_edit.setTypeface(boldItalicTypeFace);
                 }
 
-                //noinspection PointlessBooleanExpression
-                if ((bold_button_pressed == false)  && (italic_button_pressed == true)) {
+                if ((!bold_button_pressed)  && (italic_button_pressed)) {
                     notepad_edit.setTypeface(italicTypeFace);
                 }
             }
@@ -151,23 +148,20 @@ public class Notepad extends Fragment {
                 Typeface boldItalicTypeFace = Typeface.defaultFromStyle(Typeface.BOLD_ITALIC);
                 italic_button_pressed = !italic_button_pressed;
 
-                //noinspection PointlessBooleanExpression
-                if ((italic_button_pressed == true) && (bold_button_pressed == false)) {
+
+                if ((italic_button_pressed) && (!bold_button_pressed)) {
                     notepad_edit.setTypeface(italicTypeFace);
                 }
 
-                //noinspection PointlessBooleanExpression
-                if ((italic_button_pressed == false)  && (bold_button_pressed == false)) {
+                if ((!italic_button_pressed) && (!bold_button_pressed)) {
                     notepad_edit.setTypeface(regularTypeFace);
                 }
 
-                //noinspection PointlessBooleanExpression
-                if ((italic_button_pressed == true)  && (bold_button_pressed == true)) {
+                if ((italic_button_pressed) && (bold_button_pressed)) {
                     notepad_edit.setTypeface(boldItalicTypeFace);
                 }
 
-                //noinspection PointlessBooleanExpression
-                if ((italic_button_pressed == false)  && (bold_button_pressed == true)) {
+                if ((!italic_button_pressed) && (bold_button_pressed)) {
                     notepad_edit.setTypeface(boldTypeFace);
                 }
             }
@@ -221,14 +215,13 @@ public class Notepad extends Fragment {
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
             // TODO: Maybe add a clear all on file and save action
-            //noinspection ConstantConditions
-            super.getActivity().onBackPressed(); // Goto -> parent activity -> main
+            Objects.requireNonNull(super.getActivity()).onBackPressed(); // Goto -> parent activity -> main
             notepad_edit.onEditorAction(EditorInfo.IME_ACTION_DONE);
         } else if (item.getItemId() == R.id.action_notepad_save) {
             saveData(false);
         } else if (item.getItemId() == R.id.action_notepad_clear){
             notepad_edit.setText("");
-//            saveData(true);
+            // saveData(true);
         } else {
             return super.onOptionsItemSelected(item);
         }

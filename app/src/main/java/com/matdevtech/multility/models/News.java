@@ -20,20 +20,20 @@ public class News {
   @Expose
   private List<Article> article;
 
-  @SuppressWarnings("unused")
+  @SuppressWarnings({"unused", "RedundantSuppression"})
   public String getStatus() { return status; }
 
-  @SuppressWarnings("unused")
+  @SuppressWarnings({"unused", "RedundantSuppression"})
   public void setStatus(String status) { this.status = status; }
 
-  @SuppressWarnings("unused")
+  @SuppressWarnings({"unused", "RedundantSuppression"})
   public int getTotalResult() { return totalResult; }
 
-  @SuppressWarnings("unused")
+  @SuppressWarnings({"unused", "RedundantSuppression"})
   public void setTotalResult(int totalResult) { this.totalResult = totalResult; }
 
   public List<Article> getArticle() { return article; }
 
-  @SuppressWarnings("unused")
+  @SuppressWarnings({"unused", "RedundantSuppression"})
   public void setArticle(List<Article> article) { this.article = article; }
 }

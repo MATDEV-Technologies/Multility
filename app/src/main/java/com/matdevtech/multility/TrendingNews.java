@@ -1,8 +1,6 @@
 package com.matdevtech.multility;
 
 // Imports
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,7 +11,6 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 import com.matdevtech.multility.api.ApiInterface;
 import com.matdevtech.multility.api.ApiClient;
@@ -26,8 +23,11 @@ import java.util.Objects;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import android.content.Context;
-import androidx.recyclerview.widget.DefaultItemAnimator;
+//import android.content.Intent;
+//import android.net.Uri;
+//import android.widget.TextView;
+//import android.content.Context;
+//import androidx.recyclerview.widget.DefaultItemAnimator;
 //import android.content.Intent;
 //import android.net.Uri;
 //import android.view.Menu;
@@ -47,11 +47,11 @@ public class TrendingNews extends Fragment {
     private RecyclerView.LayoutManager layoutManager;
     private List<Article> articles = new ArrayList<>();
     private Adapter adapter;
-    @SuppressWarnings("unused")
+    @SuppressWarnings({"unused", "RedundantSuppression"})
     private Adapter.OnItemClickListener recyclerViewClickListener;
-    @SuppressWarnings("unused")
+    @SuppressWarnings({"unused", "RedundantSuppression"})
     private String TAG = TrendingNews.class.getSimpleName();
-    @SuppressWarnings("unused")
+    @SuppressWarnings({"unused", "RedundantSuppression"})
     private SwipeRefreshLayout swipeRefreshLayout;
 
     // TODO: Rename parameter arguments, choose names that match
@@ -60,9 +60,9 @@ public class TrendingNews extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
     // TODO: Rename and change types of parameters
-    @SuppressWarnings({"FieldCanBeLocal", "unused"})
+    @SuppressWarnings({"FieldCanBeLocal", "unused", "RedundantSuppression"})
     private String mParam1;
-    @SuppressWarnings({"FieldCanBeLocal", "unused"})
+    @SuppressWarnings({"FieldCanBeLocal", "unused", "RedundantSuppression"})
     private String mParam2;
 
     public TrendingNews() {
@@ -78,7 +78,7 @@ public class TrendingNews extends Fragment {
      * @return A new instance of fragment TrendingNews.
      */
     // TODO: Rename and change types and number of parameters
-    @SuppressWarnings("unused")
+    @SuppressWarnings({"unused", "RedundantSuppression"})
     public static TrendingNews newInstance(String param1, String param2) {
         TrendingNews fragment = new TrendingNews();
         Bundle args = new Bundle();

@@ -45,7 +45,7 @@ public class Stopwatch extends Fragment {
      * @return A new instance of fragment Stopwatch.
      */
     // TODO: Rename and change types and number of parameters
-    @SuppressWarnings("unused")
+    @SuppressWarnings({"unused", "RedundantSuppression"})
     public static Stopwatch newInstance(String param1, String param2) {
         Stopwatch fragment = new Stopwatch();
         Bundle args = new Bundle();
@@ -60,7 +60,8 @@ public class Stopwatch extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
-        if (getArguments() != null) {
+        if (getArguments() != null) //noinspection RedundantSuppression
+        {
             // TODO: Rename and change types of parameters
             //noinspection unused
             String mParam1 = getArguments().getString(ARG_PARAM1);

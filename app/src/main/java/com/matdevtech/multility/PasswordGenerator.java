@@ -6,7 +6,6 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,9 +17,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import org.apache.commons.lang3.ArrayUtils;
 import org.jetbrains.annotations.NotNull;
-
 import java.util.Objects;
 import java.util.Random;
+//import android.view.Gravity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,7 +58,7 @@ public class PasswordGenerator extends Fragment {
      * @return A new instance of fragment PasswordGenerator.
      */
     // TODO: Rename and change types and number of parameters
-    @SuppressWarnings("unused")
+    @SuppressWarnings({"unused", "RedundantSuppression"})
     public static PasswordGenerator newInstance(String param1, String param2) {
         PasswordGenerator fragment = new PasswordGenerator();
         Bundle args = new Bundle();
@@ -74,7 +73,8 @@ public class PasswordGenerator extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
-        if (getArguments() != null) {
+        if (getArguments() != null) //noinspection RedundantSuppression
+        {
             // TODO: Rename and change types of parameters
             //noinspection unused
             String mParam1 = getArguments().getString(ARG_PARAM1);

@@ -38,7 +38,7 @@ public class SettingsActivity extends AppCompatActivity {
     private Button button3;
 
     // Class consts
-    @SuppressWarnings("unused")
+    @SuppressWarnings({"unused", "RedundantSuppression"})
     public static String COLOR_TEXT = "colorText";
 
     // Activity init
@@ -51,7 +51,7 @@ public class SettingsActivity extends AppCompatActivity {
         // INITIALIZE SHARED PREFERENCES FOR SPINNERS
         LastSelect = getSharedPreferences("LastSetting", Context.MODE_PRIVATE);
         editor = LastSelect.edit();
-        //noinspection unused
+        @SuppressWarnings({"RedundantSuppression", "unused"})
         final int LastClick = LastSelect.getInt("LastClick",0);
 
         LastSelectColour = getSharedPreferences("LastSettingColour", Context.MODE_PRIVATE);

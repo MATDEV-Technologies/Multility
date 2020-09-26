@@ -37,36 +37,36 @@ public class Article {
 
     public Source getSource() { return source; }
 
-    @SuppressWarnings("unused")
+    @SuppressWarnings({"unused", "RedundantSuppression"})
     public void setSource(Source source) { this.source = source; }
 
     public String getAuthor() { return author;}
 
-    @SuppressWarnings("unused")
+    @SuppressWarnings({"unused", "RedundantSuppression"})
     public void setAuthor(String author) { this.author = author; }
 
     public String getTitle() { return title; }
 
-    @SuppressWarnings("unused")
+    @SuppressWarnings({"unused", "RedundantSuppression"})
     public void setTitle(String title) { this.title = title; }
 
     public String getDescription() { return description; }
 
-    @SuppressWarnings("unused")
+    @SuppressWarnings({"unused", "RedundantSuppression"})
     public void setDescription(String description) { this.description = description; }
 
     public String getUrl() { return url; }
 
-    @SuppressWarnings("unused")
+    @SuppressWarnings({"unused", "RedundantSuppression"})
     public void setUrl(String url) { this.url = url; }
 
     public String getUrlToImage() { return urlToImage; }
 
-    @SuppressWarnings("unused")
+    @SuppressWarnings({"unused", "RedundantSuppression"})
     public void setUrlToImage(String urlToImage) { this.urlToImage = urlToImage; }
 
     public String getPublishedAt() { return publishedAt; }
 
-    @SuppressWarnings("unused")
+    @SuppressWarnings({"unused", "RedundantSuppression"})
     public void setPublishedAt(String publishedAt) { this.publishedAt = publishedAt; }
 }
