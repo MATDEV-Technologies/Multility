@@ -25,6 +25,9 @@
         android:src="@drawable/ic_baseline_book_24"
         tools:ignore="ContentDescription"/>
 
+    <!-- TODO:
+    Make the no-internet text appear
+    dynamically after a period of time -->
     <TextView
         android:id="@+id/daily_fact_text"
         android:layout_width="310dp"

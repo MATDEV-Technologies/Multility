@@ -47,7 +47,7 @@ public class TipCalculator extends Fragment {
      * @return A new instance of fragment TipCalculator.
      */
     // TODO: Rename and change types and number of parameters
-    @SuppressWarnings("unused")
+    @SuppressWarnings({"unused", "RedundantSuppression"})
     public static TipCalculator newInstance(String param1, String param2) {
         TipCalculator fragment = new TipCalculator();
         Bundle args = new Bundle();
@@ -62,7 +62,8 @@ public class TipCalculator extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
-        if (getArguments() != null) {
+        if (getArguments() != null) //noinspection RedundantSuppression
+        {
             // TODO: Rename and change types of parameters
             //noinspection unused
             String mParam1 = getArguments().getString(ARG_PARAM1);

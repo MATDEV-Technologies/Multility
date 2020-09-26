@@ -4,9 +4,7 @@ package com.matdevtech.multility;
 import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-
 import org.ocpsoft.prettytime.PrettyTime;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -65,10 +63,11 @@ public class Utils {
         return newDate;
     }
 
-    public static String getCountry(){
+    public static String getCountry() {
         Locale locale = Locale.getDefault();
         //noinspection UnnecessaryCallToStringValueOf
         String country = String.valueOf(locale.getCountry());
+        // String country = locale.getCountry();
         return country.toLowerCase();
     }
 }

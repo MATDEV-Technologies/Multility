@@ -19,7 +19,7 @@ public class Source {
         return id;
     }
 
-    public void setId(@SuppressWarnings("unused") String name) {
+    public void setId(@SuppressWarnings({"unused", "RedundantSuppression"}) String name) {
         //noinspection SillyAssignment
         this.id = id;
     }

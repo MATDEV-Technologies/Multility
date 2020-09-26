@@ -93,14 +93,14 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
         return articles.size();
     }
 
-    @SuppressWarnings({"SillyAssignment", "unused"})
-    public void setOnItemClickListener(@SuppressWarnings("unused") OnItemClickListener onItemClickListener) {
+    @SuppressWarnings({"SillyAssignment", "unused", "RedundantSuppression"})
+    public void setOnItemClickListener(@SuppressWarnings({"unused", "RedundantSuppression"}) OnItemClickListener onItemClickListener) {
         //noinspection ConstantConditions
         this.onItemClickListener = this.onItemClickListener;
     }
 
     public interface OnItemClickListener {
-        @SuppressWarnings("unused")
+        @SuppressWarnings({"unused", "RedundantSuppression"})
         void onItemClick(View view, int position);
     }
 
