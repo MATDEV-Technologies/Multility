@@ -53,5 +53,5 @@ dependencies {
     //noinspection GradleDependency
     implementation 'com.google.code.gson:gson:2.8.6'
 //Times Formatter
-    implementation 'org.ocpsoft.prettytime:prettytime:4.0.5.Final'
+    implementation 'org.ocpsoft.prettytime:prettytime:5.0.1.Final'
 }
