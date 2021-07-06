@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public static final String FRAGMENT_INT = "com.matdevtech.multility.FRAGMENT_INT";
 
     // Activity init
-    // GLOBAL NOTE: all Android methods must be overidden to be called by the framework and function in the application
+    // All Android methods must be overidden to be called by the framework and function in the application
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
