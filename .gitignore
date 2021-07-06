@@ -2,6 +2,7 @@
 /local.properties
 .floo
 .DS_Store
+.env
 /build
 /captures
 .externalNativeBuild
