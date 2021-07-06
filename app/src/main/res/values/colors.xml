@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Global colors used in the application-->
+<resources>
+    <!-- Default/Main colors -->
+    <color name="colorPrimary">#30d179</color> <!-- Primary is the icons and the bottom part of the app bar-->
+    <color name="colorPrimaryDark">#218a51</color> <!-- Primary darl is the top part of the app bar-->
+    <color name="colorAccent">#00FF7B</color> <!-- Accent is the pop out color to highlight specific things (not used as of now) -->
+    <!--    <color name="colorAccent">#00ff61</color>--> <!-- previous -->
+    <color name="colorCardBackground">#202020</color> <!-- The color for cards in the MainActivity layout -->
+    <color name="colorWhite">#ffffff</color> <!-- Global white -->
+    <color name="colorGrey">#848484</color> <!-- Global grey -->
+
+</resources>

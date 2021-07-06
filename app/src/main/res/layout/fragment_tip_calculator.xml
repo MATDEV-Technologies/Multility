@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    tools:context=".TipCalculator">
+
+    <!-- TODO:
+    Maybe implement a cut off after 2 decimals for both
+    the Price and Tip entry if it is possible -->
+
+    <!-- GLOBAL NOTE: EditText is a UI element
+    for entering and modifying text -->
+    <EditText
+        android:id="@+id/total_price_input_bar"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:drawableStart="@drawable/ic_baseline_attach_money_small"
+        android:drawablePadding="4dp"
+        android:hint="Total Price"
+        android:inputType="numberDecimal"
+        android:background="@color/colorCardBackground"
+        android:textColorHint="@color/colorGrey"
+        android:textColor="@color/colorWhite"
+        android:paddingLeft="12dp"
+        android:textSize="18sp"
+        tools:ignore="Autofill,HardcodedText,RtlHardcoded,RtlSymmetry"/>
+
+    <EditText
+        android:id="@+id/tip_percentage_input_bar"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="290dp"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:drawableStart="@drawable/ic_percent"
+        android:drawablePadding="12dp"
+        android:hint="Tip Percentage"
+        android:inputType="numberDecimal"
+        android:background="@color/colorCardBackground"
+        android:textColorHint="@color/colorGrey"
+        android:textColor="@color/colorWhite"
+        android:paddingLeft="16dp"
+        android:textSize="18sp"
+        tools:ignore="Autofill,HardcodedText,RtlHardcoded,RtlSymmetry"/>
+
+    <Button
+        android:id="@+id/tip_calculator_button"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="375dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_rounded_green"
+        android:textColor="@color/colorCardBackground"
+        android:textSize="18sp"
+        android:text="CALCULATE TIP"
+        tools:ignore="HardcodedText"/>
+
+    <TextView
+        android:id="@+id/calculated_tip_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="500dp"
+        android:background="@drawable/grey_background_rounded"
+        android:padding="16dp"
+        android:textSize="22sp"
+        android:textColor="@color/colorPrimary"
+        android:text="TIP:  $"
+        tools:ignore="HardcodedText"/>
+
+</RelativeLayout>

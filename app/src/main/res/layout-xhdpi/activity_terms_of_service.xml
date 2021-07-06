@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TermsOfService"
+    android:background="#000000">
+
+    <!-- TODO:
+    Make text hardcoded under an alias in
+    strings.xml to help with translations
+    (as well as HTML-like bolding of headings) -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        android:text="1. Terms:\nBy accessing this app, accessible from the Google Play Store, you are agreeing to be bound by these app Terms and Conditions of Use and agree that you are responsible for the agreement with any applicable local laws. If you disagree with any of these terms, you are prohibited from accessing this app.
+\n\n2. Use License:\nPermission is granted to temporarily download one copy of the materials on MATDEV Technologies' app for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
+\n\nModify or copy the materials;\nUse the materials for any commercial purpose or for any public display;
+Attempt to reverse engineer any software contained on MATDEV Technologies' app;
+Remove any copyright or other proprietary notations from the materials; or
+Transferring the materials to another person or mirror the materials on any other server.
+This will let MATDEV Technologies terminate the usage of products from the recipient upon violations of any of these restrictions. Upon termination, your viewing right will also be terminated and you should destroy any downloaded materials in your possession whether it is printed or electronic format.
+\n\n3. Disclaimer:\nAll the materials on MATDEV Technologies’s app are provided as is. MATDEV Technologies makes no warranties, may it be expressed or implied, therefore negates all other warranties. Furthermore, MATDEV Technologies does not make any representations concerning the accuracy or reliability of the use of the materials on its app or otherwise relating to such materials or any apps linked to this app.
+\n\n4. Limitations:\nMATDEV Technologies or its suppliers will not be held accountable for any damages that will arise with the use or inability to use the materials on MATDEV Technologies’s app, even if MATDEV Technologies or an authorized representative of this app has been notified, orally or written, of the possibility of such damage. Some jurisdiction does not allow limitations on implied warranties or limitations of liability for incidental damages, these limitations may not apply to you.
+\n\n5. Revisions and Errata:\nThe materials appearing on MATDEV Technologies’s app may include technical, typographical, or photographic errors. MATDEV Technologies will not promise that any of the materials in this app are accurate, complete, or current. MATDEV Technologies may change the materials contained on its app at any time without notice. MATDEV Technologies does not make any commitment to update the materials.
+\n\n6. Links:\nMATDEV Technologies has not reviewed all of the apps linked to its app and is not responsible for the contents of any such linked app. The presence of any link does not imply endorsement by MATDEV Technologies of the app. The use of any linked app is at the user’s own risk.
+\n\n7. App Terms of Use Modifications:\nMATDEV Technologies may revise these Terms of Use for its app at any time without prior notice. By using this app, you are agreeing to be bound by the current version of these Terms and Conditions of Use.
+\n\n8. Your Privacy:\nPlease read our Privacy Policy.
+\n\n9. Governing Law:\nAny claim related to MATDEV Technologies's app shall be governed by the laws of Canada without regards to its conflict of law provisions.
+\n\n"
+        tools:ignore="HardcodedText"/>
+
+</ScrollView>

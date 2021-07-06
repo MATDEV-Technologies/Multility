@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    tools:context=".Notepad">
+
+    <!-- Disabled -->
+    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+    <!--        android:id="@+id/fab"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="bottom|end"-->
+    <!--        app:srcCompat="@drawable/ic_baseline_save_24"/>-->
+
+    <ImageButton
+        android:id="@+id/bold_button"
+        android:background="@drawable/button_rounded_green"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:elevation="8dp"
+        android:gravity=""
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:src="@drawable/ic_baseline_format_bold_24"
+        tools:ignore="ContentDescription,RtlHardcoded"/>
+
+    <ImageButton
+        android:id="@+id/italic_button"
+        android:background="@drawable/button_rounded_green"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:elevation="8dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="16dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:src="@drawable/ic_baseline_format_italic_24"
+        tools:ignore="ContentDescription,RtlHardcoded"/>
+
+    <EditText
+        android:id="@+id/notepad_edit"
+        android:layout_width="match_parent"
+        android:layout_height="640dp"
+        android:padding="18dp"
+        android:background="#000000"
+        android:layout_marginRight="60dp"
+        android:gravity="top"
+        android:hint="Type here..."
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorGrey"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="Autofill,HardcodedText,RtlHardcoded,TextFields"/>
+
+    <!-- Disabled -->
+    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+    <!--        android:id="@+id/fab"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="bottom|end"-->
+    <!--        app:srcCompat="@drawable/ic_baseline_save_24" />-->
+
+</RelativeLayout>

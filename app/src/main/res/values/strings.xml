@@ -1,0 +1,16 @@
+<resources>
+    <!-- Global strings used to display important text in the application. Useful for adding new translations -->
+    <string name="app_name">Multility</string>
+    <string name="title_home">Multility</string>
+    <string name="tip_calc">Tip\nCalculator</string>
+    <string name="notepad">Notepad</string>
+    <string name="facts">Daily Fact</string>
+    <string name="passwd">Password\nGenerator</string>
+    <string name="watch">Stopwatch</string>
+    <string name="news">Trending\nNews</string>
+
+    <string name="settings">Settings</string>
+    <string name="back">Back</string>
+    <string name="tos">Terms of Service</string>
+    <string name="priv_policy">Privacy Policy</string>
+</resources>
