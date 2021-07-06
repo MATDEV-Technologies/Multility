@@ -17,6 +17,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.view.LayoutInflater;
@@ -25,9 +27,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-//import org.w3c.dom.Text;
-//import android.widget.Toast;
-//import android.graphics.drawable.Drawable;
 
 // Main Class
 public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
@@ -55,8 +54,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
         Article model = articles.get(position);
 
         RequestOptions requestOptions = new RequestOptions();
-        requestOptions.placeholder(Utils.getRandomDrawbleColor());
-        requestOptions.error(Utils.getRandomDrawbleColor());
+        requestOptions.placeholder(new ColorDrawable(Color.parseColor("#30d179")));
+        requestOptions.error(new ColorDrawable(Color.parseColor("#30d179")));
         requestOptions.diskCacheStrategy(DiskCacheStrategy.ALL);
         requestOptions.centerCrop();
 
@@ -66,13 +65,13 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
                 .listener(new RequestListener<Drawable>() {
                     @Override
                     public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
-                        holder.progressBar.setVisibility(View.GONE);
+                        holder.progressBar.setVisibility(View.GONE); // If load failed, set progress bar to invisible
                         return false;
                     }
 
                     @Override
                     public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
-                        holder.progressBar.setVisibility(View.GONE);
+                        holder.progressBar.setVisibility(View.GONE); // If load failed, set progress bar to invisible
                         return false;
                     }
                 })
@@ -83,30 +82,19 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
         holder.author.setText(model.getAuthor());
         holder.desc.setText(model.getDescription());
         holder.source.setText(model.getSource().getName());
-        holder.time.setText(" \u2022 " + Utils.DateToTimeFormat(model.getPublishedAt()));
-        holder.published_at.setText(Utils.DateFormat(model.getPublishedAt()));
         holder.author.setText(model.getAuthor());
     }
 
     @Override
-    public int getItemCount() {
-        return articles.size();
-    }
-
-    @SuppressWarnings({"SillyAssignment", "unused", "RedundantSuppression"})
-    public void setOnItemClickListener(@SuppressWarnings({"unused", "RedundantSuppression"}) OnItemClickListener onItemClickListener) {
-        //noinspection ConstantConditions
-        this.onItemClickListener = this.onItemClickListener;
-    }
+    public int getItemCount() { return articles.size(); }
 
     public interface OnItemClickListener {
-        @SuppressWarnings({"unused", "RedundantSuppression"})
         void onItemClick(View view, int position);
     }
 
     @SuppressWarnings("InnerClassMayBeStatic")
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        TextView title, desc, author, published_at, source, time;
+        TextView title, desc, author, published_at, source;
         ImageView imageView;
         ProgressBar progressBar;
         OnItemClickListener onItemClickListener;
@@ -121,7 +109,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
             author = itemView.findViewById(R.id.author);
             published_at = itemView.findViewById(R.id.publishedAt);
             source = itemView.findViewById(R.id.source);
-            time = itemView.findViewById(R.id.time);
             imageView = itemView.findViewById(R.id.img);
             progressBar = itemView.findViewById(R.id.progress_load_photo);
 

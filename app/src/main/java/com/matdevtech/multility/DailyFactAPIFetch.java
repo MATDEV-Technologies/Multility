@@ -34,11 +34,9 @@ public class DailyFactAPIFetch extends AsyncTask<Void,Void,Void> {
             }
             fact_data = fact_data.substring(0, fact_data.length() - 4); // Remove "null"
             Log.e("fact_text", fact_data); // DEBUG
-        } catch (MalformedURLException e) {
-            e.printStackTrace(); // DEBUG
-        } catch (IOException e) {
-            e.printStackTrace(); // DEBUG
         }
+        catch (MalformedURLException ignored) { }
+        catch (IOException ignored) { }
         return null;
     }
 

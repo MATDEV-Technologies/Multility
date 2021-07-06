@@ -1,6 +1,7 @@
 package com.matdevtech.multility;
 
 // Imports
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -54,7 +55,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else {
             return super.onOptionsItemSelected(item);
         }
-
         return true;
     }
 
@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     // Main menu click/tap checks
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
 

@@ -1,72 +1,21 @@
 package com.matdevtech.multility.models;
 
-// Imports
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-
 // Main class
 public class Article {
     // Init Article attributes
-    @SerializedName("source")
-    @Expose
     private Source source;
+    private String author, title, description, url, urlToImage;
 
-    @SerializedName("author")
-    @Expose
-    private String author;
-
-    @SerializedName("title")
-    @Expose
-    private String title;
-
-    @SerializedName("description")
-    @Expose
-    private String description;
-
-    @SerializedName("url")
-    @Expose
-    private String url;
-
-    @SerializedName("urlToImage")
-    @Expose
-    private String urlToImage;
-
-    @SerializedName("publishedAt")
-    @Expose
-    private String publishedAt;
-
+    // Accessors
     public Source getSource() { return source; }
-
-    @SuppressWarnings({"unused", "RedundantSuppression"})
-    public void setSource(Source source) { this.source = source; }
 
     public String getAuthor() { return author;}
 
-    @SuppressWarnings({"unused", "RedundantSuppression"})
-    public void setAuthor(String author) { this.author = author; }
-
     public String getTitle() { return title; }
-
-    @SuppressWarnings({"unused", "RedundantSuppression"})
-    public void setTitle(String title) { this.title = title; }
 
     public String getDescription() { return description; }
 
-    @SuppressWarnings({"unused", "RedundantSuppression"})
-    public void setDescription(String description) { this.description = description; }
-
     public String getUrl() { return url; }
 
-    @SuppressWarnings({"unused", "RedundantSuppression"})
-    public void setUrl(String url) { this.url = url; }
-
     public String getUrlToImage() { return urlToImage; }
-
-    @SuppressWarnings({"unused", "RedundantSuppression"})
-    public void setUrlToImage(String urlToImage) { this.urlToImage = urlToImage; }
-
-    public String getPublishedAt() { return publishedAt; }
-
-    @SuppressWarnings({"unused", "RedundantSuppression"})
-    public void setPublishedAt(String publishedAt) { this.publishedAt = publishedAt; }
 }

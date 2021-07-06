@@ -19,53 +19,16 @@ import org.apache.commons.lang3.ArrayUtils;
 import org.jetbrains.annotations.NotNull;
 import java.util.Objects;
 import java.util.Random;
-//import android.view.Gravity;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link PasswordGenerator#newInstance} factory method to
- * create an instance of this fragment.
- */
 // Main class
+@SuppressLint("StaticFieldLeak")
 public class PasswordGenerator extends Fragment {
     // Class vars and consts
-    @SuppressLint("StaticFieldLeak")
-    private static CheckBox include_lowercase;
-    @SuppressLint("StaticFieldLeak")
-    private static CheckBox include_uppercase;
-    @SuppressLint("StaticFieldLeak")
-    private static CheckBox include_numbers;
-    @SuppressLint("StaticFieldLeak")
-    private static CheckBox include_symbols;
-    @SuppressLint("StaticFieldLeak")
-    private static TextView password_generate_result;
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private CheckBox include_lowercase, include_uppercase, include_numbers, include_symbols;
+    private TextView password_generate_result;
 
     public PasswordGenerator() {
         // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment PasswordGenerator.
-     */
-    // TODO: Rename and change types and number of parameters
-    @SuppressWarnings({"unused", "RedundantSuppression"})
-    public static PasswordGenerator newInstance(String param1, String param2) {
-        PasswordGenerator fragment = new PasswordGenerator();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
     }
 
     // Fragment init
@@ -73,15 +36,6 @@ public class PasswordGenerator extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
-        if (getArguments() != null) //noinspection RedundantSuppression
-        {
-            // TODO: Rename and change types of parameters
-            //noinspection unused
-            String mParam1 = getArguments().getString(ARG_PARAM1);
-            //noinspection unused
-            String mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-        // TODO: add new titles to strings.xml
         Objects.requireNonNull(((NavigationBar) Objects.requireNonNull(getActivity())).getSupportActionBar()).setTitle("Password Generator");
     }
 
@@ -246,11 +200,9 @@ public class PasswordGenerator extends Fragment {
                     @Override
                     public boolean onLongClick(View view) {
                         Toast.makeText(getActivity(), "Password Copied", Toast.LENGTH_SHORT).show();
-
                         ClipboardManager clipboard = (ClipboardManager) Objects.requireNonNull(getActivity()).getSystemService(Context.CLIPBOARD_SERVICE);
                         ClipData clip = ClipData.newPlainText("Copied Password", password_generate_result.getText().toString().substring(11)); // COPIES ONLY THE PASSWORD TO THE PHONE'S CLIPBOARD
                         clipboard.setPrimaryClip(clip);
-
                         return false;
                     }
                 });

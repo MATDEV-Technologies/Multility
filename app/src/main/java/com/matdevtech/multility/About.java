@@ -2,7 +2,6 @@ package com.matdevtech.multility;
 
 // Imports
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 // Main class

@@ -10,37 +10,4 @@
     <color name="colorWhite">#ffffff</color> <!-- Global white -->
     <color name="colorGrey">#848484</color> <!-- Global grey -->
 
-
-    <!-- These colors are currently disabled since theming is put on hold; DO NOT REMOVE-->
-
-<!--     Red Preset Colours-->
-<!--        <color name="redPrimary">#D13D30</color>-->
-<!--        <color name="redPrimaryDark">#8A2121</color>-->
-<!--        <color name="redAccent">#FF0000</color>-->
-
-<!--     Orange Preset Colours-->
-<!--        <color name="orangePrimary">#D16830</color>-->
-<!--        <color name="orangePrimaryDark">#8A3A21</color>-->
-<!--        <color name="orangeAccent">#FF4800</color>-->
-
-<!--     Yellow Preset Colours-->
-<!--        <color name="yellowPrimary">#D1AE30</color>-->
-<!--        <color name="yellowPrimaryDark">#8A7921</color>-->
-<!--        <color name="yellowAccent">#FFE600</color>-->
-
-<!--     Green Preset Colours-->
-<!--        <color name="greenPrimary">#30d179</color>-->
-<!--        <color name="greenPrimaryDark">#218a51</color>-->
-<!--        <color name="greenAccent">#00FF7B</color>-->
-
-<!--     Blue Preset Colours-->
-<!--        <color name="bluePrimary">#3099D1</color>-->
-<!--        <color name="bluePrimaryDark">#21598A</color>-->
-<!--        <color name="blueAccent">#00C4FF</color>-->
-
-<!--     Purple Preset Colours-->
-<!--        <color name="purplePrimary">#6830D1</color>-->
-<!--        <color name="purplePrimaryDark">#38218A</color>-->
-<!--        <color name="purpleAccent">#3700FF</color>-->
-
 </resources>

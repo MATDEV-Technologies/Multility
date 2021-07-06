@@ -1,9 +1,9 @@
 package com.matdevtech.multility;
 
 // Imports
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -12,7 +12,6 @@ import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 // Main class
 public class NavigationBar extends AppCompatActivity {
     // Class vars
-    private static final String TAG = NavigationBar.class.getSimpleName();
     String fragment_int;
     ChipNavigationBar bottomNav;
     FragmentManager fragmentManager;
@@ -28,8 +27,7 @@ public class NavigationBar extends AppCompatActivity {
         Intent intent = getIntent();
         fragment_int = intent.getStringExtra(MainActivity.FRAGMENT_INT);
 
-        // Check each fragment selection
-        assert fragment_int != null; // DEBUG
+        // Check each fragment selection (COMING DIRECTLY FROM THE MAIN ACTIVITY CARDVIEW)
         switch (fragment_int) {
             case "1":
                 if (savedInstanceState == null) {
@@ -93,14 +91,15 @@ public class NavigationBar extends AppCompatActivity {
                 break;
         }
 
-        // Check and perform fragment changes
+        // Check and perform fragment changes (WHILE ALREADY INSIDE A FRAGMENT)
         bottomNav.setOnItemSelectedListener(new ChipNavigationBar.OnItemSelectedListener() {
+            @SuppressLint("NonConstantResourceId")
             @Override
             public void onItemSelected(int id) {
                 Fragment fragment = null;
 
                 // Switch to new fragments based on case
-                switch (id){
+                switch (id) {
                     case R.id.tip_calculator_navbar:
                         fragment = new TipCalculator();
                         break;
@@ -121,14 +120,13 @@ public class NavigationBar extends AppCompatActivity {
                         break;
                 }
 
-                // x != null -> exists
+                /* If the fragment object has been set to something (in the above switch statement),
+                perform the actual fragment switch */
                 if (fragment!=null){
                     fragmentManager = getSupportFragmentManager();
                     fragmentManager.beginTransaction()
                             .replace(R.id.fragment_container, fragment)
                             .commit();
-                } else {
-                    Log.e(TAG, "Error in creating fragment"); // DEBUG
                 }
             }
         });
